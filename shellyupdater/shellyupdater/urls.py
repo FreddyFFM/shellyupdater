@@ -14,9 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
-from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 import updates.urls
 
@@ -27,6 +27,8 @@ urlpatterns = [
 urlpatterns += [
     path('', include(updates.urls)),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
 
 # if settings.DEBUG:
 #     import debug_toolbar
