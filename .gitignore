@@ -5,3 +5,5 @@
 .pydevproject
 .settings/
 venv*
+settings*
+db.sqlite*
