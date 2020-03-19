@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  updater:
+    image: shellyupdater
+    ports:
+      - "8000:8000"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - DJANGO_SETTINGS_MODULE=shellyupdater.settings_DOCKER
+      - RUN_ENV=DOCKER
+    build: .
