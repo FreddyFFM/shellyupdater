@@ -14,7 +14,6 @@ class UpdatesConfig(AppConfig):
     name = 'updates'
 
     def ready(self):
-        print(os.environ.get('RUN_MAIN', None))
         if os.environ.get('RUN_MAIN', None) != 'true':
             return
 

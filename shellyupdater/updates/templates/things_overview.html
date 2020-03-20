@@ -30,10 +30,10 @@
             <table class="table table-striped" data-toggle="table" data-sort-name="thing_label" data-sort-order="asc" id="table">
                 <thead>
                     <tr>
-                        <th data-field="thing_uid" data-sortable="true" class="col-3" scope="col">UID</th>
-                        <th data-field="thing_label" data-sortable="true" class="col-3" scope="col">Label</th>
-                        <th data-field="thing_location" data-sortable="true" class="col-3" scope="col">Location</th>
-                        <th data-field="last_change" data-sortable="true" class="col-3" scope="col">Last Update</th>
+                        <th data-field="thing_uid" data-sortable="true" class="" scope="col">UID</th>
+                        <th data-field="thing_label" data-sortable="true" class="" scope="col">Label</th>
+                        <th data-field="thing_location" data-sortable="true" class="" scope="col">Location</th>
+                        <th data-field="last_change" data-sortable="true" class="" scope="col">Last Update</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -41,10 +41,10 @@
                     {% for thing in things %}
 
                         <tr>
-                            <td class="col-3">{{ thing.thing_uid }}</td>
-                            <td class="col-3">{{ thing.thing_label }}</td>
-                            <td class="col-3">{{ thing.thing_location }}</td>
-                            <td class="col-3">{{ thing.last_change_ts|date:'d.m.Y H:i' }}</td>
+                            <td class="">{{ thing.thing_uid }}</td>
+                            <td class="">{{ thing.thing_label }}</td>
+                            <td class="">{{ thing.thing_location }}</td>
+                            <td class="">{{ thing.last_change_ts|date:'d.m.Y H:i' }}</td>
                         </tr>
 
                     {% endfor %}

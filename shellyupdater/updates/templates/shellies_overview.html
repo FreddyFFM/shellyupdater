@@ -33,15 +33,15 @@
             <table class="table table-striped" data-toggle="table" data-sort-name="shelly_new_fw" data-sort-order="desc" id="table">
                 <thead>
                     <tr>
-                        <th data-field="do_update" data-sortable="false" class="col-1 text-center" scope="col">Update</th>
-                        <th data-field="shelly_id" data-sortable="true" class="col-2" scope="col">Shelly-ID</th>
-                        <th data-field="shelly_type" data-sortable="true" class="col-1" scope="col">Shelly Type</th>
-                        <th data-field="shelly_online" data-sortable="true" class="col-1" scope="col">Online</th>
-                        <th data-field="shelly_last_online" data-sortable="true" class="col-1" scope="col">Last Online</th>
-                        <th data-field="shelly_fw_version" data-sortable="true" class="col-2" scope="col">Akt. Firmware</th>
-                        <th data-field="shelly_new_fw" data-sortable="true" class="col-1 text-center" scope="col">FW ok?</th>
-                        <th data-field="last_change" data-sortable="true" class="col-1" scope="col">Last MQTT Update</th>
-                        <th data-field="last_status" data-sortable="true" class="col-2" scope="col">Last Status</th>
+                        <th data-field="do_update" data-sortable="false" class="text-center" scope="col">Update</th>
+                        <th data-field="shelly_id" data-sortable="true" class="" scope="col">Shelly-ID</th>
+                        <th data-field="shelly_type" data-sortable="true" class="" scope="col">Shelly Type</th>
+                        <th data-field="shelly_online" data-sortable="true" class="" scope="col">Online</th>
+                        <th data-field="shelly_last_online" data-sortable="true" class="" scope="col">Last Online</th>
+                        <th data-field="shelly_fw_version" data-sortable="true" class="" scope="col">Akt. Firmware</th>
+                        <th data-field="shelly_new_fw" data-sortable="true" class="text-center" scope="col">FW ok?</th>
+                        <th data-field="last_change" data-sortable="true" class="" scope="col">Last MQTT Update</th>
+                        <th data-field="last_status" data-sortable="true" class="" scope="col">Last Status</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -49,14 +49,14 @@
                     {% for shelly in shellies %}
 
                         <tr>
-                            <td class="col-1 text-center">
+                            <td class="text-center" style="column-width:10px;">
                                 {% if shelly.shelly_new_fw %}
                                     <label>
-                                        <input type="checkbox" id="{{ shelly.shelly_id }}" name="{{ shelly.shelly_id }}" />
+                                        <input type="checkbox" id="{{ shelly.shelly_id }}" name="{{ shelly.shelly_id }}" style="margin:0px;padding:0px;" />
                                     </label>
                                 {% endif %}
                             </td>
-                            <td class="col-2"><a href="http://{{ shelly.shelly_ip }}" target="_blank">
+                            <td class=""><a href="http://{{ shelly.shelly_ip }}" target="_blank">
                                 {{ shelly.shelly_id }}</a><br />
                                 <ul>
                                 {% for thing in shelly.shelly2thing.all %}
@@ -64,19 +64,19 @@
                                 {% endfor%}
                                 </ul>
                             </td>
-                            <td class="col-1">{{ shelly.shelly_type }}</td>
-                            <td class="col-1">{{ shelly.shelly_online }}</td>
-                            <td class="col-1">{{ shelly.shelly_last_online|date:'d.m.Y H:i' }}</td>
-                            <td class="col-2">{{ shelly.shelly_fw_version }}</td>
-                            <td class="col-1 text-center">
+                            <td class="">{{ shelly.shelly_type }}</td>
+                            <td class="">{{ shelly.shelly_online }}</td>
+                            <td class="">{{ shelly.shelly_last_online|date:'d.m.Y H:i' }}</td>
+                            <td class="">{{ shelly.shelly_fw_version }}</td>
+                            <td class="text-center">
                                 {% if shelly.shelly_new_fw %}
                                     <i class="fas fa-times-circle"></i>
                                 {% else %}
                                     <i class="fas fa-check"></i>
                                 {% endif %}
                             </td>
-                            <td class="col-1">{{ shelly.last_change_ts|date:'d.m.Y H:i' }}</td>
-                            <td class="col-2">{{ shelly.last_status }}</td>
+                            <td class="">{{ shelly.last_change_ts|date:'d.m.Y H:i' }}</td>
+                            <td class="">{{ shelly.last_status }}</td>
                         </tr>
 
                     {% endfor %}
