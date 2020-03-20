@@ -47,8 +47,7 @@ def join_shelly_things():
 
         if Shellies.objects.filter(shelly_id=thing_shelly_id).exists():
             shelly = Shellies.objects.get(shelly_id=thing_shelly_id)
-
-        thing.shelly_id = shelly
-        thing.save()
+            thing.shelly_id = shelly
+            thing.save()
 
 
