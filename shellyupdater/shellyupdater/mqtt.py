@@ -7,6 +7,16 @@ from django.conf import settings
 from datetime import datetime
 
 logger = logging.getLogger()
+mqtt_client = None
+
+
+def set_mqttclient(client):
+    global mqtt_client
+    mqtt_client = client
+
+
+def get_mqttclient():
+    return mqtt_client
 
 
 class MQTTClient():

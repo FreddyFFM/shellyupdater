@@ -5,7 +5,7 @@ import logging, os
 
 from django.apps import AppConfig
 from django.conf import settings
-from shellyupdater.mqtt import MQTTClient
+from shellyupdater.mqtt import MQTTClient, set_mqttclient
 
 logger = logging.getLogger()
 
@@ -30,6 +30,7 @@ class UpdatesConfig(AppConfig):
 
         logger.info("App is up")
         mqttclient = MQTTClient().getMQTTClient()
+        set_mqttclient(mqttclient)
         mqttclient.loop_start()
         mqttclient.message_callback_add(settings.MQTT_SHELLY_ANNOUNCE_TOPIC, on_msg_announce)
         mqttclient.message_callback_add(settings.MQTT_SHELLY_BASE_TOPIC + "+/online", on_device_online)
