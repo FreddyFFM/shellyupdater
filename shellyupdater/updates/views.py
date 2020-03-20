@@ -5,9 +5,11 @@ import time
 
 from django.views.generic import TemplateView
 from django.conf import settings
-from updates.models import Shellies
+from updates.models import Shellies, OpenHabThings
 from shellyupdater.mqtt import client
+from .openhab_handler import get_openhab_things, join_shelly_things
 from datetime import datetime
+
 
 class ShowShelliesView(TemplateView):
 
@@ -82,3 +84,22 @@ class ShowShelliesView(TemplateView):
 
         return self.render_to_response(context)
 
+
+class OpenhabThingsView(TemplateView):
+
+    template_name = 'things_overview.html'
+
+    def get(self, request, refresh=None, *args, **kwargs):
+        """
+        """
+
+        context = {}
+
+        if refresh == 'Y':
+            get_openhab_things()
+            join_shelly_things()
+
+        things = OpenHabThings.objects.all()
+        context["things"] = things
+
+        return self.render_to_response(context)

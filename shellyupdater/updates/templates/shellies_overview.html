@@ -52,11 +52,18 @@
                             <td class="col-1 text-center">
                                 {% if shelly.shelly_new_fw %}
                                     <label>
-                                        <input type="checkbox" id="{{ shelly.shelly_id }}" name="{{ shelly.shelly_id }}"/>
+                                        <input type="checkbox" id="{{ shelly.shelly_id }}" name="{{ shelly.shelly_id }}" />
                                     </label>
                                 {% endif %}
                             </td>
-                            <td class="col-2"><a href="http://{{ shelly.shelly_ip }}" target="_blank">{{ shelly.shelly_id }}</a></td>
+                            <td class="col-2"><a href="http://{{ shelly.shelly_ip }}" target="_blank">
+                                {{ shelly.shelly_id }}</a><br />
+                                <ul>
+                                {% for thing in shelly.shelly2thing.all %}
+                                    <li>{{ thing.thing_label }}</li>
+                                {% endfor%}
+                                </ul>
+                            </td>
                             <td class="col-1">{{ shelly.shelly_type }}</td>
                             <td class="col-1">{{ shelly.shelly_online }}</td>
                             <td class="col-1">{{ shelly.shelly_last_online|date:'d.m.Y H:i' }}</td>
