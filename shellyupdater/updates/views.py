@@ -6,7 +6,7 @@ import time
 from django.views.generic import TemplateView
 from django.conf import settings
 from updates.models import Shellies, OpenHabThings
-from shellyupdater.mqtt import client
+from shellyupdater.mqtt import MQTTClient
 from .openhab_handler import get_openhab_things, join_shelly_things
 from datetime import datetime
 
@@ -22,7 +22,7 @@ class ShowShelliesView(TemplateView):
         context = {}
 
         if refresh == 'Y':
-            mqttclient = client.getMQTTClient()
+            mqttclient = MQTTClient.getMQTTClient()
             if mqttclient.is_connected():
 
                 i = 1

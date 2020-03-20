@@ -45,4 +45,4 @@ class MQTTClient():
         return self.mqttclient
 
 
-client = MQTTClient()
+#client = MQTTClient()

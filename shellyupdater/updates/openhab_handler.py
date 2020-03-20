@@ -3,6 +3,7 @@ import requests
 from django.conf import settings
 from .models import OpenHabThings, Shellies
 
+
 def put_thing(uid=None, label="", location=""):
     if uid:
         if OpenHabThings.objects.filter(thing_uid=uid).exists():
