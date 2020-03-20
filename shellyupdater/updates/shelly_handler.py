@@ -3,7 +3,7 @@ import json, time
 from .models import Shellies
 from django.utils import timezone
 from datetime import datetime
-from shellyupdater.mqtt import client
+from shellyupdater.mqtt import MQTTClient
 from django.conf import settings
 
 
@@ -61,7 +61,7 @@ def update_shelly_online(topic=None, status=None):
 
 
 def perform_update(shelly_id=None):
-    mqttclient = client.getMQTTClient()
+    mqttclient = MQTTClient.getMQTTClient()
     current_dt = datetime.now().strftime("%d.%m.%Y %H:%M")
     if mqttclient.is_connected() and shelly_id:
         shelly = Shellies.objects.get(shelly_id=shelly_id)

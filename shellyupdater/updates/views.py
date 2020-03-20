@@ -54,7 +54,7 @@ class ShowShelliesView(TemplateView):
         current_dt = datetime.now().strftime("%d.%m.%Y %H:%M")
         for key, val in items:
             if key.upper().startswith("SHELLY") and val == "on":
-                mqttclient = client.getMQTTClient()
+                mqttclient = MQTTClient.getMQTTClient()
                 if mqttclient.is_connected():
                     shelly = Shellies.objects.get(shelly_id=key)
                     if shelly.shelly_online:

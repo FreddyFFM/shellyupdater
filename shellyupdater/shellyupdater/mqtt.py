@@ -43,6 +43,3 @@ class MQTTClient():
 
     def getMQTTClient(self):
         return self.mqttclient
-
-
-#client = MQTTClient()
