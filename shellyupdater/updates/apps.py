@@ -15,7 +15,8 @@ class UpdatesConfig(AppConfig):
 
     def ready(self):
         if os.environ.get('RUN_MAIN', None) != 'true':
-            return
+            if not settings.STARTS_WITH_GUNICORN:
+                return
 
         def on_msg_announce(self, userdata, msg):
             from updates.shelly_handler import put_shelly_json
