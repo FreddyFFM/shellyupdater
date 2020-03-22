@@ -30,7 +30,14 @@
 
             {% endif %}
 
-            <table class="table table-striped" data-toggle="table" data-sort-name="shelly_new_fw" data-sort-order="desc" id="table">
+            <table
+                    class="table table-striped"
+                    data-search="true"
+                    data-show-columns="true"
+                    data-toggle="table"
+                    data-show-multi-sort="true"
+                    data-sort-priority='[{"sortName": "shelly_new_fw","sortOrder":"desc"},{"sortName":"shelly_last_online","sortOrder":"desc"}]'
+                    id="table">
                 <thead>
                     <tr>
                         <th data-field="do_update" data-sortable="false" class="text-center" scope="col">Update</th>
@@ -54,7 +61,10 @@
                                     <label>
                                         <input type="checkbox" id="{{ shelly.shelly_id }}" name="{{ shelly.shelly_id }}" style="margin:0px;padding:0px;" />
                                     </label>
+                                {% elif shelly.shelly_do_update %}
+                                    <i class="fas fa-times"></i>
                                 {% endif %}
+
                             </td>
                             <td class=""><a href="http://{{ shelly.shelly_ip }}" target="_blank">
                                 {{ shelly.shelly_id }}</a><br />

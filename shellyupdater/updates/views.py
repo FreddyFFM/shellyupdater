@@ -57,11 +57,12 @@ class ShowShelliesView(TemplateView):
                 mqttclient = get_mqttclient()
                 if mqttclient.is_connected():
                     shelly = Shellies.objects.get(shelly_id=key)
+                    shelly.shelly_do_update = True
                     if shelly.shelly_online:
-
                         i = 1
                         while True:
-                            result = mqttclient.publish(settings.MQTT_SHELLY_BASE_TOPIC + key + "/command", "update_fw")
+                            result = mqttclient.publish(topic=settings.MQTT_SHELLY_BASE_TOPIC + key + "/command",
+                                                        payload="update_fw", qos=1, retain=True)
                             if result.rc == 0 or i > 3:
                                 break
                             i = i + 1
@@ -71,11 +72,9 @@ class ShowShelliesView(TemplateView):
                             shelly.last_status = current_dt + ": Update failed (" + str(result.rc) + ")"
                         else:
                             shelly.last_status = current_dt + ": Update Initialized"
-                            mqttclient.publish(settings.MQTT_SHELLY_BASE_TOPIC + key + "/command", "announce")
 
                     else:
                         shelly.last_status = current_dt + ": Marked for update"
-                        shelly.shelly_do_update = True
 
                     shelly.save()
 
