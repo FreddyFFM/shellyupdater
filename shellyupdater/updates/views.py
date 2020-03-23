@@ -5,10 +5,12 @@ import time
 
 from django.views.generic import TemplateView
 from django.conf import settings
-from updates.models import Shellies, OpenHabThings
+from updates.models import Shellies, OpenHabThings, ShellySettings
 from .openhab_handler import get_openhab_things, join_shelly_things
 from datetime import datetime
 from shellyupdater.mqtt import get_mqttclient
+from .shelly_http_handler import get_shelly_info
+from django.http import HttpResponse
 
 
 class ShowShelliesView(TemplateView):
@@ -100,5 +102,38 @@ class OpenhabThingsView(TemplateView):
 
         things = OpenHabThings.objects.all()
         context["things"] = things
+
+        return self.render_to_response(context)
+
+
+class ShellyDetailView(TemplateView):
+
+    template_name = 'shelly_details.html'
+
+    def get(self, request, shelly_id=None, refresh=None, *args, **kwargs):
+        """
+
+        :param request:
+        :param args:
+        :param kwargs:
+        :return:
+        """
+
+        context = {}
+
+        if not shelly_id:
+            return HttpResponse(content="ID not found", status=400)
+
+        if ShellySettings.objects.filter(shelly_id__shelly_id=shelly_id).exists():
+            if refresh == "Y":
+                get_shelly_info(shelly_id=shelly_id)
+            details = ShellySettings.objects.get(shelly_id__shelly_id=shelly_id)
+        else:
+            if get_shelly_info(shelly_id=shelly_id):
+                details = ShellySettings.objects.get(shelly_id__shelly_id=shelly_id)
+            else:
+                return HttpResponse(content="Error getting details", status=400)
+
+        context["details"] = details
 
         return self.render_to_response(context)

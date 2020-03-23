@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% block title %}Shelly Details{% endblock title %}
+
+{% block head_css_page %}
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+{% endblock head_css_page %}
+
+{% block extrahead %}
+{% endblock %}
+
+{% block content %}
+
+    {# Hero Section #}  
+
+    {# Main Section #}
+
+    <div class="container-fluid">
+
+        <div class="text-right">
+            <a href="{% url 'details' shelly_id=details.shelly_id.shelly_id refresh='Y' %}" class="btn btn-light" role="button">Refresh</a>
+            <a href="{% url 'home' %}" class="btn btn-secondary" role="button">Zurück</a>
+        </div>
+
+        <div class="row" style="margin-top:20px;margin-bottom:20px;">
+            <div class="col-4 font-weight-bold">
+                Shelly-ID
+            </div>
+            <div class="col-8">
+                {{ details.shelly_id.shelly_id }}
+            </div>
+            <div class="col-4 font-weight-bold">
+                Thing (Location)
+            </div>
+            <div class="col-8">
+                <ul class="list-unstyled">
+                {% for thing in details.shelly_id.shelly2thing.all %}
+                    <li>{{ thing.thing_label }} ({{ thing.thing_location }})</li>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Status</a>
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Settings</a>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" style="padding:20px;">
+
+                <div class="row">
+                    <div class="col-8">
+                        <pre class="prettyprint">
+                            {{ details.shelly_status_json }}
+                        </pre>
+                    </div>
+                    <div class="col-4">
+                        <div class="alert alert-primary" role="alert">
+                            <strong>Status:</strong><br /> {{ details.last_status_status }}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" style="padding:20px;">
+
+                <div class="row">
+                    <div class="col-8">
+                        <pre class="prettyprint">
+                            {{ details.shelly_settings_json }}
+                        </pre>
+                    </div>
+                    <div class="col-4">
+                        <div class="alert alert-primary" role="alert">
+                            <strong>Status:</strong><br /> {{ details.last_status_settings }}
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluid" style="margin-top:20px;">
+    </div>
+
+{% endblock content %}
+
+{% block footer_javascript_page %}
+{% endblock footer_javascript_page %}
+
+

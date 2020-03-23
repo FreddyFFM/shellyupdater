@@ -5,6 +5,13 @@ from .models import OpenHabThings, Shellies
 
 
 def put_thing(uid=None, label="", location=""):
+    """
+    Save Openhab Thing to DB
+    :param uid:
+    :param label:
+    :param location:
+    :return:
+    """
     if uid:
         if OpenHabThings.objects.filter(thing_uid=uid).exists():
             thing = OpenHabThings.objects.get(thing_uid=uid)
@@ -26,6 +33,10 @@ def put_thing(uid=None, label="", location=""):
 
 
 def get_openhab_things():
+    """
+    Get all MQTT Shelly Openhab Things
+    :return:
+    """
     response = requests.get(settings.OPENHAB_REST_BASE_URL + "/things")
     if response.status_code == 200:
         things = response.json()
@@ -40,7 +51,10 @@ def get_openhab_things():
 
 
 def join_shelly_things():
-
+    """
+    Join Openhab Things to Shelly based on the shelly-id
+    :return:
+    """
     things = OpenHabThings.objects.all()
     for thing in things:
         thing_shelly_id = (thing.thing_uid.split(":")[3]).split("-", maxsplit=1)
@@ -49,6 +63,8 @@ def join_shelly_things():
         if Shellies.objects.filter(shelly_id=thing_shelly_id).exists():
             shelly = Shellies.objects.get(shelly_id=thing_shelly_id)
             thing.shelly_id = shelly
-            thing.save()
+        else:
+            thing.shelly_id = None
+        thing.save()
 
 

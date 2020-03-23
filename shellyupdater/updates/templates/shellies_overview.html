@@ -32,6 +32,7 @@
 
             <table
                     class="table table-striped"
+                    data-remember-order="true"
                     data-search="true"
                     data-show-columns="true"
                     data-toggle="table"
@@ -66,8 +67,18 @@
                                 {% endif %}
 
                             </td>
-                            <td class=""><a href="http://{{ shelly.shelly_ip }}" target="_blank">
-                                {{ shelly.shelly_id }}</a><br />
+                            <td class="">
+                                <strong>{{ shelly.shelly_id }}</strong>&nbsp;&nbsp;
+                                <a href="http://{{ shelly.shelly_ip }}" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>&nbsp;&nbsp;
+                                <a href="{% url 'details' shelly_id=shelly.shelly_id %}">
+                                    {% if shelly.shelly2infos.shelly_settings_json %}
+                                        <i class="fas fa-info-circle text-success"></i>
+                                    {% else %}
+                                        <i class="fas fa-info-circle"></i>
+                                    {% endif %}
+                                </a><br />
                                 <ul>
                                 {% for thing in shelly.shelly2thing.all %}
                                     <li>{{ thing.thing_label }}</li>

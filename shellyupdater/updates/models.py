@@ -44,3 +44,21 @@ class OpenHabThings (models.Model):
     class Meta:
         managed = True
         db_table = 'openhab_things'
+
+
+class ShellySettings (models.Model):
+    """
+    Base model for the Shellies
+    """
+
+    id = models.AutoField(primary_key=True)
+    shelly_id = models.OneToOneField(Shellies, on_delete=models.CASCADE, related_name="shelly2infos")
+    shelly_settings_json = models.TextField(null=True, blank=True)
+    shelly_status_json = models.TextField(null=True, blank=True)
+    last_change_ts = models.DateTimeField(auto_now=True)
+    last_status_settings = models.CharField(max_length=200, blank=True, null=True)
+    last_status_status = models.CharField(max_length=200, blank=True, null=True)
+
+    class Meta:
+        managed = True
+        db_table = 'shellies_settings'
