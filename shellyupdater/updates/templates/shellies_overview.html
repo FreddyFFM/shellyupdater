@@ -37,17 +37,15 @@
                     data-show-columns="true"
                     data-toggle="table"
                     data-show-multi-sort="true"
-                    data-sort-priority='[{"sortName": "shelly_new_fw","sortOrder":"desc"},{"sortName":"shelly_last_online","sortOrder":"desc"}]'
+                    data-sort-priority='[{"sortName": "shelly_new_fw","sortOrder":"desc"},{"sortName":"last_change","sortOrder":"desc"}]'
                     id="table">
                 <thead>
                     <tr>
                         <th data-field="do_update" data-sortable="false" class="text-center" scope="col">Update</th>
                         <th data-field="shelly_id" data-sortable="true" class="" scope="col">Shelly-ID</th>
                         <th data-field="shelly_type" data-sortable="true" class="" scope="col">Shelly Type</th>
-                        <th data-field="shelly_online" data-sortable="true" class="" scope="col">Online</th>
-                        <th data-field="shelly_last_online" data-sortable="true" class="" scope="col">Last Online</th>
-                        <th data-field="shelly_fw_version" data-sortable="true" class="" scope="col">Akt. Firmware</th>
-                        <th data-field="shelly_new_fw" data-sortable="true" class="text-center" scope="col">FW ok?</th>
+                        <th data-field="shelly_online" data-sortable="true" class="" scope="col">Status</th>
+                        <th data-field="shelly_fw_version" data-sortable="true" class="" scope="col">Firmware</th>
                         <th data-field="last_change" data-sortable="true" class="" scope="col">Last MQTT Update</th>
                         <th data-field="last_status" data-sortable="true" class="" scope="col">Last Status</th>
                     </tr>
@@ -79,22 +77,41 @@
                                         <i class="fas fa-info-circle"></i>
                                     {% endif %}
                                 </a><br />
-                                <ul>
+                                <ul class="list-unstyled">
                                 {% for thing in shelly.shelly2thing.all %}
                                     <li>{{ thing.thing_label }}</li>
                                 {% endfor%}
                                 </ul>
                             </td>
                             <td class="">{{ shelly.shelly_type }}</td>
-                            <td class="">{{ shelly.shelly_online }}</td>
-                            <td class="">{{ shelly.shelly_last_online|date:'d.m.Y H:i' }}</td>
-                            <td class="">{{ shelly.shelly_fw_version }}</td>
-                            <td class="text-center">
-                                {% if shelly.shelly_new_fw %}
-                                    <i class="fas fa-times-circle"></i>
+                            <td class="">
+                                {% if shelly.shelly_online %}
+                                    <i class="fas fa-power-off text-success"></i>
                                 {% else %}
-                                    <i class="fas fa-check"></i>
+                                    <i class="fas fa-power-off text-danger"></i>
                                 {% endif %}
+                                    <span style="font-size:0.8em">
+                                        ({{ shelly.shelly_last_online|date:'d.m.Y H:i' }})
+                                    </span>
+                                {% if shelly.shelly2infos.shelly_battery_percent %}
+                                    <br /><i class="fas fa-battery-half"></i>
+                                    <span style="font-size:0.8em">
+                                        ({{ shelly.shelly2infos.shelly_battery_percent }}%,
+                                        {{ shelly.shelly2infos.shelly_battery_voltage }}V)
+                                    </span>
+                                {% endif %}
+                            </td>
+                            <td class="text-center">
+                                <div data-toggle="tooltip" title="FW: {{ shelly.shelly_fw_version }}">
+                                {% if shelly.shelly_new_fw %}
+                                    <i class="fas fa-times-circle text-danger"></i>
+                                {% else %}
+                                    <i class="fas fa-check text-success"></i>
+                                {% endif %}
+                                <span style="font-size:0.8em">
+                                    ({{ shelly.get_fw_short }})
+                                </span>
+                                </div>
                             </td>
                             <td class="">{{ shelly.last_change_ts|date:'d.m.Y H:i' }}</td>
                             <td class="">{{ shelly.last_status }}</td>

@@ -10,6 +10,9 @@ class Shellies (models.Model):
     Base model for the Shellies
     """
 
+    def get_fw_short(self):
+        return self.shelly_fw_version.split('/')[1]
+
     id = models.AutoField(primary_key=True)
     shelly_id = models.CharField(max_length=100, blank=False, null=False, unique=True)
     shelly_name = models.CharField(max_length=200, blank=True, null=True)
@@ -55,6 +58,8 @@ class ShellySettings (models.Model):
     shelly_id = models.OneToOneField(Shellies, on_delete=models.CASCADE, related_name="shelly2infos")
     shelly_settings_json = models.TextField(null=True, blank=True)
     shelly_status_json = models.TextField(null=True, blank=True)
+    shelly_battery_percent = models.IntegerField(null=True, blank=True)
+    shelly_battery_voltage = models.DecimalField(max_digits=5, decimal_places=1, null=True, blank=True)
     last_change_ts = models.DateTimeField(auto_now=True)
     last_status_settings = models.CharField(max_length=200, blank=True, null=True)
     last_status_status = models.CharField(max_length=200, blank=True, null=True)

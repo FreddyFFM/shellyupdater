@@ -58,7 +58,11 @@ def get_shelly_status(shelly=None, shellySettings=None):
         response = requests.get("http://" + shelly.shelly_ip + "/status",
                                 auth=(settings.HTTP_SHELLY_USERNAME, settings.HTTP_SHELLY_PASSWORD), timeout=2)
         if response.status_code == 200:
-            shellySettings.shelly_status_json = json.dumps(json.loads(response.text.strip()), indent=4, sort_keys=True)
+            status_json = json.loads(response.text.strip())
+            shellySettings.shelly_status_json = json.dumps(status_json, indent=4, sort_keys=True)
+            if "bat" in status_json:
+                shellySettings.shelly_battery_percent = status_json["bat"]["value"]
+                shellySettings.shelly_battery_voltage = status_json["bat"]["voltage"]
             status = current_dt + ": HTTP OK " + str(response.status_code)
         else:
             status =  current_dt + ": HTTP Error " + str(response.status_code)
