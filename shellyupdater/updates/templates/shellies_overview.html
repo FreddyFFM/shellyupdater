@@ -19,8 +19,8 @@
                 <button type="submit" class="btn btn-primary">Update Devices</button>
                 <button type="button" class="btn btn-secondary checkall">Check All</button>
                 <button type="button" class="btn btn-secondary uncheckall">Uncheck All</button>
-                <a href="{% url 'home' %}" class="btn btn-light" role="button">Refresh</a>
-                <a href="{% url 'home' refresh='Y' %}" class="btn btn-light" role="button">Refresh with Update</a>
+                <a href="{% url 'shellies' %}" class="btn btn-light" role="button">Refresh</a>
+                <a href="{% url 'shellies' refresh='Y' %}" class="btn btn-light" role="button">Refresh with Update</a>
             </div>
 
             {% if error %}
@@ -53,7 +53,6 @@
                 <tbody>
 
                     {% for shelly in shellies %}
-
                         <tr>
                             <td class="text-center" style="column-width:10px;">
                                 {% if shelly.shelly_new_fw %}
@@ -70,7 +69,7 @@
                                 <a href="http://{{ shelly.shelly_ip }}" target="_blank">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>&nbsp;&nbsp;
-                                <a href="{% url 'details' shelly_id=shelly.shelly_id %}">
+                                <a href="{% url 'shellies/details' shelly_id=shelly.shelly_id %}">
                                     {% if shelly.shelly2infos.shelly_settings_json %}
                                         <i class="fas fa-info-circle text-success"></i>
                                     {% else %}

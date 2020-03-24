@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% block title %}Shellies Overview{% endblock title %}
+
+{% block extrahead %}
+{% endblock %}
+
+{% block content %}
+
+    {# Hero Section #}  
+
+    {# Main Section #}
+
+    <div class="container-fluid">
+
+        <div class="row" style="margin-bottom:20px;">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">
+                        Shelly Status
+                    </div>
+                    <div class="card-body">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="col-4">Anzahl Shellies</td>
+                                    <td class="col-8 text-right">{{ shelly_info.shelly_id__count }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-4">Battery MIN</td>
+                                    <td class="col-8 text-right">{{ shelly_info.shelly2infos__shelly_battery_percent__min }} %</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-4">Battery MAX</td>
+                                    <td class="col-8 text-right">{{ shelly_info.shelly2infos__shelly_battery_percent__max }} %</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-4">Battery AVG</td>
+                                    <td class="col-8 text-right">{{ shelly_info.shelly2infos__shelly_battery_percent__avg|floatformat:2 }} %</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">
+                        Oldest online
+                    </div>
+                    <div class="card-body">
+                        <strong>{{ shelly_oldest.shelly_id }}</strong><br />
+                        {% for thing in shelly_oldest.shelly2thing.all %}
+                            {{ thing.thing_label }} ({{ thing.thing_location }})
+                        {% endfor%}<br />
+                        <br />
+                        Last online: {{ shelly_oldest.shelly_last_online|date:'d.m.Y H:i' }}<br />
+                        Last MQTT Message: {{ shelly_oldest.last_change_ts|date:'d.m.Y H:i' }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">
+                        Shellies / Things ohne Zuordnung
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Shellies<br />
+                                {% for shelly in shellies_wo_things %}
+                                    <strong>{{ shelly.shelly_id }}</strong><br />
+                                {% endfor %}
+                                <br />
+                            </li>
+                            <li>Things<br />
+                                {% for thing in things_wo_shelly %}
+                                    <strong>{{ thing.thing_uid }}</strong> ({{ thing.thing_label }})<br />
+                                {% endfor %}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">
+                        tbd
+                    </div>
+                    <div class="card-body">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="container-fluid" style="margin-top:20px;">
+    </div>
+
+{% endblock content %}
+
+{% block footer_javascript_page %}
+{% endblock footer_javascript_page %}
+
+

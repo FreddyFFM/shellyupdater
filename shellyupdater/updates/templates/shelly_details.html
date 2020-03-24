@@ -17,8 +17,8 @@
     <div class="container-fluid">
 
         <div class="text-right">
-            <a href="{% url 'details' shelly_id=details.shelly_id.shelly_id refresh='Y' %}" class="btn btn-light" role="button">Refresh</a>
-            <a href="{% url 'home' %}" class="btn btn-secondary" role="button">Zurück</a>
+            <a href="{% url 'shellies/details' shelly_id=details.shelly_id.shelly_id refresh='Y' %}" class="btn btn-light" role="button">Refresh</a>
+            <a href="{% url 'shellies' %}" class="btn btn-secondary" role="button">Zurück</a>
         </div>
 
         <div class="row" style="margin-top:20px;margin-bottom:20px;">
