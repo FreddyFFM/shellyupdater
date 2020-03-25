@@ -32,23 +32,6 @@ class Shellies (models.Model):
         db_table = 'shellies'
 
 
-class OpenHabThings (models.Model):
-    """
-
-    """
-
-    id = models.AutoField(primary_key=True)
-    thing_uid = models.CharField(max_length=100, blank=False, null=False, unique=True)
-    thing_label = models.CharField(max_length=200, blank=False, null=False)
-    thing_location = models.CharField(max_length=100, blank=True, null=True)
-    shelly_id = models.ForeignKey(Shellies, on_delete=models.DO_NOTHING, null=True, related_name="shelly2thing")
-    last_change_ts = models.DateTimeField(auto_now=True)
-
-    class Meta:
-        managed = True
-        db_table = 'openhab_things'
-
-
 class ShellySettings (models.Model):
     """
     Base model for the Shellies
@@ -67,3 +50,20 @@ class ShellySettings (models.Model):
     class Meta:
         managed = True
         db_table = 'shellies_settings'
+
+
+class OpenHabThings (models.Model):
+    """
+
+    """
+
+    id = models.AutoField(primary_key=True)
+    thing_uid = models.CharField(max_length=100, blank=False, null=False, unique=True)
+    thing_label = models.CharField(max_length=200, blank=False, null=False)
+    thing_location = models.CharField(max_length=100, blank=True, null=True)
+    shelly_id = models.ForeignKey(Shellies, on_delete=models.DO_NOTHING, null=True, related_name="shelly2thing")
+    last_change_ts = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        managed = True
+        db_table = 'openhab_things'

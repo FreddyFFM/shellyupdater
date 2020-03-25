@@ -16,6 +16,6 @@ I did not setup everything to run immediatly after cloning the repo, but with so
 
 ## Notice
 
-Please be aware that this tool was designed to interact with Openhab. If you do not use Openhab you have to comment out the Things stuff in code. Maybe I will provide this as optional in a later step.
+Please be aware that this tool was designed to interact with Openhab. If you do not use Openhab you have to comment out 'openhab' in the settings.py, section INSTALLED_APPS.
 
 

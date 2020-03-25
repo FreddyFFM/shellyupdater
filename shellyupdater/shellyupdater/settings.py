@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'home',
     'updates',
+#    'openhab',
 ]
 
 MIDDLEWARE = [
@@ -65,6 +67,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'home.context_processors.openhab_active',
             ],
         },
     },
@@ -139,7 +142,7 @@ MQTT_SHELLY_BASE_TOPIC = env.str('MQTT_SHELLY_BASE_TOPIC')
 OPENHAB_REST_BASE_URL = env.str('OPENHAB_REST_BASE_URL')
 
 #GUNICORN START
-STARTS_WITH_GUNICORN = env.str('STARTS_WITH_GUNICORN')
+STARTS_WITH_GUNICORN = env.bool('STARTS_WITH_GUNICORN', False)
 
 # SHELLY-HTTP
 HTTP_SHELLY_USERNAME = env.str('HTTP_SHELLY_USERNAME')

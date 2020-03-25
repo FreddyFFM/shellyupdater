@@ -5,39 +5,11 @@ import time
 
 from django.views.generic import TemplateView
 from django.conf import settings
-from updates.models import Shellies, OpenHabThings, ShellySettings
-from .openhab_handler import get_openhab_things, join_shelly_things
+from updates.models import Shellies, ShellySettings
 from datetime import datetime
 from shellyupdater.mqtt import get_mqttclient
 from .shelly_http_handler import get_shelly_info
 from django.http import HttpResponse
-from django.db.models import Avg, Max, Min, Count
-
-
-class HomeView(TemplateView):
-
-    template_name = 'home.html'
-
-    def get(self, request, refresh=None, *args, **kwargs):
-        context = {}
-
-        shelly_info = Shellies.objects.all().aggregate(Count('shelly_id'),
-                                                            Max('shelly2infos__shelly_battery_percent'),
-                                                            Min('shelly2infos__shelly_battery_percent'),
-                                                            Avg('shelly2infos__shelly_battery_percent'),
-                                                         )
-        context["shelly_info"] = shelly_info
-
-        shelly_oldest = Shellies.objects.earliest('last_change_ts')
-        context["shelly_oldest"] = shelly_oldest
-
-        shellies_wo_things = Shellies.objects.filter(shelly2thing__thing_uid__isnull=True)
-        things_wo_shelly = OpenHabThings.objects.filter(shelly_id__isnull=True)
-        context["shellies_wo_things"] = shellies_wo_things
-        context["things_wo_shelly"] = things_wo_shelly
-
-
-        return self.render_to_response(context)
 
 
 class ShowShelliesView(TemplateView):
@@ -109,26 +81,6 @@ class ShowShelliesView(TemplateView):
 
         shellies = Shellies.objects.all()
         context["shellies"] = shellies
-
-        return self.render_to_response(context)
-
-
-class OpenhabThingsView(TemplateView):
-
-    template_name = 'things_overview.html'
-
-    def get(self, request, refresh=None, *args, **kwargs):
-        """
-        """
-
-        context = {}
-
-        if refresh == 'Y':
-            get_openhab_things()
-            join_shelly_things()
-
-        things = OpenHabThings.objects.all()
-        context["things"] = things
 
         return self.render_to_response(context)
 

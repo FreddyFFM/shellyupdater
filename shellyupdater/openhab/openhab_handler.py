@@ -1,7 +1,7 @@
 import requests
 
 from django.conf import settings
-from .models import OpenHabThings, Shellies
+from updates.models import Shellies, OpenHabThings
 
 
 def put_thing(uid=None, label="", location=""):

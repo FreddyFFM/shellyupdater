@@ -48,7 +48,9 @@
                 <div class="list-group list-group-flush">
                     <a href="{% url 'home' %}" class="list-group-item list-group-item-action bg-light">Home</a>
                     <a href="{% url 'shellies' %}" class="list-group-item list-group-item-action bg-light">Shellies</a>
-                    <a href="{% url 'things' %}" class="list-group-item list-group-item-action bg-light">Things</a>
+                    {% if OH_ACTIVE %}
+                        <a href="{% url 'things' %}" class="list-group-item list-group-item-action bg-light">Openhab</a>
+                    {% endif %}
                       <!--
 
                     <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>

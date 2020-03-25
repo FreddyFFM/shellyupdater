@@ -62,36 +62,31 @@
 
         <div class="row">
             <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-header">
-                        Shellies / Things ohne Zuordnung
+                {% if OH_ACTIVE %}
+                    <div class="card">
+                        <div class="card-header">
+                            Shellies / Things ohne Zuordnung
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Shellies<br />
+                                    {% for shelly in shellies_wo_things %}
+                                        <strong>{{ shelly.shelly_id }}</strong><br />
+                                    {% endfor %}
+                                    <br />
+                                </li>
+                                <li>Things<br />
+                                    {% for thing in things_wo_shelly %}
+                                        <strong>{{ thing.thing_uid }}</strong> ({{ thing.thing_label }})<br />
+                                    {% endfor %}
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <ul>
-                            <li>Shellies<br />
-                                {% for shelly in shellies_wo_things %}
-                                    <strong>{{ shelly.shelly_id }}</strong><br />
-                                {% endfor %}
-                                <br />
-                            </li>
-                            <li>Things<br />
-                                {% for thing in things_wo_shelly %}
-                                    <strong>{{ thing.thing_uid }}</strong> ({{ thing.thing_label }})<br />
-                                {% endfor %}
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                {% endif %}
             </div>
             <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-header">
-                        tbd
-                    </div>
-                    <div class="card-body">
 
-                    </div>
-                </div>
             </div>
         </div>
 
