@@ -7,3 +7,4 @@
 venv*
 settings*
 db.sqlite*
+*.env
