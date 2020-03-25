@@ -1,13 +1,14 @@
 version: '2'
 
-services:
-  updater:
+shellyupdater:
     image: shellyupdater
     ports:
       - "8000:8000"
     volumes:
       - /etc/localtime:/etc/localtime:ro
+      - /home/pi/docker/shellyupdater/data:/home/updater/data
     environment:
-      - DJANGO_SETTINGS_MODULE=shellyupdater.settings_DOCKER
+      - DJANGO_SETTINGS_MODULE=shellyupdater.settings
       - RUN_ENV=DOCKER
     build: .
+    restart: always
