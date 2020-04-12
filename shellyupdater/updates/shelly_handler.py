@@ -5,7 +5,7 @@ from .models import Shellies
 from django.utils import timezone
 from datetime import datetime
 from shellyupdater.mqtt import get_mqttclient
-from .shelly_http_handler import get_shelly_info
+from .shelly_http_handler import get_shelly_info, perform_update_http
 from django.conf import settings
 
 
@@ -32,9 +32,10 @@ def put_shelly(id=None, name="", mac="", ip="", fw_update=False, fw_ver=""):
         shelly.shelly_new_fw = fw_update
 
         if fw_update and shelly.shelly_do_update:
-            perform_update(shelly=shelly)
+            if not perform_update_http(shelly=shelly):
+                perform_update_mqtt(shelly=shelly)
 
-        elif not fw_update and shelly.shelly_do_update:
+        elif not fw_update and shelly.shelly_do_update and fw_ver.split("@")[0] != shelly.shelly_fw_version_old:
             shelly.shelly_do_update = False
             current_dt = datetime.now().strftime("%d.%m.%Y %H:%M")
             shelly.last_status = current_dt + ": Update OK"
@@ -82,14 +83,15 @@ def update_shelly_online(topic=None, status=None):
             shelly.shelly_online = shelly_online
             if shelly_online:
                 shelly.shelly_last_online = timezone.now()
-                if shelly.shelly_do_update:
-                    perform_update(shelly=shelly)
                 get_shelly_info(shelly_id=shelly_id)
+                if shelly.shelly_do_update:
+                    if not perform_update_http(shelly=shelly):
+                        perform_update_mqtt(shelly=shelly)
 
             shelly.save()
 
 
-def perform_update(shelly=None):
+def perform_update_mqtt(shelly=None):
     """
     Perform a firmware update on Shelly
     :param shelly:
@@ -101,14 +103,14 @@ def perform_update(shelly=None):
         i = 1
         while True:
             result = mqttclient.publish(topic=settings.MQTT_SHELLY_BASE_TOPIC + shelly.shelly_id + "/command",
-                                        payload="update_fw", qos=1, retain=True)
+                                        payload="update_fw", retain=True)
 
             if result.rc == 0:
-                shelly.last_status = current_dt + ": Update Initialized"
+                shelly.last_status = current_dt + ": Update via MQTT Initialized"
                 break
 
             if i > 3:
-                shelly.last_status = current_dt + ": Update failed (" + str(result.rc) + ")"
+                shelly.last_status = current_dt + ": Update via MQTT failed (" + str(result.rc) + ")"
                 break
 
             i = i + 1

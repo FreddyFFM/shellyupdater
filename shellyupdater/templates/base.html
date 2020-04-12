@@ -51,13 +51,6 @@
                     {% if OH_ACTIVE %}
                         <a href="{% url 'things' %}" class="list-group-item list-group-item-action bg-light">Openhab</a>
                     {% endif %}
-                      <!--
-
-                    <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
-                    <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
-                    <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
-                    <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
-                    -->
                 </div>
             </div>
         <!-- /#sidebar-wrapper -->
@@ -72,8 +65,16 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'shellies' %}" class="list-group-item list-group-item-action bg-light">Shellies</a>
+                        </li>
+                        <li class="nav-item">
+                            {% if OH_ACTIVE %}
+                                <a class="nav-link" href="{% url 'things' %}" class="list-group-item list-group-item-action bg-light">Obenhab</a>
+                            {% endif %}
                         </li>
                     </ul>
                 </div>

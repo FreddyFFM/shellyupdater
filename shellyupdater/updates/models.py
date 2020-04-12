@@ -20,6 +20,8 @@ class Shellies (models.Model):
     shelly_ip = models.CharField(max_length=50, blank=True, null=True)
     shelly_new_fw = models.BooleanField(default=False)
     shelly_fw_version = models.CharField(max_length=100, blank=True, null=True)
+    shelly_fw_version_old = models.CharField(max_length=100, blank=True, null=True)
+    shelly_fw_version_new = models.CharField(max_length=100, blank=True, null=True)
     shelly_type = models.CharField(max_length=100, blank=True, null=True)
     shelly_online = models.BooleanField(default=False)
     shelly_last_online = models.DateTimeField(1)

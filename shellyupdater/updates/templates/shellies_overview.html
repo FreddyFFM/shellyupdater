@@ -37,7 +37,7 @@
                     data-show-columns="true"
                     data-toggle="table"
                     data-show-multi-sort="true"
-                    data-sort-priority='[{"sortName": "shelly_new_fw","sortOrder":"desc"},{"sortName":"last_change","sortOrder":"desc"}]'
+                    data-sort-priority='[{"sortName": "do_update","sortOrder":"desc"},{"sortName":"last_change","sortOrder":"desc"}]'
                     id="table">
                 <thead>
                     <tr>
@@ -55,12 +55,12 @@
                     {% for shelly in shellies %}
                         <tr>
                             <td class="text-center" style="column-width:10px;">
-                                {% if shelly.shelly_new_fw %}
+                                {% if shelly.shelly_do_update %}
+                                    <i class="fas fa-times"></i>
+                                {% elif shelly.shelly_new_fw %}
                                     <label>
                                         <input type="checkbox" id="{{ shelly.shelly_id }}" name="{{ shelly.shelly_id }}" style="margin:0px;padding:0px;" />
                                     </label>
-                                {% elif shelly.shelly_do_update %}
-                                    <i class="fas fa-times"></i>
                                 {% endif %}
 
                             </td>
@@ -101,8 +101,8 @@
                                 {% endif %}
                             </td>
                             <td class="text-center">
-                                <div data-toggle="tooltip" title="FW: {{ shelly.shelly_fw_version }}">
-                                {% if shelly.shelly_new_fw %}
+                                <div data-toggle="tooltip" title="NEW FW: {{ shelly.shelly_fw_version_new }}">
+                                {% if shelly.shelly_new_fw or shelly.shelly_do_update %}
                                     <i class="fas fa-times-circle text-danger"></i>
                                 {% else %}
                                     <i class="fas fa-check text-success"></i>

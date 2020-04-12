@@ -21,6 +21,9 @@ class HomeView(TemplateView):
                                                          )
         context["shelly_info"] = shelly_info
 
+        shelly_min_battery = Shellies.objects.filter(shelly2infos__shelly_battery_percent__isnull=False).order_by('shelly2infos__shelly_battery_percent')[0]
+        context["shelly_min_battery"] = shelly_min_battery
+
         shelly_oldest = Shellies.objects.earliest('last_change_ts')
         context["shelly_oldest"] = shelly_oldest
 

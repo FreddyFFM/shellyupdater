@@ -24,18 +24,24 @@
                                 <tr>
                                     <td class="">Anzahl Shellies</td>
                                     <td class="text-right">{{ shelly_info.shelly_id__count }}</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td class="">Battery MIN</td>
-                                    <td class="text-right">{{ shelly_info.shelly2infos__shelly_battery_percent__min }} %</td>
+                                    <td class="text-right">
+                                        {{ shelly_info.shelly2infos__shelly_battery_percent__min }} %
+                                    </td>
+                                    <td>({{ shelly_min_battery.shelly_id }})</td>
                                 </tr>
                                 <tr>
                                     <td class="">Battery MAX</td>
                                     <td class="text-right">{{ shelly_info.shelly2infos__shelly_battery_percent__max }} %</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td class="">Battery AVG</td>
                                     <td class="text-right">{{ shelly_info.shelly2infos__shelly_battery_percent__avg|floatformat:2 }} %</td>
+                                    <td></td>
                                 </tr>
                             </tbody>
                         </table>
