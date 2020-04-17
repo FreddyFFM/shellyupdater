@@ -43,7 +43,7 @@ class ShellyWizardSelectView(TemplateView):
         wizardPost = request.session.get('wizardPost')
 
         wizard_form = SettingsWizardForm(wizardPost)
-        if "shelly_types" in wizardPost:
+        if wizardPost and "shelly_types" in wizardPost:
             shelly_type = wizardPost['shelly_types']
             shelly_choices = []
             shellies = Shellies.objects.filter(shelly_type=shelly_type).order_by('shelly_type',
