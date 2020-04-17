@@ -47,10 +47,6 @@
                 <div class="sidebar-heading">Shelly Updater</div>
                 <div class="list-group list-group-flush">
                     <a href="{% url 'home' %}" class="list-group-item list-group-item-action bg-light">Home</a>
-                    <a href="{% url 'shellies' %}" class="list-group-item list-group-item-action bg-light">Shellies</a>
-                    {% if OH_ACTIVE %}
-                        <a href="{% url 'things' %}" class="list-group-item list-group-item-action bg-light">Openhab</a>
-                    {% endif %}
                 </div>
             </div>
         <!-- /#sidebar-wrapper -->
@@ -70,6 +66,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'shellies' %}" class="list-group-item list-group-item-action bg-light">Shellies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'settings' %}" class="list-group-item list-group-item-action bg-light">Shelly-Settings</a>
                         </li>
                         <li class="nav-item">
                             {% if OH_ACTIVE %}

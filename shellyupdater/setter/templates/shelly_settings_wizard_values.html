@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block title %}Shelly Settings Wizard 2/2{% endblock title %}
+
+{% block extrahead %}
+{% endblock %}
+
+{% block content %}
+
+    {# Hero Section #}  
+
+    {# Main Section #}
+
+    <div class="container-fluid">
+        <h4>Your selection</h4>
+        <div class="row">
+            <div class="col-sm-4">Shelly Type</div>
+            <div class="col-sm-8">{{ shelly_type }}</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">Shelly selected</div>
+            <div class="col-sm-8">
+                {% for shelly in shellies %}
+                    {{ shelly }}<br />
+                {% endfor %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">Settings Area</div>
+            <div class="col-sm-8">{{ settings_type }}</div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+        <form action="." method="POST" name="settings_form">
+            {% csrf_token %}
+
+            <table
+                class="table"
+                data-show-columns="true"
+                data-toggle="table"
+                id="table">
+                <thead>
+                    <tr>
+                        <th>Setting</th>
+                        <th>New value</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                {% for field in settings_form.visible_fields %}
+                    <tr>
+                        <td>
+                            <label for="{{ field.name }}" class="control-label">{{ field.label }}</label>
+                        </td>
+                        <td>
+                             {{ field }}
+                        </td>
+                        <td>
+                             {{ field.help_text }}
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+            <div style="margin-top:20px;" class="text-right">
+                <a href="{% url 'settings' %}" class="btn btn-secondary">Back...</a>
+                <button type="submit" class="btn btn-primary">Preview</button>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container-fluid" style="margin-top:20px;">
+    </div>
+
+{% endblock content %}
+
+{% block footer_javascript_page %}
+
+{% endblock footer_javascript_page %}
+
+

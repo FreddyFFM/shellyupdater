@@ -21,6 +21,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 import home.urls
 import updates.urls
+import setter.urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -29,6 +30,7 @@ urlpatterns = [
 urlpatterns += [
     path('', include(home.urls)),
     path('shellies/', include(updates.urls)),
+    path('settings/', include(setter.urls)),
 ]
 
 if 'openhab' in settings.INSTALLED_APPS:

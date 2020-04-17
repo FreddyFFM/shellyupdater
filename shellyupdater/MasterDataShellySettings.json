@@ -1,0 +1,600 @@
+[
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 1,
+  "fields": {
+    "md_settings_type": "General",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "reset",
+    "md_settings_parameter_type": "bool",
+    "md_settings_description": "Will perform a factory reset of the device",
+    "md_settings_single": false,
+    "md_settings_reference_path": null
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 2,
+  "fields": {
+    "md_settings_type": "General",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "mqtt_enable",
+    "md_settings_parameter_type": "bool",
+    "md_settings_description": "Enable connecting to a MQTT broker",
+    "md_settings_single": false,
+    "md_settings_reference_path": "mqtt.enable"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 3,
+  "fields": {
+    "md_settings_type": "General",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "mqtt_server",
+    "md_settings_parameter_type": "string",
+    "md_settings_description": "MQTT broker IP address and port, ex.\u00a010.0.0.1:1883",
+    "md_settings_single": false,
+    "md_settings_reference_path": "mqtt.server"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 4,
+  "fields": {
+    "md_settings_type": "General",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "mqtt_clean_session",
+    "md_settings_parameter_type": "bool",
+    "md_settings_description": "MQTT clean session flag",
+    "md_settings_single": false,
+    "md_settings_reference_path": "mqtt.clean_session"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 5,
+  "fields": {
+    "md_settings_type": "General",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "mqtt_retain",
+    "md_settings_parameter_type": "bool",
+    "md_settings_description": "MQTT retain flag",
+    "md_settings_single": false,
+    "md_settings_reference_path": "mqtt.retain"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 6,
+  "fields": {
+    "md_settings_type": "General",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "mqtt_user",
+    "md_settings_parameter_type": "string",
+    "md_settings_description": "MQTT username, leave empty to disable authentication",
+    "md_settings_single": false,
+    "md_settings_reference_path": "mqtt.user"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 7,
+  "fields": {
+    "md_settings_type": "General",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "mqtt_pass",
+    "md_settings_parameter_type": "string",
+    "md_settings_description": "MQTT password",
+    "md_settings_single": false,
+    "md_settings_reference_path": null
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 8,
+  "fields": {
+    "md_settings_type": "General",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "mqtt_id",
+    "md_settings_parameter_type": "string",
+    "md_settings_description": "MQTT ID -- by default this has the form\u00a0<shellymodel>-<deviceid>\u00a0e.g.\u00a0shelly1-B929CC",
+    "md_settings_single": true,
+    "md_settings_reference_path": "mqtt.id"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 9,
+  "fields": {
+    "md_settings_type": "General",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "mqtt_reconnect_timeout_max",
+    "md_settings_parameter_type": "number",
+    "md_settings_description": "Maximum interval for reconnect attempts",
+    "md_settings_single": false,
+    "md_settings_reference_path": "mqtt.reconnect_timeout_max"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 10,
+  "fields": {
+    "md_settings_type": "General",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "mqtt_reconnect_timeout_min",
+    "md_settings_parameter_type": "number",
+    "md_settings_description": "Minimum interval for reconnect attempts",
+    "md_settings_single": false,
+    "md_settings_reference_path": "mqtt.reconnect_timeout_min"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 11,
+  "fields": {
+    "md_settings_type": "General",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "mqtt_keep_alive",
+    "md_settings_parameter_type": "number",
+    "md_settings_description": "MQTT keep alive period in seconds",
+    "md_settings_single": false,
+    "md_settings_reference_path": "mqtt.keep_alive"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 12,
+  "fields": {
+    "md_settings_type": "General",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "mqtt_update_period",
+    "md_settings_parameter_type": "number",
+    "md_settings_description": "Periodic update in seconds, 0 to disable",
+    "md_settings_single": false,
+    "md_settings_reference_path": "mqtt.update_period"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 13,
+  "fields": {
+    "md_settings_type": "General",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "mqtt_max_qos",
+    "md_settings_parameter_type": "number",
+    "md_settings_description": "Max value of QOS for MQTT packets",
+    "md_settings_single": false,
+    "md_settings_reference_path": "mqtt.max_qos"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 14,
+  "fields": {
+    "md_settings_type": "General",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "coiot_update_period",
+    "md_settings_parameter_type": "number",
+    "md_settings_description": "Update period of CoIoT messages\u00a0[15-65535s]",
+    "md_settings_single": false,
+    "md_settings_reference_path": "coiot.update_period"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 15,
+  "fields": {
+    "md_settings_type": "General",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "sntp_server",
+    "md_settings_parameter_type": "string",
+    "md_settings_description": "Time server host to be used instead of the default\u00a0time.google.com. An empty value disables timekeeping and requires reboot to apply.",
+    "md_settings_single": false,
+    "md_settings_reference_path": "sntp.server"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 16,
+  "fields": {
+    "md_settings_type": "General",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "name",
+    "md_settings_parameter_type": "string",
+    "md_settings_description": "User-configurable device name",
+    "md_settings_single": true,
+    "md_settings_reference_path": "name"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 17,
+  "fields": {
+    "md_settings_type": "General",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "discoverable",
+    "md_settings_parameter_type": "bool",
+    "md_settings_description": "Set whether device should be discoverable (i.e. visible)",
+    "md_settings_single": false,
+    "md_settings_reference_path": "discoverable"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 18,
+  "fields": {
+    "md_settings_type": "General",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "timezone",
+    "md_settings_parameter_type": "string",
+    "md_settings_description": "Timezone identifier",
+    "md_settings_single": false,
+    "md_settings_reference_path": "timezone"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 19,
+  "fields": {
+    "md_settings_type": "General",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "lat",
+    "md_settings_parameter_type": "number",
+    "md_settings_description": "Degrees latitude in decimal format, South is negative",
+    "md_settings_single": false,
+    "md_settings_reference_path": "lat"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 20,
+  "fields": {
+    "md_settings_type": "General",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "lng",
+    "md_settings_parameter_type": "number",
+    "md_settings_description": "Degrees longitude in decimal format, between -180\u00b0 and 180\u00b0",
+    "md_settings_single": false,
+    "md_settings_reference_path": "lng"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 21,
+  "fields": {
+    "md_settings_type": "General",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "tzautodetect",
+    "md_settings_parameter_type": "bool",
+    "md_settings_description": "Set this to\u00a0false\u00a0if you want to set custom geolocation (lat\u00a0and\u00a0lng) or custom\u00a0timezone.",
+    "md_settings_single": false,
+    "md_settings_reference_path": "tzautodetect"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 22,
+  "fields": {
+    "md_settings_type": "General",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "tz_utc_offset",
+    "md_settings_parameter_type": "number",
+    "md_settings_description": "UTC offset",
+    "md_settings_single": false,
+    "md_settings_reference_path": "tz_utc_offset"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 23,
+  "fields": {
+    "md_settings_type": "General",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "tz_dst",
+    "md_settings_parameter_type": "number",
+    "md_settings_description": "Daylight saving time\u00a0[0/1]",
+    "md_settings_single": false,
+    "md_settings_reference_path": "tz_dst"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 24,
+  "fields": {
+    "md_settings_type": "General",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "tz_dst_auto",
+    "md_settings_parameter_type": "number",
+    "md_settings_description": "Auto update daylight saving time\u00a0[0/1]",
+    "md_settings_single": false,
+    "md_settings_reference_path": "tz_dst_auto"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 25,
+  "fields": {
+    "md_settings_type": "WifiAP",
+    "md_settings_path": "/settings/ap",
+    "md_settings_parameter": "enabled",
+    "md_settings_parameter_type": "bool",
+    "md_settings_description": "Set to\u00a01\u00a0to return the device to AP WiFi mode",
+    "md_settings_single": false,
+    "md_settings_reference_path": "wifi_ap.enabled"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 26,
+  "fields": {
+    "md_settings_type": "WifiAP",
+    "md_settings_path": "/settings/ap",
+    "md_settings_parameter": "key",
+    "md_settings_parameter_type": "string",
+    "md_settings_description": "WiFi password required for association with the device's AP",
+    "md_settings_single": false,
+    "md_settings_reference_path": "wifi_ap.key"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 27,
+  "fields": {
+    "md_settings_type": "Wifi1",
+    "md_settings_path": "/settings/sta",
+    "md_settings_parameter": "enabled",
+    "md_settings_parameter_type": "bool",
+    "md_settings_description": "Set to\u00a01\u00a0to make STA the current WiFi mode",
+    "md_settings_single": false,
+    "md_settings_reference_path": "wifi_sta.enabled"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 28,
+  "fields": {
+    "md_settings_type": "Wifi1",
+    "md_settings_path": "/settings/sta",
+    "md_settings_parameter": "ssid",
+    "md_settings_parameter_type": "string",
+    "md_settings_description": "The WiFi SSID to associate with",
+    "md_settings_single": false,
+    "md_settings_reference_path": "wifi_sta.ssid"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 29,
+  "fields": {
+    "md_settings_type": "Wifi1",
+    "md_settings_path": "/settings/sta",
+    "md_settings_parameter": "key",
+    "md_settings_parameter_type": "string",
+    "md_settings_description": "The password required for associating to the given WiFi SSID",
+    "md_settings_single": false,
+    "md_settings_reference_path": ""
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 30,
+  "fields": {
+    "md_settings_type": "Wifi1",
+    "md_settings_path": "/settings/sta",
+    "md_settings_parameter": "ipv4_method",
+    "md_settings_parameter_type": "string",
+    "md_settings_description": "dhcp\u00a0or\u00a0static",
+    "md_settings_single": true,
+    "md_settings_reference_path": "wifi_sta.ipv4_method"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 31,
+  "fields": {
+    "md_settings_type": "Wifi1",
+    "md_settings_path": "/settings/sta",
+    "md_settings_parameter": "ip",
+    "md_settings_parameter_type": "string",
+    "md_settings_description": "Local IP address if\u00a0ipv4_method\u00a0is\u00a0static",
+    "md_settings_single": true,
+    "md_settings_reference_path": "wifi_sta.ip"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 32,
+  "fields": {
+    "md_settings_type": "Wifi1",
+    "md_settings_path": "/settings/sta",
+    "md_settings_parameter": "netmask",
+    "md_settings_parameter_type": "string",
+    "md_settings_description": "Mask if\u00a0ipv4_method\u00a0is\u00a0static",
+    "md_settings_single": false,
+    "md_settings_reference_path": "wifi_sta.mask"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 33,
+  "fields": {
+    "md_settings_type": "Wifi1",
+    "md_settings_path": "/settings/sta",
+    "md_settings_parameter": "gateway",
+    "md_settings_parameter_type": "string",
+    "md_settings_description": "Local gateway IP address if\u00a0ipv4_method\u00a0is\u00a0static",
+    "md_settings_single": false,
+    "md_settings_reference_path": "wifi_sta.gw"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 34,
+  "fields": {
+    "md_settings_type": "Wifi1",
+    "md_settings_path": "/settings/sta",
+    "md_settings_parameter": "dns",
+    "md_settings_parameter_type": "string",
+    "md_settings_description": "DNS address if\u00a0ipv4_method\u00a0is\u00a0static",
+    "md_settings_single": false,
+    "md_settings_reference_path": "wifi_sta.dns"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 35,
+  "fields": {
+    "md_settings_type": "Wifi2",
+    "md_settings_path": "/settings/sta1",
+    "md_settings_parameter": "enabled",
+    "md_settings_parameter_type": "bool",
+    "md_settings_description": "Set to\u00a01\u00a0to make STA the current WiFi mode",
+    "md_settings_single": false,
+    "md_settings_reference_path": "wifi_sta1.enabled"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 36,
+  "fields": {
+    "md_settings_type": "Wifi2",
+    "md_settings_path": "/settings/sta1",
+    "md_settings_parameter": "ssid",
+    "md_settings_parameter_type": "string",
+    "md_settings_description": "The WiFi SSID to associate with",
+    "md_settings_single": false,
+    "md_settings_reference_path": "wifi_sta1.ssid"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 37,
+  "fields": {
+    "md_settings_type": "Wifi2",
+    "md_settings_path": "/settings/sta1",
+    "md_settings_parameter": "key",
+    "md_settings_parameter_type": "string",
+    "md_settings_description": "The password required for associating to the given WiFi SSID",
+    "md_settings_single": false,
+    "md_settings_reference_path": null
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 38,
+  "fields": {
+    "md_settings_type": "Wifi2",
+    "md_settings_path": "/settings/sta1",
+    "md_settings_parameter": "ipv4_method",
+    "md_settings_parameter_type": "string",
+    "md_settings_description": "dhcp\u00a0or\u00a0static",
+    "md_settings_single": true,
+    "md_settings_reference_path": "wifi_sta1.ipv4_method"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 39,
+  "fields": {
+    "md_settings_type": "Wifi2",
+    "md_settings_path": "/settings/sta1",
+    "md_settings_parameter": "ip",
+    "md_settings_parameter_type": "string",
+    "md_settings_description": "Local IP address if\u00a0ipv4_method\u00a0is\u00a0static",
+    "md_settings_single": true,
+    "md_settings_reference_path": "wifi_sta1.ip"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 40,
+  "fields": {
+    "md_settings_type": "Wifi2",
+    "md_settings_path": "/settings/sta1",
+    "md_settings_parameter": "netmask",
+    "md_settings_parameter_type": "string",
+    "md_settings_description": "Mask if\u00a0ipv4_method\u00a0is\u00a0static",
+    "md_settings_single": false,
+    "md_settings_reference_path": "wifi_sta1.mask"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 41,
+  "fields": {
+    "md_settings_type": "Wifi2",
+    "md_settings_path": "/settings/sta1",
+    "md_settings_parameter": "gateway",
+    "md_settings_parameter_type": "string",
+    "md_settings_description": "Local gateway IP address if\u00a0ipv4_method\u00a0is\u00a0static",
+    "md_settings_single": false,
+    "md_settings_reference_path": "wifi_sta1.gw"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 42,
+  "fields": {
+    "md_settings_type": "Wifi2",
+    "md_settings_path": "/settings/sta1",
+    "md_settings_parameter": "dns",
+    "md_settings_parameter_type": "string",
+    "md_settings_description": "DNS address if\u00a0ipv4_method\u00a0is\u00a0static",
+    "md_settings_single": false,
+    "md_settings_reference_path": "wifi_sta1.dns"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 43,
+  "fields": {
+    "md_settings_type": "Login",
+    "md_settings_path": "/settings/login",
+    "md_settings_parameter": "enabled",
+    "md_settings_parameter_type": "bool",
+    "md_settings_description": "Whether to require HTTP authentication",
+    "md_settings_single": false,
+    "md_settings_reference_path": "login.enabled"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 44,
+  "fields": {
+    "md_settings_type": "Login",
+    "md_settings_path": "/settings/login",
+    "md_settings_parameter": "unprotected",
+    "md_settings_parameter_type": "bool",
+    "md_settings_description": "Whether the user is aware of the risks",
+    "md_settings_single": false,
+    "md_settings_reference_path": "login.unprotected"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 45,
+  "fields": {
+    "md_settings_type": "Login",
+    "md_settings_path": "/settings/login",
+    "md_settings_parameter": "username",
+    "md_settings_parameter_type": "string",
+    "md_settings_description": "Length between 1 and 50",
+    "md_settings_single": false,
+    "md_settings_reference_path": "login.username"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 46,
+  "fields": {
+    "md_settings_type": "Login",
+    "md_settings_path": "/settings/login",
+    "md_settings_parameter": "password",
+    "md_settings_parameter_type": "string",
+    "md_settings_description": "Length between 1 and 50",
+    "md_settings_single": false,
+    "md_settings_reference_path": "login.password"
+  }
+}
+]

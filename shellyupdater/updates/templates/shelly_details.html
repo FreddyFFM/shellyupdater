@@ -42,10 +42,12 @@
 
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Status</a>
-            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Settings</a>
+                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Status</a>
+                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Settings</a>
+                <a class="nav-item nav-link" id="nav-updates-tab" data-toggle="tab" href="#nav-updates" role="tab" aria-controls="nav-updates" aria-selected="false">Settings-Updates</a>
             </div>
         </nav>
+
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" style="padding:20px;">
 
@@ -77,8 +79,42 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
+            <div class="tab-pane fade" id="nav-updates" role="tabpanel" aria-labelledby="nav-updates-tab" style="padding:20px;">
+                <table
+                    class="table"
+                    data-show-columns="true"
+                    data-toggle="table"
+                    id="table">
+                    <thead>
+                        <tr>
+                            <th>Shelly</th>
+                            <th>Update JSON</th>
+                            <th>Update Initialized</th>
+                            <th>Last Status TS</th>
+                            <th>Last Status Code</th>
+                            <th>Last Status</th>
+                        </tr>
+                    </thead>
 
+                    <tbody>
+                    {% for update in update_status %}
+                        <tr {% if update.last_status_code != "200" %}class="table-warning"{% endif %}>
+                            <td>{{ update.shelly_id.shelly_id }}</td>
+                            <td>
+                                {{ update.shelly_settings_path }}<br /><br />
+                                {{ update.shelly_settings_json }}
+                            </td>
+                            <td>{{ update.insert_ts|date:'d.m.Y H:i' }}</td>
+                            <td>{{ update.last_status_ts|date:'d.m.Y H:i' }}</td>
+                            <td>{{ update.last_status_code }}</td>
+                            <td>{{ update.last_status }}</td>
+                        </tr>
+
+                    {% endfor %}
+                    </tbody>
+                </table>
             </div>
         </div>
 

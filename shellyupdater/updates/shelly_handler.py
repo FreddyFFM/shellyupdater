@@ -5,7 +5,7 @@ from .models import Shellies
 from django.utils import timezone
 from datetime import datetime
 from shellyupdater.mqtt import get_mqttclient
-from .shelly_http_handler import get_shelly_info, perform_update_http
+from .shelly_http_handler import get_shelly_info, perform_update_http, apply_shelly_settings
 from django.conf import settings
 
 
@@ -87,6 +87,8 @@ def update_shelly_online(topic=None, status=None):
                 if shelly.shelly_do_update:
                     if not perform_update_http(shelly=shelly):
                         perform_update_mqtt(shelly=shelly)
+                else:
+                    apply_shelly_settings(shelly=shelly)
 
             shelly.save()
 

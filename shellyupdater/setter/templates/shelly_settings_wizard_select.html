@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block title %}Shelly Settings Wizard 1/2{% endblock title %}
+
+{% block extrahead %}
+{% endblock %}
+
+{% block content %}
+
+    {# Hero Section #}  
+
+    {# Main Section #}
+
+    <div class="container-fluid" style="margin-top:20px;">
+        <h4>Please choose Shelly-Type, one or more Shelly and a Settings-Area to change</h4>
+    </div>
+
+    <div class="container-fluid">
+
+        <form action="." method="POST" name="wizardform">
+            {% csrf_token %}
+
+            {% for field in wizard_form.visible_fields %}
+
+                <div class="form-group {% if field.errors %}has-error{% endif %}" id="formid_{{ field.name }}">
+                    <label for="{{ field.name }}" class="control-label col-6">{{ field.label }}</label>
+                    <div class="col-6 text-left form-row">
+                        {{ field }}
+                    </div>
+                </div>
+
+            {% endfor %}
+
+            <div style="margin-top:20px;" class="text-right">
+                <button type="submit" class="btn btn-primary">Weiter...</button>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container-fluid" style="margin-top:20px;">
+    </div>
+
+{% endblock content %}
+
+{% block footer_javascript_page %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        function populate_shellies(shelly_type) {
+            $.ajax({
+                url: 'shellies/' + shelly_type + '/',
+                dataType: 'json',
+                type: 'GET',
+                success: function(json) {
+                    $('#id_shelly').find('option').remove();
+                    $.each(json, function(i, obj){
+                        $('#id_shelly').append($('<option>').text(obj.shelly_id).attr('value', obj.id));
+                    });
+                },
+                error: function(x, e) {
+                }
+            });
+        }
+
+        $('#id_shelly_types').on('change', function(e) {
+            if (this.value != "") {
+                populate_shellies(this.value);
+            }
+        });
+    });
+</script>
+{% endblock footer_javascript_page %}
+
+

@@ -3,7 +3,7 @@ import json
 
 from datetime import datetime
 from django.conf import settings
-from .models import Shellies, ShellySettings
+from .models import Shellies, ShellySettings, ShellySettingUpdates
 
 
 def get_shelly_info(shelly_id=None):
@@ -101,7 +101,6 @@ def perform_update_http(shelly=None):
                                 auth=(settings.HTTP_SHELLY_USERNAME, settings.HTTP_SHELLY_PASSWORD), timeout=10)
         if response.status_code == 200:
             status_json = json.loads(response.text.strip())
-            print(status_json)
             if "status" in status_json and status_json["status"].upper() == "UPDATING":
                 shelly.last_status = current_dt + ": Update via HTTP running"
             else:
@@ -118,3 +117,45 @@ def perform_update_http(shelly=None):
         print("HTTP LOG - " + str(datetime.now()) + ": HTTP Exception - " + str(e))
 
     return False
+
+
+def apply_shelly_settings(shelly=None):
+    """
+
+    :param shelly:
+    :return:
+    """
+
+    if shelly:
+        shellyupdates = ShellySettingUpdates.objects.filter(shelly_id=shelly, shelly_settings_applied=False,
+                                                            shelly_settings_delete=False).select_related('shelly_id')
+
+    for update in shellyupdates:
+        try:
+            headers = {'content-type': 'application/x-www-form-urlencoded'}
+            response = requests.post("http://" + update.shelly_id.shelly_ip + update.shelly_settings_path,
+                                    auth=(settings.HTTP_SHELLY_USERNAME, settings.HTTP_SHELLY_PASSWORD),
+                                    timeout=3,
+                                    data=json.loads(update.shelly_settings_json),
+                                    headers=headers)
+            if response.status_code == 200:
+                update.last_status_ts = datetime.now()
+                update.last_status = json.loads(response.text.strip())
+                update.last_status_code = response.status_code
+                update.shelly_settings_applied = True
+                print(
+                    "HTTP LOG - " + str(datetime.now()) + ": HTTP OK - " + response.url + " - " + str(
+                        response.status_code))
+            else:
+                update.last_status_ts = datetime.now()
+                update.last_status = json.loads(response.text.strip())
+                update.last_status_code = response.status_code
+                print("HTTP LOG - " + str(datetime.now()) + ": HTTP Error - " + response.url + " - " + str(
+                    response.status_code))
+        except requests.exceptions.RequestException as e:
+            update.last_status_ts = datetime.now()
+            update.last_status = "HTTP Exception " + str(e)
+            update.last_status_code = "FAILED"
+            print("HTTP LOG - " + str(datetime.now()) + ": HTTP Exception - " + str(e))
+
+        update.save()

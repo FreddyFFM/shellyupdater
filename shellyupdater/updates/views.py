@@ -5,7 +5,7 @@ import time
 
 from django.views.generic import TemplateView
 from django.conf import settings
-from updates.models import Shellies, ShellySettings
+from updates.models import Shellies, ShellySettings, ShellySettingUpdates
 from datetime import datetime
 from shellyupdater.mqtt import get_mqttclient
 from .shelly_handler import perform_update_mqtt
@@ -101,6 +101,9 @@ class ShellyDetailView(TemplateView):
             else:
                 return HttpResponse(content="Error getting details", status=400)
 
+        update_status = ShellySettingUpdates.objects.filter(shelly_id__shelly_id=shelly_id)
+
         context["details"] = details
+        context["update_status"] = update_status
 
         return self.render_to_response(context)

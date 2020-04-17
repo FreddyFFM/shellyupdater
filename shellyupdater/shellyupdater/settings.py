@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'home',
     'updates',
     'openhab',
+    'setter',
 ]
 
 MIDDLEWARE = [

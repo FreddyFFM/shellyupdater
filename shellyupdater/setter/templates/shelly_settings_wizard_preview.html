@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% block title %}Shelly Settings Wizard 2/2{% endblock title %}
+
+{% block extrahead %}
+{% endblock %}
+
+{% block content %}
+
+    {# Hero Section #}  
+
+    {# Main Section #}
+
+    <div class="container-fluid">
+        <h4>Your selection</h4>
+        <div class="row">
+            <div class="col-sm-4">Shelly Type</div>
+            <div class="col-sm-8">{{ shelly_type }}</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">Shelly selected</div>
+            <div class="col-sm-8">
+                {% for shelly in shellies %}
+                    {{ shelly }}<br />
+                {% endfor %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">Settings Area</div>
+            <div class="col-sm-8">{{ settings_type }}</div>
+        </div>
+    </div>
+
+    {% if not success %}
+
+        <div class="container-fluid">
+
+            <div class="alert alert-warning">
+                The following settings will be applied to the above listed Shellies.
+                If a Shelly is offline, they will be applied as soon as the Shelly becomes online (like DW or Flood).
+                <strong>Please verfiy the settings before submitting, they can not be undone directly and may cause unusability
+                    of the Shellies!</strong>
+            </div>
+
+            <form action="." method="POST" name="preview_form">
+                {% csrf_token %}
+
+                {% for field in preview_form.visible_fields %}
+
+                    <div class="form-group {% if field.errors %}has-error{% endif %}" id="formid_{{ field.name }}">
+                        <label for="{{ field.name }}" class="control-label col-6">{{ field.label }}</label>
+                        <div class="col-6 text-left form-row">
+                            {{ field }}
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+                {% for field in preview_form.hidden_fields %}
+
+                    {{ field }}
+
+                {% endfor %}
+
+                <div style="margin-top:20px;" class="text-right">
+                    <a href="{% url 'settings/set' %}" class="btn btn-secondary">Back...</a>
+                    <button type="submit" class="btn btn-primary">Apply settings</button>
+                </div>
+            </form>
+
+
+        </div>
+
+    {% else %}
+
+        <div class="container-fluid">
+
+
+            <table
+                class="table"
+                data-show-columns="true"
+                data-toggle="table"
+                id="table">
+                <thead>
+                    <tr>
+                        <th>Shelly</th>
+                        <th>Update JSON</th>
+                        <th>Update Initialized</th>
+                        <th>Last Status TS</th>
+                        <th>Last Status Code</th>
+                        <th>Last Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                {% for update in update_status %}
+                    <tr {% if update.last_status_code != "200" %}class="table-warning"{% endif %}>
+                        <td>{{ update.shelly_id.shelly_id }}</td>
+                        <td>
+                            {{ update.shelly_settings_path }}<br /><br />
+                            {{ update.shelly_settings_json }}
+                        </td>
+                        <td>{{ update.insert_ts|date:'d.m.Y H:i' }}</td>
+                        <td>{{ update.last_status_ts|date:'d.m.Y H:i' }}</td>
+                        <td>{{ update.last_status_code }}</td>
+                        <td>{{ update.last_status }}</td>
+                    </tr>
+
+                {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+
+    {% endif %}
+
+    <div class="container-fluid" style="margin-top:20px;">
+    </div>
+
+{% endblock content %}
+
+{% block footer_javascript_page %}
+
+{% endblock footer_javascript_page %}
+
+

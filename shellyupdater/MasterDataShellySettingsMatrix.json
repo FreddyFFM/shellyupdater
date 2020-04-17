@@ -1,0 +1,6258 @@
+[
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 1,
+  "fields": {
+    "md_setmatrix_setting": 1,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 2,
+  "fields": {
+    "md_setmatrix_setting": 2,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 3,
+  "fields": {
+    "md_setmatrix_setting": 3,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 4,
+  "fields": {
+    "md_setmatrix_setting": 4,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 5,
+  "fields": {
+    "md_setmatrix_setting": 5,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 6,
+  "fields": {
+    "md_setmatrix_setting": 6,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 7,
+  "fields": {
+    "md_setmatrix_setting": 7,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 8,
+  "fields": {
+    "md_setmatrix_setting": 8,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 9,
+  "fields": {
+    "md_setmatrix_setting": 9,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 10,
+  "fields": {
+    "md_setmatrix_setting": 10,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 11,
+  "fields": {
+    "md_setmatrix_setting": 11,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 12,
+  "fields": {
+    "md_setmatrix_setting": 12,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 13,
+  "fields": {
+    "md_setmatrix_setting": 13,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 14,
+  "fields": {
+    "md_setmatrix_setting": 14,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 15,
+  "fields": {
+    "md_setmatrix_setting": 15,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 16,
+  "fields": {
+    "md_setmatrix_setting": 16,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 17,
+  "fields": {
+    "md_setmatrix_setting": 17,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 18,
+  "fields": {
+    "md_setmatrix_setting": 18,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 19,
+  "fields": {
+    "md_setmatrix_setting": 19,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 20,
+  "fields": {
+    "md_setmatrix_setting": 20,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 21,
+  "fields": {
+    "md_setmatrix_setting": 21,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 22,
+  "fields": {
+    "md_setmatrix_setting": 22,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 23,
+  "fields": {
+    "md_setmatrix_setting": 23,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 24,
+  "fields": {
+    "md_setmatrix_setting": 24,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 25,
+  "fields": {
+    "md_setmatrix_setting": 25,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 26,
+  "fields": {
+    "md_setmatrix_setting": 26,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 27,
+  "fields": {
+    "md_setmatrix_setting": 27,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 28,
+  "fields": {
+    "md_setmatrix_setting": 28,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 29,
+  "fields": {
+    "md_setmatrix_setting": 29,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 30,
+  "fields": {
+    "md_setmatrix_setting": 30,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 31,
+  "fields": {
+    "md_setmatrix_setting": 31,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 32,
+  "fields": {
+    "md_setmatrix_setting": 32,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 33,
+  "fields": {
+    "md_setmatrix_setting": 33,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 34,
+  "fields": {
+    "md_setmatrix_setting": 34,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 35,
+  "fields": {
+    "md_setmatrix_setting": 35,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 36,
+  "fields": {
+    "md_setmatrix_setting": 36,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 37,
+  "fields": {
+    "md_setmatrix_setting": 37,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 38,
+  "fields": {
+    "md_setmatrix_setting": 38,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 39,
+  "fields": {
+    "md_setmatrix_setting": 39,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 40,
+  "fields": {
+    "md_setmatrix_setting": 40,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 41,
+  "fields": {
+    "md_setmatrix_setting": 41,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 42,
+  "fields": {
+    "md_setmatrix_setting": 42,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 43,
+  "fields": {
+    "md_setmatrix_setting": 43,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 44,
+  "fields": {
+    "md_setmatrix_setting": 44,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 45,
+  "fields": {
+    "md_setmatrix_setting": 45,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 46,
+  "fields": {
+    "md_setmatrix_setting": 46,
+    "md_setmatrix_shellytype": "SHELLY1"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 47,
+  "fields": {
+    "md_setmatrix_setting": 1,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 48,
+  "fields": {
+    "md_setmatrix_setting": 2,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 49,
+  "fields": {
+    "md_setmatrix_setting": 3,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 50,
+  "fields": {
+    "md_setmatrix_setting": 4,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 51,
+  "fields": {
+    "md_setmatrix_setting": 5,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 52,
+  "fields": {
+    "md_setmatrix_setting": 6,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 53,
+  "fields": {
+    "md_setmatrix_setting": 7,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 54,
+  "fields": {
+    "md_setmatrix_setting": 8,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 55,
+  "fields": {
+    "md_setmatrix_setting": 9,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 56,
+  "fields": {
+    "md_setmatrix_setting": 10,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 57,
+  "fields": {
+    "md_setmatrix_setting": 11,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 58,
+  "fields": {
+    "md_setmatrix_setting": 12,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 59,
+  "fields": {
+    "md_setmatrix_setting": 13,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 60,
+  "fields": {
+    "md_setmatrix_setting": 14,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 61,
+  "fields": {
+    "md_setmatrix_setting": 15,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 62,
+  "fields": {
+    "md_setmatrix_setting": 16,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 63,
+  "fields": {
+    "md_setmatrix_setting": 17,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 64,
+  "fields": {
+    "md_setmatrix_setting": 18,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 65,
+  "fields": {
+    "md_setmatrix_setting": 19,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 66,
+  "fields": {
+    "md_setmatrix_setting": 20,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 67,
+  "fields": {
+    "md_setmatrix_setting": 21,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 68,
+  "fields": {
+    "md_setmatrix_setting": 22,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 69,
+  "fields": {
+    "md_setmatrix_setting": 23,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 70,
+  "fields": {
+    "md_setmatrix_setting": 24,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 71,
+  "fields": {
+    "md_setmatrix_setting": 25,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 72,
+  "fields": {
+    "md_setmatrix_setting": 26,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 73,
+  "fields": {
+    "md_setmatrix_setting": 27,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 74,
+  "fields": {
+    "md_setmatrix_setting": 28,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 75,
+  "fields": {
+    "md_setmatrix_setting": 29,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 76,
+  "fields": {
+    "md_setmatrix_setting": 30,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 77,
+  "fields": {
+    "md_setmatrix_setting": 31,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 78,
+  "fields": {
+    "md_setmatrix_setting": 32,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 79,
+  "fields": {
+    "md_setmatrix_setting": 33,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 80,
+  "fields": {
+    "md_setmatrix_setting": 34,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 81,
+  "fields": {
+    "md_setmatrix_setting": 35,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 82,
+  "fields": {
+    "md_setmatrix_setting": 36,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 83,
+  "fields": {
+    "md_setmatrix_setting": 37,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 84,
+  "fields": {
+    "md_setmatrix_setting": 38,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 85,
+  "fields": {
+    "md_setmatrix_setting": 39,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 86,
+  "fields": {
+    "md_setmatrix_setting": 40,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 87,
+  "fields": {
+    "md_setmatrix_setting": 41,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 88,
+  "fields": {
+    "md_setmatrix_setting": 42,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 89,
+  "fields": {
+    "md_setmatrix_setting": 43,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 90,
+  "fields": {
+    "md_setmatrix_setting": 44,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 91,
+  "fields": {
+    "md_setmatrix_setting": 45,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 92,
+  "fields": {
+    "md_setmatrix_setting": 46,
+    "md_setmatrix_shellytype": "SHELLY1PM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 93,
+  "fields": {
+    "md_setmatrix_setting": 1,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 94,
+  "fields": {
+    "md_setmatrix_setting": 2,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 95,
+  "fields": {
+    "md_setmatrix_setting": 3,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 96,
+  "fields": {
+    "md_setmatrix_setting": 4,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 97,
+  "fields": {
+    "md_setmatrix_setting": 5,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 98,
+  "fields": {
+    "md_setmatrix_setting": 6,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 99,
+  "fields": {
+    "md_setmatrix_setting": 7,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 100,
+  "fields": {
+    "md_setmatrix_setting": 8,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 101,
+  "fields": {
+    "md_setmatrix_setting": 9,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 102,
+  "fields": {
+    "md_setmatrix_setting": 10,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 103,
+  "fields": {
+    "md_setmatrix_setting": 11,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 104,
+  "fields": {
+    "md_setmatrix_setting": 12,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 105,
+  "fields": {
+    "md_setmatrix_setting": 13,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 106,
+  "fields": {
+    "md_setmatrix_setting": 14,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 107,
+  "fields": {
+    "md_setmatrix_setting": 15,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 108,
+  "fields": {
+    "md_setmatrix_setting": 16,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 109,
+  "fields": {
+    "md_setmatrix_setting": 17,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 110,
+  "fields": {
+    "md_setmatrix_setting": 18,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 111,
+  "fields": {
+    "md_setmatrix_setting": 19,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 112,
+  "fields": {
+    "md_setmatrix_setting": 20,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 113,
+  "fields": {
+    "md_setmatrix_setting": 21,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 114,
+  "fields": {
+    "md_setmatrix_setting": 22,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 115,
+  "fields": {
+    "md_setmatrix_setting": 23,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 116,
+  "fields": {
+    "md_setmatrix_setting": 24,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 117,
+  "fields": {
+    "md_setmatrix_setting": 25,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 118,
+  "fields": {
+    "md_setmatrix_setting": 26,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 119,
+  "fields": {
+    "md_setmatrix_setting": 27,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 120,
+  "fields": {
+    "md_setmatrix_setting": 28,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 121,
+  "fields": {
+    "md_setmatrix_setting": 29,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 122,
+  "fields": {
+    "md_setmatrix_setting": 30,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 123,
+  "fields": {
+    "md_setmatrix_setting": 31,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 124,
+  "fields": {
+    "md_setmatrix_setting": 32,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 125,
+  "fields": {
+    "md_setmatrix_setting": 33,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 126,
+  "fields": {
+    "md_setmatrix_setting": 34,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 127,
+  "fields": {
+    "md_setmatrix_setting": 35,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 128,
+  "fields": {
+    "md_setmatrix_setting": 36,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 129,
+  "fields": {
+    "md_setmatrix_setting": 37,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 130,
+  "fields": {
+    "md_setmatrix_setting": 38,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 131,
+  "fields": {
+    "md_setmatrix_setting": 39,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 132,
+  "fields": {
+    "md_setmatrix_setting": 40,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 133,
+  "fields": {
+    "md_setmatrix_setting": 41,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 134,
+  "fields": {
+    "md_setmatrix_setting": 42,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 135,
+  "fields": {
+    "md_setmatrix_setting": 43,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 136,
+  "fields": {
+    "md_setmatrix_setting": 44,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 137,
+  "fields": {
+    "md_setmatrix_setting": 45,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 138,
+  "fields": {
+    "md_setmatrix_setting": 46,
+    "md_setmatrix_shellytype": "SHELLYSWITCH"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 139,
+  "fields": {
+    "md_setmatrix_setting": 1,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 140,
+  "fields": {
+    "md_setmatrix_setting": 2,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 141,
+  "fields": {
+    "md_setmatrix_setting": 3,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 142,
+  "fields": {
+    "md_setmatrix_setting": 4,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 143,
+  "fields": {
+    "md_setmatrix_setting": 5,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 144,
+  "fields": {
+    "md_setmatrix_setting": 6,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 145,
+  "fields": {
+    "md_setmatrix_setting": 7,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 146,
+  "fields": {
+    "md_setmatrix_setting": 8,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 147,
+  "fields": {
+    "md_setmatrix_setting": 9,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 148,
+  "fields": {
+    "md_setmatrix_setting": 10,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 149,
+  "fields": {
+    "md_setmatrix_setting": 11,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 150,
+  "fields": {
+    "md_setmatrix_setting": 12,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 151,
+  "fields": {
+    "md_setmatrix_setting": 13,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 152,
+  "fields": {
+    "md_setmatrix_setting": 14,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 153,
+  "fields": {
+    "md_setmatrix_setting": 15,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 154,
+  "fields": {
+    "md_setmatrix_setting": 16,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 155,
+  "fields": {
+    "md_setmatrix_setting": 17,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 156,
+  "fields": {
+    "md_setmatrix_setting": 18,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 157,
+  "fields": {
+    "md_setmatrix_setting": 19,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 158,
+  "fields": {
+    "md_setmatrix_setting": 20,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 159,
+  "fields": {
+    "md_setmatrix_setting": 21,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 160,
+  "fields": {
+    "md_setmatrix_setting": 22,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 161,
+  "fields": {
+    "md_setmatrix_setting": 23,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 162,
+  "fields": {
+    "md_setmatrix_setting": 24,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 163,
+  "fields": {
+    "md_setmatrix_setting": 25,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 164,
+  "fields": {
+    "md_setmatrix_setting": 26,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 165,
+  "fields": {
+    "md_setmatrix_setting": 27,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 166,
+  "fields": {
+    "md_setmatrix_setting": 28,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 167,
+  "fields": {
+    "md_setmatrix_setting": 29,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 168,
+  "fields": {
+    "md_setmatrix_setting": 30,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 169,
+  "fields": {
+    "md_setmatrix_setting": 31,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 170,
+  "fields": {
+    "md_setmatrix_setting": 32,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 171,
+  "fields": {
+    "md_setmatrix_setting": 33,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 172,
+  "fields": {
+    "md_setmatrix_setting": 34,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 173,
+  "fields": {
+    "md_setmatrix_setting": 35,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 174,
+  "fields": {
+    "md_setmatrix_setting": 36,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 175,
+  "fields": {
+    "md_setmatrix_setting": 37,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 176,
+  "fields": {
+    "md_setmatrix_setting": 38,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 177,
+  "fields": {
+    "md_setmatrix_setting": 39,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 178,
+  "fields": {
+    "md_setmatrix_setting": 40,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 179,
+  "fields": {
+    "md_setmatrix_setting": 41,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 180,
+  "fields": {
+    "md_setmatrix_setting": 42,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 181,
+  "fields": {
+    "md_setmatrix_setting": 43,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 182,
+  "fields": {
+    "md_setmatrix_setting": 44,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 183,
+  "fields": {
+    "md_setmatrix_setting": 45,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 184,
+  "fields": {
+    "md_setmatrix_setting": 46,
+    "md_setmatrix_shellytype": "SHELLYSWITCH25"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 185,
+  "fields": {
+    "md_setmatrix_setting": 1,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 186,
+  "fields": {
+    "md_setmatrix_setting": 2,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 187,
+  "fields": {
+    "md_setmatrix_setting": 3,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 188,
+  "fields": {
+    "md_setmatrix_setting": 4,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 189,
+  "fields": {
+    "md_setmatrix_setting": 5,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 190,
+  "fields": {
+    "md_setmatrix_setting": 6,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 191,
+  "fields": {
+    "md_setmatrix_setting": 7,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 192,
+  "fields": {
+    "md_setmatrix_setting": 8,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 193,
+  "fields": {
+    "md_setmatrix_setting": 9,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 194,
+  "fields": {
+    "md_setmatrix_setting": 10,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 195,
+  "fields": {
+    "md_setmatrix_setting": 11,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 196,
+  "fields": {
+    "md_setmatrix_setting": 12,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 197,
+  "fields": {
+    "md_setmatrix_setting": 13,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 198,
+  "fields": {
+    "md_setmatrix_setting": 14,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 199,
+  "fields": {
+    "md_setmatrix_setting": 15,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 200,
+  "fields": {
+    "md_setmatrix_setting": 16,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 201,
+  "fields": {
+    "md_setmatrix_setting": 17,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 202,
+  "fields": {
+    "md_setmatrix_setting": 18,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 203,
+  "fields": {
+    "md_setmatrix_setting": 19,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 204,
+  "fields": {
+    "md_setmatrix_setting": 20,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 205,
+  "fields": {
+    "md_setmatrix_setting": 21,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 206,
+  "fields": {
+    "md_setmatrix_setting": 22,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 207,
+  "fields": {
+    "md_setmatrix_setting": 23,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 208,
+  "fields": {
+    "md_setmatrix_setting": 24,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 209,
+  "fields": {
+    "md_setmatrix_setting": 25,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 210,
+  "fields": {
+    "md_setmatrix_setting": 26,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 211,
+  "fields": {
+    "md_setmatrix_setting": 27,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 212,
+  "fields": {
+    "md_setmatrix_setting": 28,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 213,
+  "fields": {
+    "md_setmatrix_setting": 29,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 214,
+  "fields": {
+    "md_setmatrix_setting": 30,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 215,
+  "fields": {
+    "md_setmatrix_setting": 31,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 216,
+  "fields": {
+    "md_setmatrix_setting": 32,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 217,
+  "fields": {
+    "md_setmatrix_setting": 33,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 218,
+  "fields": {
+    "md_setmatrix_setting": 34,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 219,
+  "fields": {
+    "md_setmatrix_setting": 35,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 220,
+  "fields": {
+    "md_setmatrix_setting": 36,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 221,
+  "fields": {
+    "md_setmatrix_setting": 37,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 222,
+  "fields": {
+    "md_setmatrix_setting": 38,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 223,
+  "fields": {
+    "md_setmatrix_setting": 39,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 224,
+  "fields": {
+    "md_setmatrix_setting": 40,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 225,
+  "fields": {
+    "md_setmatrix_setting": 41,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 226,
+  "fields": {
+    "md_setmatrix_setting": 42,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 227,
+  "fields": {
+    "md_setmatrix_setting": 43,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 228,
+  "fields": {
+    "md_setmatrix_setting": 44,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 229,
+  "fields": {
+    "md_setmatrix_setting": 45,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 230,
+  "fields": {
+    "md_setmatrix_setting": 46,
+    "md_setmatrix_shellytype": "SHELLY4PRO"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 231,
+  "fields": {
+    "md_setmatrix_setting": 1,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 232,
+  "fields": {
+    "md_setmatrix_setting": 2,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 233,
+  "fields": {
+    "md_setmatrix_setting": 3,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 234,
+  "fields": {
+    "md_setmatrix_setting": 4,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 235,
+  "fields": {
+    "md_setmatrix_setting": 5,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 236,
+  "fields": {
+    "md_setmatrix_setting": 6,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 237,
+  "fields": {
+    "md_setmatrix_setting": 7,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 238,
+  "fields": {
+    "md_setmatrix_setting": 8,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 239,
+  "fields": {
+    "md_setmatrix_setting": 9,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 240,
+  "fields": {
+    "md_setmatrix_setting": 10,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 241,
+  "fields": {
+    "md_setmatrix_setting": 11,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 242,
+  "fields": {
+    "md_setmatrix_setting": 12,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 243,
+  "fields": {
+    "md_setmatrix_setting": 13,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 244,
+  "fields": {
+    "md_setmatrix_setting": 14,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 245,
+  "fields": {
+    "md_setmatrix_setting": 15,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 246,
+  "fields": {
+    "md_setmatrix_setting": 16,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 247,
+  "fields": {
+    "md_setmatrix_setting": 17,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 248,
+  "fields": {
+    "md_setmatrix_setting": 18,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 249,
+  "fields": {
+    "md_setmatrix_setting": 19,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 250,
+  "fields": {
+    "md_setmatrix_setting": 20,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 251,
+  "fields": {
+    "md_setmatrix_setting": 21,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 252,
+  "fields": {
+    "md_setmatrix_setting": 22,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 253,
+  "fields": {
+    "md_setmatrix_setting": 23,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 254,
+  "fields": {
+    "md_setmatrix_setting": 24,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 255,
+  "fields": {
+    "md_setmatrix_setting": 25,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 256,
+  "fields": {
+    "md_setmatrix_setting": 26,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 257,
+  "fields": {
+    "md_setmatrix_setting": 27,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 258,
+  "fields": {
+    "md_setmatrix_setting": 28,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 259,
+  "fields": {
+    "md_setmatrix_setting": 29,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 260,
+  "fields": {
+    "md_setmatrix_setting": 30,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 261,
+  "fields": {
+    "md_setmatrix_setting": 31,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 262,
+  "fields": {
+    "md_setmatrix_setting": 32,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 263,
+  "fields": {
+    "md_setmatrix_setting": 33,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 264,
+  "fields": {
+    "md_setmatrix_setting": 34,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 265,
+  "fields": {
+    "md_setmatrix_setting": 35,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 266,
+  "fields": {
+    "md_setmatrix_setting": 36,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 267,
+  "fields": {
+    "md_setmatrix_setting": 37,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 268,
+  "fields": {
+    "md_setmatrix_setting": 38,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 269,
+  "fields": {
+    "md_setmatrix_setting": 39,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 270,
+  "fields": {
+    "md_setmatrix_setting": 40,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 271,
+  "fields": {
+    "md_setmatrix_setting": 41,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 272,
+  "fields": {
+    "md_setmatrix_setting": 42,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 273,
+  "fields": {
+    "md_setmatrix_setting": 43,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 274,
+  "fields": {
+    "md_setmatrix_setting": 44,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 275,
+  "fields": {
+    "md_setmatrix_setting": 45,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 276,
+  "fields": {
+    "md_setmatrix_setting": 46,
+    "md_setmatrix_shellytype": "SHELLYPLUG"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 277,
+  "fields": {
+    "md_setmatrix_setting": 1,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 278,
+  "fields": {
+    "md_setmatrix_setting": 2,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 279,
+  "fields": {
+    "md_setmatrix_setting": 3,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 280,
+  "fields": {
+    "md_setmatrix_setting": 4,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 281,
+  "fields": {
+    "md_setmatrix_setting": 5,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 282,
+  "fields": {
+    "md_setmatrix_setting": 6,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 283,
+  "fields": {
+    "md_setmatrix_setting": 7,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 284,
+  "fields": {
+    "md_setmatrix_setting": 8,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 285,
+  "fields": {
+    "md_setmatrix_setting": 9,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 286,
+  "fields": {
+    "md_setmatrix_setting": 10,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 287,
+  "fields": {
+    "md_setmatrix_setting": 11,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 288,
+  "fields": {
+    "md_setmatrix_setting": 12,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 289,
+  "fields": {
+    "md_setmatrix_setting": 13,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 290,
+  "fields": {
+    "md_setmatrix_setting": 14,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 291,
+  "fields": {
+    "md_setmatrix_setting": 15,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 292,
+  "fields": {
+    "md_setmatrix_setting": 16,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 293,
+  "fields": {
+    "md_setmatrix_setting": 17,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 294,
+  "fields": {
+    "md_setmatrix_setting": 18,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 295,
+  "fields": {
+    "md_setmatrix_setting": 19,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 296,
+  "fields": {
+    "md_setmatrix_setting": 20,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 297,
+  "fields": {
+    "md_setmatrix_setting": 21,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 298,
+  "fields": {
+    "md_setmatrix_setting": 22,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 299,
+  "fields": {
+    "md_setmatrix_setting": 23,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 300,
+  "fields": {
+    "md_setmatrix_setting": 24,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 301,
+  "fields": {
+    "md_setmatrix_setting": 25,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 302,
+  "fields": {
+    "md_setmatrix_setting": 26,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 303,
+  "fields": {
+    "md_setmatrix_setting": 27,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 304,
+  "fields": {
+    "md_setmatrix_setting": 28,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 305,
+  "fields": {
+    "md_setmatrix_setting": 29,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 306,
+  "fields": {
+    "md_setmatrix_setting": 30,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 307,
+  "fields": {
+    "md_setmatrix_setting": 31,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 308,
+  "fields": {
+    "md_setmatrix_setting": 32,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 309,
+  "fields": {
+    "md_setmatrix_setting": 33,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 310,
+  "fields": {
+    "md_setmatrix_setting": 34,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 311,
+  "fields": {
+    "md_setmatrix_setting": 35,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 312,
+  "fields": {
+    "md_setmatrix_setting": 36,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 313,
+  "fields": {
+    "md_setmatrix_setting": 37,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 314,
+  "fields": {
+    "md_setmatrix_setting": 38,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 315,
+  "fields": {
+    "md_setmatrix_setting": 39,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 316,
+  "fields": {
+    "md_setmatrix_setting": 40,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 317,
+  "fields": {
+    "md_setmatrix_setting": 41,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 318,
+  "fields": {
+    "md_setmatrix_setting": 42,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 319,
+  "fields": {
+    "md_setmatrix_setting": 43,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 320,
+  "fields": {
+    "md_setmatrix_setting": 44,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 321,
+  "fields": {
+    "md_setmatrix_setting": 45,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 322,
+  "fields": {
+    "md_setmatrix_setting": 46,
+    "md_setmatrix_shellytype": "SHELLYPLUG-S"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 323,
+  "fields": {
+    "md_setmatrix_setting": 1,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 324,
+  "fields": {
+    "md_setmatrix_setting": 2,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 325,
+  "fields": {
+    "md_setmatrix_setting": 3,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 326,
+  "fields": {
+    "md_setmatrix_setting": 4,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 327,
+  "fields": {
+    "md_setmatrix_setting": 5,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 328,
+  "fields": {
+    "md_setmatrix_setting": 6,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 329,
+  "fields": {
+    "md_setmatrix_setting": 7,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 330,
+  "fields": {
+    "md_setmatrix_setting": 8,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 331,
+  "fields": {
+    "md_setmatrix_setting": 9,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 332,
+  "fields": {
+    "md_setmatrix_setting": 10,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 333,
+  "fields": {
+    "md_setmatrix_setting": 11,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 334,
+  "fields": {
+    "md_setmatrix_setting": 12,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 335,
+  "fields": {
+    "md_setmatrix_setting": 13,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 336,
+  "fields": {
+    "md_setmatrix_setting": 14,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 337,
+  "fields": {
+    "md_setmatrix_setting": 15,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 338,
+  "fields": {
+    "md_setmatrix_setting": 16,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 339,
+  "fields": {
+    "md_setmatrix_setting": 17,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 340,
+  "fields": {
+    "md_setmatrix_setting": 18,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 341,
+  "fields": {
+    "md_setmatrix_setting": 19,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 342,
+  "fields": {
+    "md_setmatrix_setting": 20,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 343,
+  "fields": {
+    "md_setmatrix_setting": 21,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 344,
+  "fields": {
+    "md_setmatrix_setting": 22,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 345,
+  "fields": {
+    "md_setmatrix_setting": 23,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 346,
+  "fields": {
+    "md_setmatrix_setting": 24,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 347,
+  "fields": {
+    "md_setmatrix_setting": 25,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 348,
+  "fields": {
+    "md_setmatrix_setting": 26,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 349,
+  "fields": {
+    "md_setmatrix_setting": 27,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 350,
+  "fields": {
+    "md_setmatrix_setting": 28,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 351,
+  "fields": {
+    "md_setmatrix_setting": 29,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 352,
+  "fields": {
+    "md_setmatrix_setting": 30,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 353,
+  "fields": {
+    "md_setmatrix_setting": 31,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 354,
+  "fields": {
+    "md_setmatrix_setting": 32,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 355,
+  "fields": {
+    "md_setmatrix_setting": 33,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 356,
+  "fields": {
+    "md_setmatrix_setting": 34,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 357,
+  "fields": {
+    "md_setmatrix_setting": 35,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 358,
+  "fields": {
+    "md_setmatrix_setting": 36,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 359,
+  "fields": {
+    "md_setmatrix_setting": 37,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 360,
+  "fields": {
+    "md_setmatrix_setting": 38,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 361,
+  "fields": {
+    "md_setmatrix_setting": 39,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 362,
+  "fields": {
+    "md_setmatrix_setting": 40,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 363,
+  "fields": {
+    "md_setmatrix_setting": 41,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 364,
+  "fields": {
+    "md_setmatrix_setting": 42,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 365,
+  "fields": {
+    "md_setmatrix_setting": 43,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 366,
+  "fields": {
+    "md_setmatrix_setting": 44,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 367,
+  "fields": {
+    "md_setmatrix_setting": 45,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 368,
+  "fields": {
+    "md_setmatrix_setting": 46,
+    "md_setmatrix_shellytype": "SHELLYVINTAGE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 369,
+  "fields": {
+    "md_setmatrix_setting": 1,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 370,
+  "fields": {
+    "md_setmatrix_setting": 2,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 371,
+  "fields": {
+    "md_setmatrix_setting": 3,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 372,
+  "fields": {
+    "md_setmatrix_setting": 4,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 373,
+  "fields": {
+    "md_setmatrix_setting": 5,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 374,
+  "fields": {
+    "md_setmatrix_setting": 6,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 375,
+  "fields": {
+    "md_setmatrix_setting": 7,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 376,
+  "fields": {
+    "md_setmatrix_setting": 8,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 377,
+  "fields": {
+    "md_setmatrix_setting": 9,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 378,
+  "fields": {
+    "md_setmatrix_setting": 10,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 379,
+  "fields": {
+    "md_setmatrix_setting": 11,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 380,
+  "fields": {
+    "md_setmatrix_setting": 12,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 381,
+  "fields": {
+    "md_setmatrix_setting": 13,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 382,
+  "fields": {
+    "md_setmatrix_setting": 14,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 383,
+  "fields": {
+    "md_setmatrix_setting": 15,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 384,
+  "fields": {
+    "md_setmatrix_setting": 16,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 385,
+  "fields": {
+    "md_setmatrix_setting": 17,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 386,
+  "fields": {
+    "md_setmatrix_setting": 18,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 387,
+  "fields": {
+    "md_setmatrix_setting": 19,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 388,
+  "fields": {
+    "md_setmatrix_setting": 20,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 389,
+  "fields": {
+    "md_setmatrix_setting": 21,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 390,
+  "fields": {
+    "md_setmatrix_setting": 22,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 391,
+  "fields": {
+    "md_setmatrix_setting": 23,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 392,
+  "fields": {
+    "md_setmatrix_setting": 24,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 393,
+  "fields": {
+    "md_setmatrix_setting": 25,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 394,
+  "fields": {
+    "md_setmatrix_setting": 26,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 395,
+  "fields": {
+    "md_setmatrix_setting": 27,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 396,
+  "fields": {
+    "md_setmatrix_setting": 28,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 397,
+  "fields": {
+    "md_setmatrix_setting": 29,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 398,
+  "fields": {
+    "md_setmatrix_setting": 30,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 399,
+  "fields": {
+    "md_setmatrix_setting": 31,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 400,
+  "fields": {
+    "md_setmatrix_setting": 32,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 401,
+  "fields": {
+    "md_setmatrix_setting": 33,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 402,
+  "fields": {
+    "md_setmatrix_setting": 34,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 403,
+  "fields": {
+    "md_setmatrix_setting": 35,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 404,
+  "fields": {
+    "md_setmatrix_setting": 36,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 405,
+  "fields": {
+    "md_setmatrix_setting": 37,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 406,
+  "fields": {
+    "md_setmatrix_setting": 38,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 407,
+  "fields": {
+    "md_setmatrix_setting": 39,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 408,
+  "fields": {
+    "md_setmatrix_setting": 40,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 409,
+  "fields": {
+    "md_setmatrix_setting": 41,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 410,
+  "fields": {
+    "md_setmatrix_setting": 42,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 411,
+  "fields": {
+    "md_setmatrix_setting": 43,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 412,
+  "fields": {
+    "md_setmatrix_setting": 44,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 413,
+  "fields": {
+    "md_setmatrix_setting": 45,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 414,
+  "fields": {
+    "md_setmatrix_setting": 46,
+    "md_setmatrix_shellytype": "SHELLYRGBW2"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 415,
+  "fields": {
+    "md_setmatrix_setting": 1,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 416,
+  "fields": {
+    "md_setmatrix_setting": 2,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 417,
+  "fields": {
+    "md_setmatrix_setting": 3,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 418,
+  "fields": {
+    "md_setmatrix_setting": 4,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 419,
+  "fields": {
+    "md_setmatrix_setting": 5,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 420,
+  "fields": {
+    "md_setmatrix_setting": 6,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 421,
+  "fields": {
+    "md_setmatrix_setting": 7,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 422,
+  "fields": {
+    "md_setmatrix_setting": 8,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 423,
+  "fields": {
+    "md_setmatrix_setting": 9,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 424,
+  "fields": {
+    "md_setmatrix_setting": 10,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 425,
+  "fields": {
+    "md_setmatrix_setting": 11,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 426,
+  "fields": {
+    "md_setmatrix_setting": 12,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 427,
+  "fields": {
+    "md_setmatrix_setting": 13,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 428,
+  "fields": {
+    "md_setmatrix_setting": 14,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 429,
+  "fields": {
+    "md_setmatrix_setting": 15,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 430,
+  "fields": {
+    "md_setmatrix_setting": 16,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 431,
+  "fields": {
+    "md_setmatrix_setting": 17,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 432,
+  "fields": {
+    "md_setmatrix_setting": 18,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 433,
+  "fields": {
+    "md_setmatrix_setting": 19,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 434,
+  "fields": {
+    "md_setmatrix_setting": 20,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 435,
+  "fields": {
+    "md_setmatrix_setting": 21,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 436,
+  "fields": {
+    "md_setmatrix_setting": 22,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 437,
+  "fields": {
+    "md_setmatrix_setting": 23,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 438,
+  "fields": {
+    "md_setmatrix_setting": 24,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 439,
+  "fields": {
+    "md_setmatrix_setting": 25,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 440,
+  "fields": {
+    "md_setmatrix_setting": 26,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 441,
+  "fields": {
+    "md_setmatrix_setting": 27,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 442,
+  "fields": {
+    "md_setmatrix_setting": 28,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 443,
+  "fields": {
+    "md_setmatrix_setting": 29,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 444,
+  "fields": {
+    "md_setmatrix_setting": 30,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 445,
+  "fields": {
+    "md_setmatrix_setting": 31,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 446,
+  "fields": {
+    "md_setmatrix_setting": 32,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 447,
+  "fields": {
+    "md_setmatrix_setting": 33,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 448,
+  "fields": {
+    "md_setmatrix_setting": 34,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 449,
+  "fields": {
+    "md_setmatrix_setting": 35,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 450,
+  "fields": {
+    "md_setmatrix_setting": 36,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 451,
+  "fields": {
+    "md_setmatrix_setting": 37,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 452,
+  "fields": {
+    "md_setmatrix_setting": 38,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 453,
+  "fields": {
+    "md_setmatrix_setting": 39,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 454,
+  "fields": {
+    "md_setmatrix_setting": 40,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 455,
+  "fields": {
+    "md_setmatrix_setting": 41,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 456,
+  "fields": {
+    "md_setmatrix_setting": 42,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 457,
+  "fields": {
+    "md_setmatrix_setting": 43,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 458,
+  "fields": {
+    "md_setmatrix_setting": 44,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 459,
+  "fields": {
+    "md_setmatrix_setting": 45,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 460,
+  "fields": {
+    "md_setmatrix_setting": 46,
+    "md_setmatrix_shellytype": "SHELLYDIMMER"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 461,
+  "fields": {
+    "md_setmatrix_setting": 1,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 462,
+  "fields": {
+    "md_setmatrix_setting": 2,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 463,
+  "fields": {
+    "md_setmatrix_setting": 3,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 464,
+  "fields": {
+    "md_setmatrix_setting": 4,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 465,
+  "fields": {
+    "md_setmatrix_setting": 5,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 466,
+  "fields": {
+    "md_setmatrix_setting": 6,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 467,
+  "fields": {
+    "md_setmatrix_setting": 7,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 468,
+  "fields": {
+    "md_setmatrix_setting": 8,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 469,
+  "fields": {
+    "md_setmatrix_setting": 9,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 470,
+  "fields": {
+    "md_setmatrix_setting": 10,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 471,
+  "fields": {
+    "md_setmatrix_setting": 11,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 472,
+  "fields": {
+    "md_setmatrix_setting": 12,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 473,
+  "fields": {
+    "md_setmatrix_setting": 13,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 474,
+  "fields": {
+    "md_setmatrix_setting": 14,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 475,
+  "fields": {
+    "md_setmatrix_setting": 15,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 476,
+  "fields": {
+    "md_setmatrix_setting": 16,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 477,
+  "fields": {
+    "md_setmatrix_setting": 17,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 478,
+  "fields": {
+    "md_setmatrix_setting": 18,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 479,
+  "fields": {
+    "md_setmatrix_setting": 19,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 480,
+  "fields": {
+    "md_setmatrix_setting": 20,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 481,
+  "fields": {
+    "md_setmatrix_setting": 21,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 482,
+  "fields": {
+    "md_setmatrix_setting": 22,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 483,
+  "fields": {
+    "md_setmatrix_setting": 23,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 484,
+  "fields": {
+    "md_setmatrix_setting": 24,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 485,
+  "fields": {
+    "md_setmatrix_setting": 25,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 486,
+  "fields": {
+    "md_setmatrix_setting": 26,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 487,
+  "fields": {
+    "md_setmatrix_setting": 27,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 488,
+  "fields": {
+    "md_setmatrix_setting": 28,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 489,
+  "fields": {
+    "md_setmatrix_setting": 29,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 490,
+  "fields": {
+    "md_setmatrix_setting": 30,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 491,
+  "fields": {
+    "md_setmatrix_setting": 31,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 492,
+  "fields": {
+    "md_setmatrix_setting": 32,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 493,
+  "fields": {
+    "md_setmatrix_setting": 33,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 494,
+  "fields": {
+    "md_setmatrix_setting": 34,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 495,
+  "fields": {
+    "md_setmatrix_setting": 35,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 496,
+  "fields": {
+    "md_setmatrix_setting": 36,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 497,
+  "fields": {
+    "md_setmatrix_setting": 37,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 498,
+  "fields": {
+    "md_setmatrix_setting": 38,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 499,
+  "fields": {
+    "md_setmatrix_setting": 39,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 500,
+  "fields": {
+    "md_setmatrix_setting": 40,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 501,
+  "fields": {
+    "md_setmatrix_setting": 41,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 502,
+  "fields": {
+    "md_setmatrix_setting": 42,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 503,
+  "fields": {
+    "md_setmatrix_setting": 43,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 504,
+  "fields": {
+    "md_setmatrix_setting": 44,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 505,
+  "fields": {
+    "md_setmatrix_setting": 45,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 506,
+  "fields": {
+    "md_setmatrix_setting": 46,
+    "md_setmatrix_shellytype": "SHELLYSENSE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 507,
+  "fields": {
+    "md_setmatrix_setting": 1,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 508,
+  "fields": {
+    "md_setmatrix_setting": 2,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 509,
+  "fields": {
+    "md_setmatrix_setting": 3,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 510,
+  "fields": {
+    "md_setmatrix_setting": 4,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 511,
+  "fields": {
+    "md_setmatrix_setting": 5,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 512,
+  "fields": {
+    "md_setmatrix_setting": 6,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 513,
+  "fields": {
+    "md_setmatrix_setting": 7,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 514,
+  "fields": {
+    "md_setmatrix_setting": 8,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 515,
+  "fields": {
+    "md_setmatrix_setting": 9,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 516,
+  "fields": {
+    "md_setmatrix_setting": 10,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 517,
+  "fields": {
+    "md_setmatrix_setting": 11,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 518,
+  "fields": {
+    "md_setmatrix_setting": 12,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 519,
+  "fields": {
+    "md_setmatrix_setting": 13,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 520,
+  "fields": {
+    "md_setmatrix_setting": 14,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 521,
+  "fields": {
+    "md_setmatrix_setting": 15,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 522,
+  "fields": {
+    "md_setmatrix_setting": 16,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 523,
+  "fields": {
+    "md_setmatrix_setting": 17,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 524,
+  "fields": {
+    "md_setmatrix_setting": 18,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 525,
+  "fields": {
+    "md_setmatrix_setting": 19,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 526,
+  "fields": {
+    "md_setmatrix_setting": 20,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 527,
+  "fields": {
+    "md_setmatrix_setting": 21,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 528,
+  "fields": {
+    "md_setmatrix_setting": 22,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 529,
+  "fields": {
+    "md_setmatrix_setting": 23,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 530,
+  "fields": {
+    "md_setmatrix_setting": 24,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 531,
+  "fields": {
+    "md_setmatrix_setting": 25,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 532,
+  "fields": {
+    "md_setmatrix_setting": 26,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 533,
+  "fields": {
+    "md_setmatrix_setting": 27,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 534,
+  "fields": {
+    "md_setmatrix_setting": 28,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 535,
+  "fields": {
+    "md_setmatrix_setting": 29,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 536,
+  "fields": {
+    "md_setmatrix_setting": 30,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 537,
+  "fields": {
+    "md_setmatrix_setting": 31,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 538,
+  "fields": {
+    "md_setmatrix_setting": 32,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 539,
+  "fields": {
+    "md_setmatrix_setting": 33,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 540,
+  "fields": {
+    "md_setmatrix_setting": 34,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 541,
+  "fields": {
+    "md_setmatrix_setting": 35,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 542,
+  "fields": {
+    "md_setmatrix_setting": 36,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 543,
+  "fields": {
+    "md_setmatrix_setting": 37,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 544,
+  "fields": {
+    "md_setmatrix_setting": 38,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 545,
+  "fields": {
+    "md_setmatrix_setting": 39,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 546,
+  "fields": {
+    "md_setmatrix_setting": 40,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 547,
+  "fields": {
+    "md_setmatrix_setting": 41,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 548,
+  "fields": {
+    "md_setmatrix_setting": 42,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 549,
+  "fields": {
+    "md_setmatrix_setting": 43,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 550,
+  "fields": {
+    "md_setmatrix_setting": 44,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 551,
+  "fields": {
+    "md_setmatrix_setting": 45,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 552,
+  "fields": {
+    "md_setmatrix_setting": 46,
+    "md_setmatrix_shellytype": "SHELLYHT"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 553,
+  "fields": {
+    "md_setmatrix_setting": 1,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 554,
+  "fields": {
+    "md_setmatrix_setting": 2,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 555,
+  "fields": {
+    "md_setmatrix_setting": 3,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 556,
+  "fields": {
+    "md_setmatrix_setting": 4,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 557,
+  "fields": {
+    "md_setmatrix_setting": 5,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 558,
+  "fields": {
+    "md_setmatrix_setting": 6,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 559,
+  "fields": {
+    "md_setmatrix_setting": 7,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 560,
+  "fields": {
+    "md_setmatrix_setting": 8,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 561,
+  "fields": {
+    "md_setmatrix_setting": 9,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 562,
+  "fields": {
+    "md_setmatrix_setting": 10,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 563,
+  "fields": {
+    "md_setmatrix_setting": 11,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 564,
+  "fields": {
+    "md_setmatrix_setting": 12,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 565,
+  "fields": {
+    "md_setmatrix_setting": 13,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 566,
+  "fields": {
+    "md_setmatrix_setting": 14,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 567,
+  "fields": {
+    "md_setmatrix_setting": 15,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 568,
+  "fields": {
+    "md_setmatrix_setting": 16,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 569,
+  "fields": {
+    "md_setmatrix_setting": 17,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 570,
+  "fields": {
+    "md_setmatrix_setting": 18,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 571,
+  "fields": {
+    "md_setmatrix_setting": 19,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 572,
+  "fields": {
+    "md_setmatrix_setting": 20,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 573,
+  "fields": {
+    "md_setmatrix_setting": 21,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 574,
+  "fields": {
+    "md_setmatrix_setting": 22,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 575,
+  "fields": {
+    "md_setmatrix_setting": 23,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 576,
+  "fields": {
+    "md_setmatrix_setting": 24,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 577,
+  "fields": {
+    "md_setmatrix_setting": 25,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 578,
+  "fields": {
+    "md_setmatrix_setting": 26,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 579,
+  "fields": {
+    "md_setmatrix_setting": 27,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 580,
+  "fields": {
+    "md_setmatrix_setting": 28,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 581,
+  "fields": {
+    "md_setmatrix_setting": 29,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 582,
+  "fields": {
+    "md_setmatrix_setting": 30,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 583,
+  "fields": {
+    "md_setmatrix_setting": 31,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 584,
+  "fields": {
+    "md_setmatrix_setting": 32,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 585,
+  "fields": {
+    "md_setmatrix_setting": 33,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 586,
+  "fields": {
+    "md_setmatrix_setting": 34,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 587,
+  "fields": {
+    "md_setmatrix_setting": 35,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 588,
+  "fields": {
+    "md_setmatrix_setting": 36,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 589,
+  "fields": {
+    "md_setmatrix_setting": 37,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 590,
+  "fields": {
+    "md_setmatrix_setting": 38,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 591,
+  "fields": {
+    "md_setmatrix_setting": 39,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 592,
+  "fields": {
+    "md_setmatrix_setting": 40,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 593,
+  "fields": {
+    "md_setmatrix_setting": 41,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 594,
+  "fields": {
+    "md_setmatrix_setting": 42,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 595,
+  "fields": {
+    "md_setmatrix_setting": 43,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 596,
+  "fields": {
+    "md_setmatrix_setting": 44,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 597,
+  "fields": {
+    "md_setmatrix_setting": 45,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 598,
+  "fields": {
+    "md_setmatrix_setting": 46,
+    "md_setmatrix_shellytype": "SHELLYSMOKE"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 599,
+  "fields": {
+    "md_setmatrix_setting": 1,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 600,
+  "fields": {
+    "md_setmatrix_setting": 2,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 601,
+  "fields": {
+    "md_setmatrix_setting": 3,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 602,
+  "fields": {
+    "md_setmatrix_setting": 4,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 603,
+  "fields": {
+    "md_setmatrix_setting": 5,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 604,
+  "fields": {
+    "md_setmatrix_setting": 6,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 605,
+  "fields": {
+    "md_setmatrix_setting": 7,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 606,
+  "fields": {
+    "md_setmatrix_setting": 8,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 607,
+  "fields": {
+    "md_setmatrix_setting": 9,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 608,
+  "fields": {
+    "md_setmatrix_setting": 10,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 609,
+  "fields": {
+    "md_setmatrix_setting": 11,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 610,
+  "fields": {
+    "md_setmatrix_setting": 12,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 611,
+  "fields": {
+    "md_setmatrix_setting": 13,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 612,
+  "fields": {
+    "md_setmatrix_setting": 14,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 613,
+  "fields": {
+    "md_setmatrix_setting": 15,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 614,
+  "fields": {
+    "md_setmatrix_setting": 16,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 615,
+  "fields": {
+    "md_setmatrix_setting": 17,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 616,
+  "fields": {
+    "md_setmatrix_setting": 18,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 617,
+  "fields": {
+    "md_setmatrix_setting": 19,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 618,
+  "fields": {
+    "md_setmatrix_setting": 20,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 619,
+  "fields": {
+    "md_setmatrix_setting": 21,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 620,
+  "fields": {
+    "md_setmatrix_setting": 22,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 621,
+  "fields": {
+    "md_setmatrix_setting": 23,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 622,
+  "fields": {
+    "md_setmatrix_setting": 24,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 623,
+  "fields": {
+    "md_setmatrix_setting": 25,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 624,
+  "fields": {
+    "md_setmatrix_setting": 26,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 625,
+  "fields": {
+    "md_setmatrix_setting": 27,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 626,
+  "fields": {
+    "md_setmatrix_setting": 28,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 627,
+  "fields": {
+    "md_setmatrix_setting": 29,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 628,
+  "fields": {
+    "md_setmatrix_setting": 30,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 629,
+  "fields": {
+    "md_setmatrix_setting": 31,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 630,
+  "fields": {
+    "md_setmatrix_setting": 32,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 631,
+  "fields": {
+    "md_setmatrix_setting": 33,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 632,
+  "fields": {
+    "md_setmatrix_setting": 34,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 633,
+  "fields": {
+    "md_setmatrix_setting": 35,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 634,
+  "fields": {
+    "md_setmatrix_setting": 36,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 635,
+  "fields": {
+    "md_setmatrix_setting": 37,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 636,
+  "fields": {
+    "md_setmatrix_setting": 38,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 637,
+  "fields": {
+    "md_setmatrix_setting": 39,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 638,
+  "fields": {
+    "md_setmatrix_setting": 40,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 639,
+  "fields": {
+    "md_setmatrix_setting": 41,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 640,
+  "fields": {
+    "md_setmatrix_setting": 42,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 641,
+  "fields": {
+    "md_setmatrix_setting": 43,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 642,
+  "fields": {
+    "md_setmatrix_setting": 44,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 643,
+  "fields": {
+    "md_setmatrix_setting": 45,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 644,
+  "fields": {
+    "md_setmatrix_setting": 46,
+    "md_setmatrix_shellytype": "SHELLYEM"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 645,
+  "fields": {
+    "md_setmatrix_setting": 1,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 646,
+  "fields": {
+    "md_setmatrix_setting": 2,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 647,
+  "fields": {
+    "md_setmatrix_setting": 3,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 648,
+  "fields": {
+    "md_setmatrix_setting": 4,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 649,
+  "fields": {
+    "md_setmatrix_setting": 5,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 650,
+  "fields": {
+    "md_setmatrix_setting": 6,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 651,
+  "fields": {
+    "md_setmatrix_setting": 7,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 652,
+  "fields": {
+    "md_setmatrix_setting": 8,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 653,
+  "fields": {
+    "md_setmatrix_setting": 9,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 654,
+  "fields": {
+    "md_setmatrix_setting": 10,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 655,
+  "fields": {
+    "md_setmatrix_setting": 11,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 656,
+  "fields": {
+    "md_setmatrix_setting": 12,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 657,
+  "fields": {
+    "md_setmatrix_setting": 13,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 658,
+  "fields": {
+    "md_setmatrix_setting": 14,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 659,
+  "fields": {
+    "md_setmatrix_setting": 15,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 660,
+  "fields": {
+    "md_setmatrix_setting": 16,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 661,
+  "fields": {
+    "md_setmatrix_setting": 17,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 662,
+  "fields": {
+    "md_setmatrix_setting": 18,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 663,
+  "fields": {
+    "md_setmatrix_setting": 19,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 664,
+  "fields": {
+    "md_setmatrix_setting": 20,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 665,
+  "fields": {
+    "md_setmatrix_setting": 21,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 666,
+  "fields": {
+    "md_setmatrix_setting": 22,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 667,
+  "fields": {
+    "md_setmatrix_setting": 23,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 668,
+  "fields": {
+    "md_setmatrix_setting": 24,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 669,
+  "fields": {
+    "md_setmatrix_setting": 25,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 670,
+  "fields": {
+    "md_setmatrix_setting": 26,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 671,
+  "fields": {
+    "md_setmatrix_setting": 27,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 672,
+  "fields": {
+    "md_setmatrix_setting": 28,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 673,
+  "fields": {
+    "md_setmatrix_setting": 29,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 674,
+  "fields": {
+    "md_setmatrix_setting": 30,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 675,
+  "fields": {
+    "md_setmatrix_setting": 31,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 676,
+  "fields": {
+    "md_setmatrix_setting": 32,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 677,
+  "fields": {
+    "md_setmatrix_setting": 33,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 678,
+  "fields": {
+    "md_setmatrix_setting": 34,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 679,
+  "fields": {
+    "md_setmatrix_setting": 35,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 680,
+  "fields": {
+    "md_setmatrix_setting": 36,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 681,
+  "fields": {
+    "md_setmatrix_setting": 37,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 682,
+  "fields": {
+    "md_setmatrix_setting": 38,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 683,
+  "fields": {
+    "md_setmatrix_setting": 39,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 684,
+  "fields": {
+    "md_setmatrix_setting": 40,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 685,
+  "fields": {
+    "md_setmatrix_setting": 41,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 686,
+  "fields": {
+    "md_setmatrix_setting": 42,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 687,
+  "fields": {
+    "md_setmatrix_setting": 43,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 688,
+  "fields": {
+    "md_setmatrix_setting": 44,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 689,
+  "fields": {
+    "md_setmatrix_setting": 45,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 690,
+  "fields": {
+    "md_setmatrix_setting": 46,
+    "md_setmatrix_shellytype": "SHELLYEM3"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 691,
+  "fields": {
+    "md_setmatrix_setting": 1,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 692,
+  "fields": {
+    "md_setmatrix_setting": 2,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 693,
+  "fields": {
+    "md_setmatrix_setting": 3,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 694,
+  "fields": {
+    "md_setmatrix_setting": 4,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 695,
+  "fields": {
+    "md_setmatrix_setting": 5,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 696,
+  "fields": {
+    "md_setmatrix_setting": 6,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 697,
+  "fields": {
+    "md_setmatrix_setting": 7,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 698,
+  "fields": {
+    "md_setmatrix_setting": 8,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 699,
+  "fields": {
+    "md_setmatrix_setting": 9,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 700,
+  "fields": {
+    "md_setmatrix_setting": 10,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 701,
+  "fields": {
+    "md_setmatrix_setting": 11,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 702,
+  "fields": {
+    "md_setmatrix_setting": 12,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 703,
+  "fields": {
+    "md_setmatrix_setting": 13,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 704,
+  "fields": {
+    "md_setmatrix_setting": 14,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 705,
+  "fields": {
+    "md_setmatrix_setting": 15,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 706,
+  "fields": {
+    "md_setmatrix_setting": 16,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 707,
+  "fields": {
+    "md_setmatrix_setting": 17,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 708,
+  "fields": {
+    "md_setmatrix_setting": 18,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 709,
+  "fields": {
+    "md_setmatrix_setting": 19,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 710,
+  "fields": {
+    "md_setmatrix_setting": 20,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 711,
+  "fields": {
+    "md_setmatrix_setting": 21,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 712,
+  "fields": {
+    "md_setmatrix_setting": 22,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 713,
+  "fields": {
+    "md_setmatrix_setting": 23,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 714,
+  "fields": {
+    "md_setmatrix_setting": 24,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 715,
+  "fields": {
+    "md_setmatrix_setting": 25,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 716,
+  "fields": {
+    "md_setmatrix_setting": 26,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 717,
+  "fields": {
+    "md_setmatrix_setting": 27,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 718,
+  "fields": {
+    "md_setmatrix_setting": 28,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 719,
+  "fields": {
+    "md_setmatrix_setting": 29,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 720,
+  "fields": {
+    "md_setmatrix_setting": 30,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 721,
+  "fields": {
+    "md_setmatrix_setting": 31,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 722,
+  "fields": {
+    "md_setmatrix_setting": 32,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 723,
+  "fields": {
+    "md_setmatrix_setting": 33,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 724,
+  "fields": {
+    "md_setmatrix_setting": 34,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 725,
+  "fields": {
+    "md_setmatrix_setting": 35,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 726,
+  "fields": {
+    "md_setmatrix_setting": 36,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 727,
+  "fields": {
+    "md_setmatrix_setting": 37,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 728,
+  "fields": {
+    "md_setmatrix_setting": 38,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 729,
+  "fields": {
+    "md_setmatrix_setting": 39,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 730,
+  "fields": {
+    "md_setmatrix_setting": 40,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 731,
+  "fields": {
+    "md_setmatrix_setting": 41,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 732,
+  "fields": {
+    "md_setmatrix_setting": 42,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 733,
+  "fields": {
+    "md_setmatrix_setting": 43,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 734,
+  "fields": {
+    "md_setmatrix_setting": 44,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 735,
+  "fields": {
+    "md_setmatrix_setting": 45,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 736,
+  "fields": {
+    "md_setmatrix_setting": 46,
+    "md_setmatrix_shellytype": "SHELLYFLOOD"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 737,
+  "fields": {
+    "md_setmatrix_setting": 1,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 738,
+  "fields": {
+    "md_setmatrix_setting": 2,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 739,
+  "fields": {
+    "md_setmatrix_setting": 3,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 740,
+  "fields": {
+    "md_setmatrix_setting": 4,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 741,
+  "fields": {
+    "md_setmatrix_setting": 5,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 742,
+  "fields": {
+    "md_setmatrix_setting": 6,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 743,
+  "fields": {
+    "md_setmatrix_setting": 7,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 744,
+  "fields": {
+    "md_setmatrix_setting": 8,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 745,
+  "fields": {
+    "md_setmatrix_setting": 9,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 746,
+  "fields": {
+    "md_setmatrix_setting": 10,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 747,
+  "fields": {
+    "md_setmatrix_setting": 11,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 748,
+  "fields": {
+    "md_setmatrix_setting": 12,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 749,
+  "fields": {
+    "md_setmatrix_setting": 13,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 750,
+  "fields": {
+    "md_setmatrix_setting": 14,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 751,
+  "fields": {
+    "md_setmatrix_setting": 15,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 752,
+  "fields": {
+    "md_setmatrix_setting": 16,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 753,
+  "fields": {
+    "md_setmatrix_setting": 17,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 754,
+  "fields": {
+    "md_setmatrix_setting": 18,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 755,
+  "fields": {
+    "md_setmatrix_setting": 19,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 756,
+  "fields": {
+    "md_setmatrix_setting": 20,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 757,
+  "fields": {
+    "md_setmatrix_setting": 21,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 758,
+  "fields": {
+    "md_setmatrix_setting": 22,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 759,
+  "fields": {
+    "md_setmatrix_setting": 23,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 760,
+  "fields": {
+    "md_setmatrix_setting": 24,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 761,
+  "fields": {
+    "md_setmatrix_setting": 25,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 762,
+  "fields": {
+    "md_setmatrix_setting": 26,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 763,
+  "fields": {
+    "md_setmatrix_setting": 27,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 764,
+  "fields": {
+    "md_setmatrix_setting": 28,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 765,
+  "fields": {
+    "md_setmatrix_setting": 29,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 766,
+  "fields": {
+    "md_setmatrix_setting": 30,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 767,
+  "fields": {
+    "md_setmatrix_setting": 31,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 768,
+  "fields": {
+    "md_setmatrix_setting": 32,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 769,
+  "fields": {
+    "md_setmatrix_setting": 33,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 770,
+  "fields": {
+    "md_setmatrix_setting": 34,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 771,
+  "fields": {
+    "md_setmatrix_setting": 35,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 772,
+  "fields": {
+    "md_setmatrix_setting": 36,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 773,
+  "fields": {
+    "md_setmatrix_setting": 37,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 774,
+  "fields": {
+    "md_setmatrix_setting": 38,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 775,
+  "fields": {
+    "md_setmatrix_setting": 39,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 776,
+  "fields": {
+    "md_setmatrix_setting": 40,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 777,
+  "fields": {
+    "md_setmatrix_setting": 41,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 778,
+  "fields": {
+    "md_setmatrix_setting": 42,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 779,
+  "fields": {
+    "md_setmatrix_setting": 43,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 780,
+  "fields": {
+    "md_setmatrix_setting": 44,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 781,
+  "fields": {
+    "md_setmatrix_setting": 45,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 782,
+  "fields": {
+    "md_setmatrix_setting": 46,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+}
+]
