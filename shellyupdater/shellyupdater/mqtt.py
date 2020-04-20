@@ -1,3 +1,7 @@
+"""
+This module handles the MQTT communication
+"""
+
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
@@ -11,23 +15,54 @@ mqtt_client = None
 
 
 def set_mqttclient(client):
+    """
+    Set MQTT Client for global usage
+    :param client:
+    :return:
+    """
     global mqtt_client
     mqtt_client = client
 
 
 def get_mqttclient():
+    """
+    Return client for global usage
+    :return:
+    """
     return mqtt_client
 
 
 class MQTTClient():
+    """
+    Create the MQTT client
+    """
 
     mqttclient = None
 
     def __init__(self):
+        """
+        Initialize the MQTT client
+        """
         def on_connect(client, userdata, flags, rc):
+            """
+            Log the connect
+            :param client:
+            :param userdata:
+            :param flags:
+            :param rc:
+            :return:
+            """
             logger.debug("MQTT: Connected with flags [%s] rtn code [%d]" % (flags, rc))
 
         def on_log(client, userdata, level, buf):
+            """
+            Define the logging on every action
+            :param client:
+            :param userdata:
+            :param level:
+            :param buf:
+            :return:
+            """
             logger.debug("MQTT: " + str(buf))
             print("MQTT LOG - " + str(datetime.now()) + ": " + buf + " - ClientID: " + clientid)
             pass
@@ -49,7 +84,15 @@ class MQTTClient():
             print("MQTT LOG - " + str(datetime.now()) + ": Connection error " + rc)
 
     def startMQTTloop(self):
+        """
+        Start the MQTT logging
+        :return:
+        """
         self.mqttclient.loop_start()
 
     def getMQTTClient(self):
+        """
+        return reference to MQTT client
+        :return:
+        """
         return self.mqttclient

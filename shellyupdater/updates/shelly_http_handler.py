@@ -1,3 +1,7 @@
+"""
+This module handles the http communication to the Shellies
+"""
+
 import requests
 import json
 
@@ -7,6 +11,11 @@ from .models import Shellies, ShellySettings, ShellySettingUpdates
 
 
 def get_shelly_info(shelly_id=None):
+    """
+    Get Shelly settings and status via http and update on DB
+    :param shelly_id:
+    :return:
+    """
     if not shelly_id:
         return False
 
@@ -30,6 +39,12 @@ def get_shelly_info(shelly_id=None):
 
 
 def get_shelly_settings(shelly=None, shellySettings=None):
+    """
+    get the current Shelly settings
+    :param shelly:
+    :param shellySettings:
+    :return:
+    """
     if not shelly or not shellySettings:
         return False
 
@@ -54,6 +69,12 @@ def get_shelly_settings(shelly=None, shellySettings=None):
 
 
 def get_shelly_status(shelly=None, shellySettings=None):
+    """
+    get the current Shelly status
+    :param shelly:
+    :param shellySettings:
+    :return:
+    """
     if not shelly or not shellySettings:
         return False
 
@@ -87,7 +108,7 @@ def get_shelly_status(shelly=None, shellySettings=None):
 
 def perform_update_http(shelly=None):
     """
-    Perform a firmware update on Shelly
+    Perform a firmware update on Shelly via http
     :param shelly:
     :return:
     """
@@ -121,14 +142,14 @@ def perform_update_http(shelly=None):
 
 def apply_shelly_settings(shelly=None):
     """
-
+    Apply new settings to the Shelly
     :param shelly:
     :return:
     """
 
     if shelly:
         shellyupdates = ShellySettingUpdates.objects.filter(shelly_id=shelly, shelly_settings_applied=False,
-                                                            shelly_settings_delete=False).select_related('shelly_id')
+                                                            shelly_settings_delete=False).select_related('shelly_id').order_by('insert_ts')
 
     for update in shellyupdates:
         try:

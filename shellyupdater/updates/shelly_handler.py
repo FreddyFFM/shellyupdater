@@ -1,3 +1,7 @@
+"""
+This module handles all Shelly update/info functions and the communication via MQTT
+"""
+
 import json
 import time
 
@@ -12,6 +16,7 @@ from django.conf import settings
 def put_shelly(id=None, name="", mac="", ip="", fw_update=False, fw_ver=""):
     """
     Save Shelly Information to Database
+    Apply Updates if applicable
     :param id:
     :param name:
     :param mac:
@@ -20,6 +25,8 @@ def put_shelly(id=None, name="", mac="", ip="", fw_update=False, fw_ver=""):
     :param fw_ver:
     :return:
     """
+
+    # if Shelly not exists create a new in DB
     if id:
         if Shellies.objects.filter(shelly_id=id).exists():
             shelly = Shellies.objects.get(shelly_id=id)
@@ -31,10 +38,12 @@ def put_shelly(id=None, name="", mac="", ip="", fw_update=False, fw_ver=""):
         shelly.shelly_type = (id.split('-')[0]).upper()
         shelly.shelly_new_fw = fw_update
 
+        # Apply firmware update when available an initiated
         if fw_update and shelly.shelly_do_update:
             if not perform_update_http(shelly=shelly):
                 perform_update_mqtt(shelly=shelly)
 
+        # update firmware information and update status
         elif not fw_update and shelly.shelly_do_update and fw_ver.split("@")[0] != shelly.shelly_fw_version_old:
             shelly.shelly_do_update = False
             current_dt = datetime.now().strftime("%d.%m.%Y %H:%M")
@@ -65,7 +74,7 @@ def put_shelly_json(payload=None):
 def update_shelly_online(topic=None, status=None):
     """
     Update Shelly Online Information
-    If neccessary perform or mark update for Shelly
+    Apply or mark Updates if applicable
     :param topic:
     :param status:
     :return:
@@ -81,12 +90,15 @@ def update_shelly_online(topic=None, status=None):
             shelly = Shellies.objects.get(shelly_id=shelly_id)
 
             shelly.shelly_online = shelly_online
+            # if shelly is online update settings and status information in DB
             if shelly_online:
                 shelly.shelly_last_online = timezone.now()
                 get_shelly_info(shelly_id=shelly_id)
+                # start available and initiated updates
                 if shelly.shelly_do_update:
                     if not perform_update_http(shelly=shelly):
                         perform_update_mqtt(shelly=shelly)
+                # if no updates apply new settings (if applicable)
                 else:
                     apply_shelly_settings(shelly=shelly)
 
@@ -95,7 +107,7 @@ def update_shelly_online(topic=None, status=None):
 
 def perform_update_mqtt(shelly=None):
     """
-    Perform a firmware update on Shelly
+    Perform a firmware update on Shelly via mqtt
     :param shelly:
     :return:
     """

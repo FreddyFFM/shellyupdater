@@ -16,6 +16,8 @@ import environ
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Get local settings from .env file
 env = environ.Env()
 # reading .env file
 env.read_env()
@@ -41,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'updates',
-    'openhab',
+    'openhab',  # deactivate the Openhab modul here
     'setter',
 ]
 
@@ -131,7 +133,9 @@ STATICFILES_DIRS = (  # where to find static files
     os.path.join(BASE_DIR, "static-assets"),
 )
 
-# MQTT
+### LOCAL SETTINGS ARE READ FROM THE .env FILE
+
+# MQTT variables for connection
 MQTT_BROKER_ADDRESS = env.str('MQTT_BROKER_ADDRESS')
 MQTT_USERNAME = env.str('MQTT_USERNAME')
 MQTT_PASSWORD = env.str('MQTT_PASSWORD')

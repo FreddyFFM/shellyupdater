@@ -1,3 +1,8 @@
+"""
+This module provides actions that are executed after the application is fully loaded
+E.g. starting MQTT
+"""
+
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
@@ -11,12 +16,31 @@ logger = logging.getLogger()
 
 
 def start_MQTT():
+    """
+    Start MQTT after application is loaded
+    :return:
+    """
+
     def on_msg_announce(self, userdata, msg):
+        """
+        Log Shelly announcements and handle them
+        :param self:
+        :param userdata:
+        :param msg:
+        :return:
+        """
         from updates.shelly_handler import put_shelly_json
         logger.debug(msg.payload.decode('utf-8'))
         put_shelly_json(msg.payload.decode('utf-8'))
 
     def on_device_online(self, userdata, msg):
+        """
+        Log Shelly online announcements and handle them
+        :param self:
+        :param userdata:
+        :param msg:
+        :return:
+        """
         from updates.shelly_handler import update_shelly_online
         logger.debug(msg.payload.decode('utf-8'))
         update_shelly_online(topic=msg.topic, status=msg.payload.decode('utf-8'))
@@ -24,6 +48,7 @@ def start_MQTT():
     mqttclient = MQTTClient().getMQTTClient()
     set_mqttclient(mqttclient)
     mqttclient.loop_start()
+    # Subscribe to global announcement topic and Shelly specific online topics
     mqttclient.message_callback_add(settings.MQTT_SHELLY_ANNOUNCE_TOPIC, on_msg_announce)
     mqttclient.message_callback_add(settings.MQTT_SHELLY_BASE_TOPIC + "+/online", on_device_online)
 
@@ -35,6 +60,7 @@ class UpdatesConfig(AppConfig):
         if os.environ.get('RUN_MAIN', None) != 'true':
             return
 
+        # Start MQTT after application is fully loaded
         start_MQTT()
 
         logger.info("App is up")

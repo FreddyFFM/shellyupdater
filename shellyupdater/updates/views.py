@@ -14,15 +14,20 @@ from django.http import HttpResponse
 
 
 class ShowShelliesView(TemplateView):
+    """
+    Provide the Shelly overview
+    """
 
     template_name = 'shellies_overview.html'
 
     def get(self, request, refresh=None, *args, **kwargs):
         """
+        Show table with all Shelly and their information
         """
 
         context = {}
 
+        # If refresh initiate a refresh via MQTT
         if refresh == 'Y':
             mqttclient = get_mqttclient()
             if mqttclient.is_connected():
@@ -47,13 +52,15 @@ class ShowShelliesView(TemplateView):
 
     def post(self, request, at_id=None, task=None, *args, **kwargs):
         """
-
+        This is executed is Shellies are marked for updates
         """
 
         context = {}
 
         items = request.POST.items()
         current_dt = datetime.now().strftime("%d.%m.%Y %H:%M")
+        # for every Shelly marked start the update (if online) else mark the shelly for update
+        # when comming online
         for key, val in items:
             if key.upper().startswith("SHELLY") and val == "on":
                 shelly = Shellies.objects.get(shelly_id=key)
@@ -74,12 +81,17 @@ class ShowShelliesView(TemplateView):
 
 
 class ShellyDetailView(TemplateView):
+    """
+    Provide the Shelly Detail view
+    (Current settings, status and the already apllied new settings and their status)
+    """
 
     template_name = 'shelly_details.html'
 
     def get(self, request, shelly_id=None, refresh=None, *args, **kwargs):
         """
-
+        Get view
+        if called with refresh an http request will be send to the Shelly updating current settings and status
         :param request:
         :param args:
         :param kwargs:

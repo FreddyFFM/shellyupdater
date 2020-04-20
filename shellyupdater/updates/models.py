@@ -8,6 +8,7 @@ from django.db import models
 class Shellies (models.Model):
     """
     Base model for the Shellies
+    Stores basic shelly information
     """
 
     def __str__(self):
@@ -43,7 +44,8 @@ class Shellies (models.Model):
 
 class ShellySettings (models.Model):
     """
-    Base model for the Shellies
+    Model for the Shellies Settings
+    Stores settings and status JSONs as well as battery stats
     """
 
     id = models.AutoField(primary_key=True)
@@ -63,7 +65,8 @@ class ShellySettings (models.Model):
 
 class ShellySettingUpdates(models.Model):
     """
-
+    Model for the Shelly setting updates
+    All new settings and their status will be stored here
     """
 
     id = models.AutoField(primary_key=True)
@@ -85,7 +88,7 @@ class ShellySettingUpdates(models.Model):
 
 class OpenHabThings (models.Model):
     """
-
+    Base model for the Openhab things
     """
 
     id = models.AutoField(primary_key=True)
@@ -101,6 +104,10 @@ class OpenHabThings (models.Model):
 
 
 class MasterDataShellySettings(models.Model):
+    """
+    Master data for the Shelly settings
+    All possible settings are stored here
+    """
 
     SETTINGS_TYPE_CHOICES = (
         ('General', 'General settings'),
@@ -132,6 +139,9 @@ class MasterDataShellySettings(models.Model):
 
 
 class MasterDataShellySettingsMatrix(models.Model):
+    """
+    The model stores the matrix of settings and Shelly-Type
+    """
 
     SHELLY_DEVICES = (
         ('SHELLY1','Shelly1'),
@@ -160,4 +170,3 @@ class MasterDataShellySettingsMatrix(models.Model):
         managed = True
         unique_together = ('md_setmatrix_setting', 'md_setmatrix_shellytype',)
         db_table = 'masterdata_shelly_settings_matrix'
-

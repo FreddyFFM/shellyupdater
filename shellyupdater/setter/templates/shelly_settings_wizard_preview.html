@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}Shelly Settings Wizard 2/2{% endblock title %}
+{% block title %}Shelly Settings Wizard 3/3{% endblock title %}
 
 {% block extrahead %}
 {% endblock %}
@@ -108,6 +108,16 @@
                 {% endfor %}
                 </tbody>
             </table>
+
+            <div class="text-right" style="margin-top:20px;">
+            {% if shellies.count > 1 %}
+                <a href="{% url 'shellies' %}" class="btn btn-secondary" role="button">Shelly Overview</a>
+            {% else %}
+                {% for shelly in shellies %}
+                    <a href="{% url 'shellies/details' shelly_id=shelly.shelly_id %}" class="btn btn-secondary" role="button">Show the Shelly details</a>
+                {% endfor %}
+            {% endif %}
+            </div>
 
         </div>
 

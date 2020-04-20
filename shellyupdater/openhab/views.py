@@ -7,6 +7,9 @@ from .openhab_handler import get_openhab_things, join_shelly_things
 
 
 class OpenhabThingsView(TemplateView):
+    """
+    Show all Openhab Things in a Table with the mapped Shelly
+    """
 
     template_name = 'things_overview.html'
 
@@ -16,6 +19,7 @@ class OpenhabThingsView(TemplateView):
 
         context = {}
 
+        # refresh starts a new http call to Openhab
         if refresh == 'Y':
             get_openhab_things()
             join_shelly_things()

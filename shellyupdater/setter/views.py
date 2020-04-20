@@ -14,6 +14,13 @@ from django.http import HttpResponse, QueryDict
 
 
 def get_shellies(request, shelly_type=None):
+    """
+    Provide Shellies for a Shelly-Type
+    This is for the Ajax call within the form
+    :param request: AJAX request
+    :param shelly_type: Shelly-Type from form
+    :return:
+    """
 
     if shelly_type:
         shellies = Shellies.objects.filter(shelly_type=shelly_type).order_by('shelly_type', 'shelly_id').values('id',
@@ -31,11 +38,17 @@ def get_shellies(request, shelly_type=None):
 
 
 class ShellyWizardSelectView(TemplateView):
+    """
+    View for the first page of the Shelly Settings wizard
+    Select Shelly Type, Shellies and settings area
+    For switching between the wizard-pages data will be stored in a session
+    """
 
     template_name = 'shelly_settings_wizard_select.html'
 
     def get(self, request, *args, **kwargs):
         """
+        GET view with pre-filled form
         """
 
         context = {}
@@ -43,6 +56,7 @@ class ShellyWizardSelectView(TemplateView):
         wizardPost = request.session.get('wizardPost')
 
         wizard_form = SettingsWizardForm(wizardPost)
+        # Set Shellies to select based on the Shelly Type
         if wizardPost and "shelly_types" in wizardPost:
             shelly_type = wizardPost['shelly_types']
             shelly_choices = []
@@ -66,13 +80,15 @@ class ShellyWizardSelectView(TemplateView):
 
     def post(self, request, *args, **kwargs):
         """
-
+        POST view with prefilled form based on POST request
         """
+
         context = {}
 
         request.session['wizardPost'] = request.POST
 
         wizard_form = SettingsWizardForm(request.POST)
+        # Set Shellies to select based on the Shelly Type
         if wizard_form.data['shelly_types']:
             shelly_type = wizard_form.data['shelly_types']
             shelly_choices = [(shelly['id'], shelly['shelly_id']) for shelly in
@@ -96,10 +112,21 @@ class ShellyWizardSelectView(TemplateView):
 
 
 class ShellyWizardValuesView(TemplateView):
+    """
+    View for the second page of the wizard
+    Form to enter the Shelly type specific values
+    """
 
     template_name = 'shelly_settings_wizard_values.html'
 
     def get(self, request, *args, **kwargs):
+        """
+        Get View
+        :param request:
+        :param args:
+        :param kwargs:
+        :return:
+        """
         context = {}
 
         valuesPost = request.session.get('valuesPost')
@@ -121,15 +148,12 @@ class ShellyWizardValuesView(TemplateView):
 
         return self.render_to_response(context)
 
-
     def post(self, request, *args, **kwargs):
         """
-
+        Post view
         """
 
         context = {}
-
-        request.session['valuesPost'] = request.POST
 
         shelly_type = request.session.get('shelly_type')
         settings_type = request.session.get('shelly_settings_topic')
@@ -142,6 +166,7 @@ class ShellyWizardValuesView(TemplateView):
                                            )
 
         if settings_form.is_valid():
+            request.session['valuesPost'] = settings_form.cleaned_data
             return redirect(to='settings/preview')
 
         context["settings_form"] = settings_form
@@ -155,10 +180,20 @@ class ShellyWizardValuesView(TemplateView):
 
 
 class ShellyWizardPreviewView(TemplateView):
+    """
+    Final view for the wizward to review the settings before application
+    """
 
     template_name = 'shelly_settings_wizard_preview.html'
 
     def get(self, request, *args, **kwargs):
+        """
+        Get view
+        :param request:
+        :param args:
+        :param kwargs:
+        :return:
+        """
         context = {}
 
         shelly_type = request.session.get('shelly_type')
@@ -173,11 +208,11 @@ class ShellyWizardPreviewView(TemplateView):
             if key.startswith('/'):
                 param = key.split('-')[1]
                 path = key.split('-')[0]
-                if value:
-                    if value.upper() == "ON":
-                        value = "true"
-                    settings_json[param] = value
-                    settings_encode = param + ":" + value + "\n" + settings_encode
+                type = key.split('-')[2]
+                if value or type == "bool":
+                    settings_json[param] = str(value)
+                    settings_encode = param + ":" + str(value) + "\n" + settings_encode
+
 
         preview_form = SettingsPreviewForm(settings_path=path, settings_json=settings_json, settings_encode=settings_encode)
 
@@ -192,7 +227,7 @@ class ShellyWizardPreviewView(TemplateView):
 
     def post(self, request, *args, **kwargs):
         """
-
+        Post view
         """
 
         context = {}

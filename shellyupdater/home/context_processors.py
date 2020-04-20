@@ -5,6 +5,11 @@ from django.conf import settings
 
 
 def openhab_active(request):
+    """
+    Return a global Template variable if Openhab modul is activated. This is e.g. needed for Navigation on Base template
+    :param request:
+    :return:
+    """
 
     if 'openhab' in settings.INSTALLED_APPS:
         oh_active = True
