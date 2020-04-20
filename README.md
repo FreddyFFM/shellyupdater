@@ -16,7 +16,8 @@ Due to my integration with Openhab I also can request the MQTT Shelly Things fro
     * current settings and status
     * last online timestamp and battery power
     * and a link to directly jump to the shelly-http-Interface
-* Possibility to mass-update Shelly-Settings via MQTT and http (scheduled when offline)
+* Possibility to mass-update Shelly-Firmware (postponed for retry when Shelly is offline)
+* Possibility to mass-update Shelly-Settings via http (postponed for retry when Shelly is offline)
     * Includes General settings (like mqtt)
     * Wifi AP, Wifi Client and Wifi Backup
     * as well as login data
