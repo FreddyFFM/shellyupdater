@@ -152,6 +152,7 @@ def apply_shelly_settings(shelly=None):
                                                             shelly_settings_delete=False).select_related('shelly_id').order_by('insert_ts')
 
     for update in shellyupdates:
+        cancel = False
         try:
             headers = {'content-type': 'application/x-www-form-urlencoded'}
             response = requests.post("http://" + update.shelly_id.shelly_ip + update.shelly_settings_path,
@@ -178,5 +179,8 @@ def apply_shelly_settings(shelly=None):
             update.last_status = "HTTP Exception " + str(e)
             update.last_status_code = "FAILED"
             print("HTTP LOG - " + str(datetime.now()) + ": HTTP Exception - " + str(e))
+            cancel = True
 
         update.save()
+        if cancel:
+            break

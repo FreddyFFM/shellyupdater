@@ -65,14 +65,14 @@
                             <a class="nav-link" href="{% url 'home' %}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'shellies' %}" class="list-group-item list-group-item-action bg-light">Shellies</a>
+                            <a class="nav-link" href="{% url 'shellies' %}" class="list-group-item list-group-item-action bg-light">Shellies Overview</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'settings' %}" class="list-group-item list-group-item-action bg-light">Shelly-Settings</a>
+                            <a class="nav-link" href="{% url 'settings' %}" class="list-group-item list-group-item-action bg-light">Shelly Settings-Updater</a>
                         </li>
                         <li class="nav-item">
                             {% if OH_ACTIVE %}
-                                <a class="nav-link" href="{% url 'things' %}" class="list-group-item list-group-item-action bg-light">Obenhab</a>
+                                <a class="nav-link" href="{% url 'things' %}" class="list-group-item list-group-item-action bg-light">Obenhab Things</a>
                             {% endif %}
                         </li>
                     </ul>

@@ -17,8 +17,9 @@
     <div class="container-fluid">
 
         <div class="text-right">
-            <a href="{% url 'shellies/details' shelly_id=details.shelly_id.shelly_id refresh='Y' %}" class="btn btn-light" role="button">Refresh</a>
-            <a href="{% url 'shellies' %}" class="btn btn-secondary" role="button">Overview</a>
+            <a href="{% url 'shellies/details' shelly_id=details.shelly_id.shelly_id refresh='Y' %}" class="btn btn-light" role="button">Refresh with Update</a>
+            <a href="{% url 'shellies/details' shelly_id=details.shelly_id.shelly_id %}" class="btn btn-light" role="button">Refresh</a>
+            <a href="{% url 'shellies' %}" class="btn btn-secondary" role="button">Shellies Overview</a>
         </div>
 
         <div class="row" style="margin-top:20px;margin-bottom:20px;">
@@ -126,6 +127,25 @@
 {% endblock content %}
 
 {% block footer_javascript_page %}
+<script type="text/javascript">
+    $(document).ready(
+        function () {
+            $('a[data-toggle="tab"]').on('click.bs.tab', function (e) {
+                localStorage.setItem('lastTab', $(this).attr('href'));
+            });
+
+            // go to the hash or latest tab, if it exists:
+            var lastTab = localStorage.getItem('lastTab');
+            var hash = $(location).attr('hash');
+            if (hash) {
+                $('[href="' + hash + '"]').click();
+            }
+            else if (lastTab) {
+                $('[href="' + lastTab + '"]').click();
+            }
+        }
+    );
+</script>
 {% endblock footer_javascript_page %}
 
 
