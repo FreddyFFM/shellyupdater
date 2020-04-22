@@ -8,6 +8,7 @@ from django.conf import settings
 from updates.models import Shellies, ShellySettings, ShellySettingUpdates
 from datetime import datetime
 from shellyupdater.mqtt import get_mqttclient
+from .forms import ShellySelectForm
 from .shelly_handler import perform_update_mqtt
 from .shelly_http_handler import get_shelly_info, perform_update_http
 from django.http import HttpResponse
@@ -100,22 +101,22 @@ class ShellyDetailView(TemplateView):
 
         context = {}
 
-        if not shelly_id:
-            return HttpResponse(content="ID not found", status=400)
+        shelly_select_form = ShellySelectForm(shelly_id=shelly_id)
+        context["shelly_select_form"] = shelly_select_form
 
-        if ShellySettings.objects.filter(shelly_id__shelly_id=shelly_id).exists():
-            if refresh == "Y":
-                get_shelly_info(shelly_id=shelly_id)
-            details = ShellySettings.objects.get(shelly_id__shelly_id=shelly_id)
-        else:
-            if get_shelly_info(shelly_id=shelly_id):
+        if shelly_id:
+            details = None
+            if ShellySettings.objects.filter(shelly_id__shelly_id=shelly_id).exists():
+                if refresh == "Y":
+                    get_shelly_info(shelly_id=shelly_id)
                 details = ShellySettings.objects.get(shelly_id__shelly_id=shelly_id)
             else:
-                return HttpResponse(content="Error getting details", status=400)
+                if get_shelly_info(shelly_id=shelly_id):
+                    details = ShellySettings.objects.get(shelly_id__shelly_id=shelly_id)
 
-        update_status = ShellySettingUpdates.objects.filter(shelly_id__shelly_id=shelly_id)
+            update_status = ShellySettingUpdates.objects.filter(shelly_id__shelly_id=shelly_id)
 
-        context["details"] = details
-        context["update_status"] = update_status
+            context["details"] = details
+            context["update_status"] = update_status
 
         return self.render_to_response(context)

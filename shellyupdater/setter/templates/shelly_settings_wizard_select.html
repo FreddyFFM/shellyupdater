@@ -22,9 +22,9 @@
 
             {% for field in wizard_form.visible_fields %}
 
-                <div class="form-group {% if field.errors %}has-error{% endif %}" id="formid_{{ field.name }}">
-                    <label for="{{ field.name }}" class="control-label col-6">{{ field.label }}</label>
-                    <div class="col-6 text-left form-row">
+                <div class="form-group row {% if field.errors %}has-error{% endif %}" id="formid_{{ field.name }}">
+                    <label for="{{ field.name }}" class="control-label col-2">{{ field.label }}</label>
+                    <div class="col-4 text-left form-row">
                         {{ field }}
                     </div>
                 </div>

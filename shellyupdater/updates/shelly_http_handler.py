@@ -88,6 +88,9 @@ def get_shelly_status(shelly=None, shellySettings=None):
             if "bat" in status_json:
                 shellySettings.shelly_battery_percent = status_json["bat"]["value"]
                 shellySettings.shelly_battery_voltage = status_json["bat"]["voltage"]
+            if "wifi_sta" in status_json:
+                shellySettings.shelly_wifi_ssid = status_json["wifi_sta"]["ssid"]
+                shellySettings.shelly_wifi_strength = status_json["wifi_sta"]["rssi"]
             if "update" in status_json:
                 shelly.shelly_fw_version_new = status_json["update"]["new_version"]
             status = current_dt + ": HTTP OK " + str(response.status_code)

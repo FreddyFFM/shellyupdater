@@ -5,6 +5,9 @@ from django.db import models
 
 
 # Create your models here.
+from django.db.models import Count
+
+
 class Shellies (models.Model):
     """
     Base model for the Shellies
@@ -20,6 +23,14 @@ class Shellies (models.Model):
 
     def get_fw_short(self):
         return self.shelly_fw_version.split('/')[1]
+
+    def get_updates_applied(self):
+        return Shellies.objects.filter(shelly2updates__shelly_id=self, shelly2updates__shelly_settings_applied=True,
+                                       shelly2updates__shelly_settings_delete=False).aggregate(Count('shelly_id'))
+
+    def get_updates_all(self):
+        return Shellies.objects.filter(shelly2updates__shelly_id=self,
+                                       shelly2updates__shelly_settings_delete=False).aggregate(Count('shelly_id'))
 
     id = models.AutoField(primary_key=True)
     shelly_id = models.CharField(max_length=100, blank=False, null=False, unique=True)
@@ -54,6 +65,8 @@ class ShellySettings (models.Model):
     shelly_status_json = models.TextField(null=True, blank=True)
     shelly_battery_percent = models.IntegerField(null=True, blank=True)
     shelly_battery_voltage = models.DecimalField(max_digits=5, decimal_places=1, null=True, blank=True)
+    shelly_wifi_ssid = models.CharField(max_length=200, null=True, blank=True)
+    shelly_wifi_strength = models.IntegerField(null=True, blank=True)
     last_change_ts = models.DateTimeField(auto_now=True)
     last_status_settings = models.CharField(max_length=200, blank=True, null=True)
     last_status_status = models.CharField(max_length=200, blank=True, null=True)

@@ -2,7 +2,6 @@
 {% block title %}Shelly Details{% endblock title %}
 
 {% block head_css_page %}
-    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 {% endblock head_css_page %}
 
 {% block extrahead %}
@@ -15,12 +14,34 @@
     {# Main Section #}
 
     <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
 
-        <div class="text-right">
-            <a href="{% url 'shellies/details' shelly_id=details.shelly_id.shelly_id refresh='Y' %}" class="btn btn-light" role="button">Refresh with Update</a>
-            <a href="{% url 'shellies/details' shelly_id=details.shelly_id.shelly_id %}" class="btn btn-light" role="button">Refresh</a>
-            <a href="{% url 'shellies' %}" class="btn btn-secondary" role="button">Shellies Overview</a>
+                <form action="." method="GET" name="shellyselectform">
+                    {% csrf_token %}
+
+                    {% for field in shelly_select_form.visible_fields %}
+                        <div class="form-group row {% if field.errors %}has-error{% endif %}" id="formid_{{ field.name }}">
+                            <label for="{{ field.name }}" class="control-label col-1">{{ field.label }}</label>
+                            <div class="col-4 text-left">
+                                {{ field }}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </form>
+            </div>
+
+            <div class="col-6 text-right">
+                {% if details.shelly_id.shelly_id %}
+                    <a href="{% url 'shellies/details' shelly_id=details.shelly_id.shelly_id refresh='Y' %}" class="btn btn-light" role="button">Refresh with Update</a>
+                    <a href="{% url 'shellies/details' shelly_id=details.shelly_id.shelly_id %}" class="btn btn-light" role="button">Refresh</a>
+                {% endif %}
+                <a href="{% url 'shellies' %}" class="btn btn-secondary" role="button">Shellies Overview</a>
+            </div>
         </div>
+    </div>
+
+    <div class="container-fluid">
 
         <div class="row" style="margin-top:20px;margin-bottom:20px;">
             <div class="col-4 font-weight-bold">
@@ -127,6 +148,7 @@
 {% endblock content %}
 
 {% block footer_javascript_page %}
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 <script type="text/javascript">
     $(document).ready(
         function () {
@@ -143,6 +165,15 @@
             else if (lastTab) {
                 $('[href="' + lastTab + '"]').click();
             }
+
+            $('#id_shelly').on('change', function(e) {
+                var url = "{% url 'shellies/details' %}";
+                var val = $(this).val();
+                if (val) { // require a URL
+                    window.location = url + val;
+                }
+                return false;
+            });
         }
     );
 </script>

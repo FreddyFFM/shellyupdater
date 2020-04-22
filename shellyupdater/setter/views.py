@@ -2,15 +2,14 @@
 from __future__ import unicode_literals
 
 import json
-from urllib.parse import urlencode
 
 from django.shortcuts import redirect
 from django.views.generic import TemplateView
 
-from updates.models import Shellies, MasterDataShellySettings, ShellySettingUpdates, OpenHabThings
+from updates.models import Shellies, ShellySettingUpdates, OpenHabThings
 from updates.shelly_http_handler import apply_shelly_settings
 from .forms import SettingsWizardForm, SettingsValuesForm, SettingsPreviewForm
-from django.http import HttpResponse, QueryDict
+from django.http import HttpResponse
 
 
 def get_shellies(request, shelly_type=None):
@@ -181,7 +180,7 @@ class ShellyWizardValuesView(TemplateView):
 
 class ShellyWizardPreviewView(TemplateView):
     """
-    Final view for the wizward to review the settings before application
+    Final view for the wizard to review the settings before application
     """
 
     template_name = 'shelly_settings_wizard_preview.html'
@@ -266,5 +265,22 @@ class ShellyWizardPreviewView(TemplateView):
         context["shellies"] = shellies
         context["shelly_type"] = shelly_type
         context["settings_type"] = settings_type
+
+        return self.render_to_response(context)
+
+
+class SettingsView(TemplateView):
+    """
+    Overview of all Settings made
+    """
+
+    template_name = 'settings_overview.html'
+
+    def get(self, request, *args, **kwargs):
+
+        context = {}
+
+        setting_updates = ShellySettingUpdates.objects.all()
+        context["setting_updates"] = setting_updates
 
         return self.render_to_response(context)

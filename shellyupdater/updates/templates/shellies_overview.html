@@ -38,6 +38,8 @@
                     data-toggle="table"
                     data-show-multi-sort="true"
                     data-sort-priority='[{"sortName": "do_update","sortOrder":"desc"},{"sortName":"last_change","sortOrder":"desc"}]'
+                    data-cookie="true"
+                    data-cookie-id-table="shellyOverview"
                     id="table">
                 <thead>
                     <tr>
@@ -45,9 +47,10 @@
                         <th data-field="shelly_id" data-sortable="true" class="" scope="col">Shelly-ID</th>
                         <th data-field="shelly_type" data-sortable="true" class="" scope="col">Shelly Type</th>
                         <th data-field="shelly_online" data-sortable="true" class="" scope="col">Status</th>
+                        <th data-field="shelly_settings" data-sortable="true" class="" scope="col" data-visible="false">Settings applied</th>
                         <th data-field="shelly_fw_version" data-sortable="true" class="" scope="col">Firmware</th>
                         <th data-field="last_change" data-sortable="true" class="" scope="col">Last MQTT Update</th>
-                        <th data-field="last_status" data-sortable="true" class="" scope="col">Last Status</th>
+                        <th data-field="last_status" data-sortable="true" class="" scope="col" data-visible="false">Last Status</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -69,7 +72,7 @@
                                 <a href="http://{{ shelly.shelly_ip }}" target="_blank">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>&nbsp;&nbsp;
-                                <a href="{% url 'shellies/details' shelly_id=shelly.shelly_id %}">
+                                <a href="{% url 'shellies/details' shelly_id=shelly.shelly_id %}#nav-home">
                                     {% if shelly.shelly2infos.shelly_settings_json %}
                                         <i class="fas fa-info-circle text-success"></i>
                                     {% else %}
@@ -99,6 +102,24 @@
                                         {{ shelly.shelly2infos.shelly_battery_voltage }}V)
                                     </span>
                                 {% endif %}
+                                {% if shelly.shelly2infos.shelly_wifi_ssid %}
+                                    <br /><i class="fas fa-wifi"></i>
+                                    <span style="font-size:0.8em">
+                                        ({{ shelly.shelly2infos.shelly_wifi_ssid|truncatechars:20 }},
+                                        {{ shelly.shelly2infos.shelly_wifi_strength }}dB)
+                                    </span>
+                                {% endif %}
+                            </td>
+                            <td class="text-center">
+                                {{ shelly.get_updates_applied.shelly_id__count }} /
+                                {{ shelly.get_updates_all.shelly_id__count }}
+                                <a href="{% url 'shellies/details' shelly_id=shelly.shelly_id %}#nav-updates">
+                                    {% if shelly.get_updates_applied.shelly_id__count == shelly.get_updates_all.shelly_id__count %}
+                                        <i class="fas fa-info-circle text-success"></i>
+                                    {% else %}
+                                        <i class="fas fa-info-circle text-warning"></i>
+                                    {% endif %}
+                                </a>
                             </td>
                             <td class="text-center">
                                 <div data-toggle="tooltip" title="NEW FW: {{ shelly.shelly_fw_version_new }}">
@@ -131,16 +152,20 @@
 
 {% block footer_javascript_page %}
     <script type="text/javascript">
-     $(document).ready(function() {
-         // Check All
-         $('.checkall').click(function() {
-             $(":checkbox").attr("checked", true);
-         });
-         // Uncheck All
-         $('.uncheckall').click(function() {
-             $(":checkbox").attr("checked", false);
-         });
-     });
+    $(function() {
+        $('#table').bootstrapTable()
+    });
+
+    $(document).ready(function() {
+        // Check All
+        $('.checkall').click(function() {
+            $(":checkbox").attr("checked", true);
+        });
+        // Uncheck All
+        $('.uncheckall').click(function() {
+            $(":checkbox").attr("checked", false);
+        });
+    });
     </script>
 {% endblock footer_javascript_page %}
 
