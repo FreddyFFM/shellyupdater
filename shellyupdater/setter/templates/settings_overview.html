@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% block title %}Settings Overview{% endblock title %}
+
+{% block extrahead %}
+{% endblock %}
+
+{% block content %}
+
+    {# Hero Section #}  
+
+    {# Main Section #}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-right">
+                <a href="{% url 'settings/overview' %}" class="btn btn-light" role="button">Refresh</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+            <table
+                    class="table table-striped"
+                    data-remember-order="true"
+                    data-show-columns="true"
+                    data-toggle="table"
+                    data-pagination="true"
+                    data-page-size="25"
+                    data-show-multi-sort="true"
+                    data-sort-priority='[{"sortName": "update_applied","sortOrder":"desc"},{"sortName": "shelly_type","sortOrder":"asc"},{"sortName":"shelly_id","sortOrder":"asc"}]'
+                    data-cookie="false"
+                    data-cookie-id-table="settingsOverview"
+                    data-filter-control="true"
+                    data-show-search-clear-button="true"
+                    id="table">
+                <thead>
+                    <tr>
+                        <th data-field="shelly_type" data-sortable="true" class="" scope="col" data-filter-control="select">
+                            Shelly-Type
+                        </th>
+                        <th data-field="shelly_id" data-sortable="true" class="" scope="col" data-filter-control="select">
+                            Shelly
+                        </th>
+                        <th data-field="settings_area" data-sortable="true" class="" scope="col" data-filter-control="select" data-filter-strict-search="true">
+                            Settings-Area
+                        </th>
+                        <th data-field="update_json" data-sortable="false" class="" scope="col">Update JSON</th>
+                        <th data-field="update_applied" data-sortable="true" class="" scope="col">Update applied</th>
+                        <th data-field="update_deleted" data-sortable="true" class="" scope="col" data-visible="false">Update deleted</th>
+                        <th data-field="last_status_ts" data-sortable="true" class="" scope="col">Last status TS</th>
+                        <th data-field="last_status_code" data-sortable="true" class="" scope="col">Last status Code</th>
+                        <th data-field="last_status" data-sortable="false" class="" scope="col" data-visible="false">Last Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for update in setting_updates %}
+                        <tr {% if update.last_status_code != "200" %}class="table-warning"{% endif %}>
+                            <td class="">{{ update.shelly_id.shelly_type }}</td>
+                            <td class="">
+                                {{ update.shelly_id.shelly_id }}
+                                {% for thing in update.shelly_id.shelly2thing.all %}
+                                    {% if forloop.first %}
+                                        ({{ thing.thing_label }})
+                                    {% endif %}
+                                {% endfor%}
+                            </td>
+                            <td class="">
+                                {{ update.shelly_settings_path }}
+                            </td>
+                            <td class="">
+                                <pre style="font-size:0.8em" class="prettyprinted">
+                                    {{ update.shelly_settings_json }}
+                                </pre>
+                            </td>
+                            <td class="">
+                                {% if update.shelly_settings_applied %}
+                                    <i class="fas fa-check text-success"></i>
+                                {% else %}
+                                    <i class="fas fa-times text-danger"></i>
+                                {% endif %}
+                            </td>
+                            <td class="">{{ update.shelly_settings_delete }}</td>
+                            <td class="">{{ update.last_status_ts|date:'d.m.Y H:i' }}</td>
+                            <td class="">{{ update.last_status_code }}</td>
+                            <td class="">
+                                <span style="font-size:0.8em">
+                                    {{ update.last_status }}
+                                </span>
+                            </td>
+                        </tr>
+
+                    {% endfor %}
+
+                </tbody>
+            </table>
+
+    </div>
+
+    <div class="container-fluid" style="margin-top:20px;">
+    </div>
+
+{% endblock content %}
+
+{% block footer_javascript_page %}
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('#table').bootstrapTable()
+    });
+
+    $(document).ready(function() {
+        // Check All
+        $('.checkall').click(function() {
+            $(":checkbox").attr("checked", true);
+        });
+        // Uncheck All
+        $('.uncheckall').click(function() {
+            $(":checkbox").attr("checked", false);
+        });
+    });
+</script>
+{% endblock footer_javascript_page %}
+
+
