@@ -6254,5 +6254,45 @@
     "md_setmatrix_setting": 46,
     "md_setmatrix_shellytype": "SHELLYDW"
   }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 783,
+  "fields": {
+    "md_setmatrix_setting": 47,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 784,
+  "fields": {
+    "md_setmatrix_setting": 48,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 785,
+  "fields": {
+    "md_setmatrix_setting": 49,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 786,
+  "fields": {
+    "md_setmatrix_setting": 50,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 787,
+  "fields": {
+    "md_setmatrix_setting": 51,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
 }
 ]

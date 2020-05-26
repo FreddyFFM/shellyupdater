@@ -596,5 +596,70 @@
     "md_settings_single": false,
     "md_settings_reference_path": "login.password"
   }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 47,
+  "fields": {
+    "md_settings_type": "Device",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "tilt_enabled",
+    "md_settings_parameter_type": "bool",
+    "md_settings_description": "Enable/disable tilt detection",
+    "md_settings_single": false,
+    "md_settings_reference_path": "tilt_enabled"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 48,
+  "fields": {
+    "md_settings_type": "Device",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "vibration_enabled",
+    "md_settings_parameter_type": "bool",
+    "md_settings_description": "Enable/disable vibration detection",
+    "md_settings_single": false,
+    "md_settings_reference_path": "vibration_enabled"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 49,
+  "fields": {
+    "md_settings_type": "Device",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "reverse_open_close",
+    "md_settings_parameter_type": "bool",
+    "md_settings_description": "Reverse which position the sensor consideres \"open\"",
+    "md_settings_single": false,
+    "md_settings_reference_path": "reverse_open_close"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 50,
+  "fields": {
+    "md_settings_type": "Device",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "led_status_disable",
+    "md_settings_parameter_type": "bool",
+    "md_settings_description": "Enable/disable status LED",
+    "md_settings_single": false,
+    "md_settings_reference_path": "led_status_disable"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 51,
+  "fields": {
+    "md_settings_type": "Device",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "sleep_mode_period",
+    "md_settings_parameter_type": "number",
+    "md_settings_description": "Periodic update period in hours, 1..24",
+    "md_settings_single": false,
+    "md_settings_reference_path": "sleep_mode.period"
+  }
 }
 ]

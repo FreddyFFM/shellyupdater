@@ -63,8 +63,8 @@ class ShellyWizardSelectView(TemplateView):
                                                                                         'shelly_id').values('id',
                                                                                                             'shelly_id')
             for shelly in shellies:
-                thing = OpenHabThings.objects.filter(shelly_id__shelly_id=shelly['shelly_id'])[0]
-                if thing:
+                if OpenHabThings.objects.filter(shelly_id__shelly_id=shelly['shelly_id']).exists():
+                    thing = OpenHabThings.objects.filter(shelly_id__shelly_id=shelly['shelly_id'])[0]
                     shelly_id = shelly['shelly_id'] + " (" + thing.thing_label + ")"
                 else:
                     shelly_id = shelly['shelly_id']

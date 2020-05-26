@@ -127,7 +127,8 @@ class MasterDataShellySettings(models.Model):
         ('WifiAP', 'Internal Wifi AP'),
         ('Wifi1', 'Wifi Connection'),
         ('Wifi2', 'Wifi Connection Backup'),
-        ('Login', 'Credentials')
+        ('Login', 'Credentials'),
+        ('Device', 'Device specific'),
     )
 
     SETTINGS_PARAM_TYPE_CHOICES = (
