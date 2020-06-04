@@ -50,7 +50,10 @@
                             <td class="">{{ thing.thing_uid }}</td>
                             <td class="">{{ thing.thing_label }}</td>
                             <td class="">{{ thing.thing_location }}</td>
-                            <td class="">{{ thing.last_change_ts|date:'d.m.Y H:i' }}</td>
+                            <td class="">
+                                <span class="hidden">{{ thing.last_change_ts|date:'Y/m/d H:i' }}</span>
+                                {{ thing.last_change_ts|date:'d.m.Y H:i' }}
+                            </td>
                         </tr>
 
                     {% endfor %}

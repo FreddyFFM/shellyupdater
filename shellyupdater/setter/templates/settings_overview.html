@@ -81,7 +81,10 @@
                                 {% endif %}
                             </td>
                             <td class="">{{ update.shelly_settings_delete }}</td>
-                            <td class="">{{ update.last_status_ts|date:'d.m.Y H:i' }}</td>
+                            <td class="">
+                                <span class="hidden">{{ update.last_status_ts|date:'Y/m/d H:i' }}</span>
+                                {{ update.last_status_ts|date:'d.m.Y H:i' }}
+                            </td>
                             <td class="">{{ update.last_status_code }}</td>
                             <td class="">
                                 <span style="font-size:0.8em">

@@ -134,7 +134,10 @@
                                 </span>
                                 </div>
                             </td>
-                            <td class="">{{ shelly.last_change_ts|date:'d.m.Y H:i' }}</td>
+                            <td class="">
+                                <span class="hidden">{{ shelly.last_change_ts|date:'Y/m/d H:i' }}</span>
+                                {{ shelly.last_change_ts|date:'d.m.Y H:i' }}
+                            </td>
                             <td class="">{{ shelly.last_status }}</td>
                         </tr>
 

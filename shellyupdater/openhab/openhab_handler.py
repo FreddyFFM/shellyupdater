@@ -3,6 +3,7 @@ This handler covers all functionality in communication with Openhab
 """
 
 import requests
+import re
 
 from django.conf import settings
 from updates.models import Shellies, OpenHabThings
@@ -65,8 +66,13 @@ def join_shelly_things():
     for thing in things:
         # Split the Thing ID and retrieve Shelly-ID (is the 4th part)
         # Thing mqtt:topic:shellies:shellyswitch25-xxxxxx -> shellyswitch25-xxxxxx
-        thing_shelly_id = (thing.thing_uid.split(":")[3]).split("-", maxsplit=1)
-        thing_shelly_id = thing_shelly_id[0] + "-" + thing_shelly_id[1].split("-")[0]
+        # Thing mqtt:topic:shellies:shellyplug-s-xxxxxx -> shellyplug-s-xxxxxx
+        # Thing mqtt:topic:shellies:shellyswitch25-xxxxxx-HE-KE -> shellyswitch25-xxxxxx
+        # thing_shelly_id = (thing.thing_uid.split(":")[3]).split("-", maxsplit=1)
+        # thing_shelly_id = thing_shelly_id[0] + "-" + thing_shelly_id[1].split("-")[0]
+        re_pattern = "(shelly[\w]+)(\-s)?\-([\w]+)\-?.*"
+        re_matches = re.match(re_pattern, thing.thing_uid.split(":")[3])
+        thing_shelly_id = re_matches.group(1) + (re_matches.group(2) if re_matches.group(2) else "") + "-" + re_matches.group(3)
 
         # If Shelly-ID exists than map to Thing
         if Shellies.objects.filter(shelly_id=thing_shelly_id).exists():

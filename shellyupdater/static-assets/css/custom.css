@@ -1,3 +1,7 @@
 .container-fluid {
     padding-top:    15px;
 }
+
+.hidden {
+    display:    none;
+}
