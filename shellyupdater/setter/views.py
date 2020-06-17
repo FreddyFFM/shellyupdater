@@ -208,7 +208,7 @@ class ShellyWizardPreviewView(TemplateView):
                 param = key.split('-')[1]
                 path = key.split('-')[0]
                 type = key.split('-')[2]
-                if value or type == "bool":
+                if value or value == 0 or type == "bool":
                     settings_json[param] = str(value)
                     settings_encode = param + ":" + str(value) + "\n" + settings_encode
 

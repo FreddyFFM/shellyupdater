@@ -661,5 +661,31 @@
     "md_settings_single": false,
     "md_settings_reference_path": "sleep_mode.period"
   }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 52,
+  "fields": {
+    "md_settings_type": "Device",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "dark_threshold",
+    "md_settings_parameter_type": "number",
+    "md_settings_description": "Illumination definition for \"dark\" in lux, 0..100000 and must be lower than twilight_threshold",
+    "md_settings_single": false,
+    "md_settings_reference_path": "dark_threshold"
+  }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 53,
+  "fields": {
+    "md_settings_type": "Device",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "twilight_threshold",
+    "md_settings_parameter_type": "number",
+    "md_settings_description": "Illumination definition for \"dusk\" in lux, 0..100000 and must be greater than dark_threshold",
+    "md_settings_single": false,
+    "md_settings_reference_path": "twilight_threshold"
+  }
 }
 ]

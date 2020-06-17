@@ -6294,5 +6294,21 @@
     "md_setmatrix_setting": 51,
     "md_setmatrix_shellytype": "SHELLYDW"
   }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 788,
+  "fields": {
+    "md_setmatrix_setting": 52,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
+},
+{
+  "model": "updates.masterdatashellysettingsmatrix",
+  "pk": 789,
+  "fields": {
+    "md_setmatrix_setting": 53,
+    "md_setmatrix_shellytype": "SHELLYDW"
+  }
 }
 ]
