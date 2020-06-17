@@ -209,9 +209,11 @@ class ShellyWizardPreviewView(TemplateView):
                 path = key.split('-')[0]
                 type = key.split('-')[2]
                 if value or value == 0 or type == "bool":
-                    settings_json[param] = str(value)
+                    if type == "number":
+                        settings_json[param] = value
+                    else:
+                        settings_json[param] = str(value)
                     settings_encode = param + ":" + str(value) + "\n" + settings_encode
-
 
         preview_form = SettingsPreviewForm(settings_path=path, settings_json=settings_json, settings_encode=settings_encode)
 

@@ -96,8 +96,7 @@ def update_shelly_online(topic=None, status=None):
                 get_shelly_info(shelly_id=shelly_id)
                 # start available and initiated updates
                 if shelly.shelly_do_update:
-                    if not perform_update_http(shelly=shelly):
-                        perform_update_mqtt(shelly=shelly)
+                    perform_update_http(shelly=shelly)
                 # if no updates apply new settings (if applicable)
                 else:
                     apply_shelly_settings(shelly=shelly)
