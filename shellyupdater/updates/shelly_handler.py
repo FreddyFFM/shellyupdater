@@ -40,8 +40,7 @@ def put_shelly(id=None, name="", mac="", ip="", fw_update=False, fw_ver=""):
 
         # Apply firmware update when available an initiated
         if fw_update and shelly.shelly_do_update:
-            if not perform_update_http(shelly=shelly):
-                perform_update_mqtt(shelly=shelly)
+            perform_update_http(shelly=shelly)
 
         # update firmware information and update status
         elif not fw_update and shelly.shelly_do_update and fw_ver.split("@")[0] != shelly.shelly_fw_version_old:
@@ -89,11 +88,13 @@ def update_shelly_online(topic=None, status=None):
         if Shellies.objects.filter(shelly_id=shelly_id).exists():
             shelly = Shellies.objects.get(shelly_id=shelly_id)
 
+            current_ts = timezone.now()
             shelly.shelly_online = shelly_online
-            # if shelly is online update settings and status information in DB
-            if shelly_online:
-                shelly.shelly_last_online = timezone.now()
-                get_shelly_info(shelly_id=shelly_id)
+            shelly.shelly_last_online = current_ts
+
+            diff = current_ts - shelly.shelly2infos.last_change_ts
+            # if shelly is online update settings and status information in DB (after time interval)
+            if shelly_online and ((diff.days >= settings.MAX_INFO_DAYS) or shelly.shelly_do_update):
                 # start available and initiated updates
                 if shelly.shelly_do_update:
                     perform_update_http(shelly=shelly)
@@ -101,30 +102,7 @@ def update_shelly_online(topic=None, status=None):
                 else:
                     apply_shelly_settings(shelly=shelly)
 
+                # catch settings and status
+                get_shelly_info(shelly_id=shelly_id)
+
             shelly.save()
-
-
-def perform_update_mqtt(shelly=None):
-    """
-    Perform a firmware update on Shelly via mqtt
-    :param shelly:
-    :return:
-    """
-    mqttclient = get_mqttclient()
-    current_dt = datetime.now().strftime("%d.%m.%Y %H:%M")
-    if mqttclient.is_connected() and shelly:
-        i = 1
-        while True:
-            result = mqttclient.publish(topic=settings.MQTT_SHELLY_BASE_TOPIC + shelly.shelly_id + "/command",
-                                        payload="update_fw", retain=True)
-
-            if result.rc == 0:
-                shelly.last_status = current_dt + ": Update via MQTT Initialized"
-                break
-
-            if i > 3:
-                shelly.last_status = current_dt + ": Update via MQTT failed (" + str(result.rc) + ")"
-                break
-
-            i = i + 1
-            time.sleep(1)

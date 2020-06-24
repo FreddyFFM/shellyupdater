@@ -9,9 +9,7 @@ from updates.models import Shellies, ShellySettings, ShellySettingUpdates
 from datetime import datetime
 from shellyupdater.mqtt import get_mqttclient
 from .forms import ShellySelectForm
-from .shelly_handler import perform_update_mqtt
 from .shelly_http_handler import get_shelly_info, perform_update_http
-from django.http import HttpResponse
 
 
 class ShowShelliesView(TemplateView):
@@ -68,8 +66,7 @@ class ShowShelliesView(TemplateView):
                 shelly.shelly_fw_version_old = shelly.shelly_fw_version
                 shelly.shelly_do_update = True
                 if shelly.shelly_online:
-                    if not perform_update_http(shelly=shelly):
-                        perform_update_mqtt(shelly=shelly)
+                    perform_update_http(shelly=shelly)
                 else:
                     shelly.last_status = current_dt + ": Marked for update"
 

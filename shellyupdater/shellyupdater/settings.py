@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 import environ
+import logging.config
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -135,6 +136,13 @@ STATICFILES_DIRS = (  # where to find static files
 
 ### LOCAL SETTINGS ARE READ FROM THE .env FILE
 
+# GENERAL
+MEDIA_ROOT = env.str('MEDIA_ROOT', BASE_DIR)
+
+# LOGLEVEL
+LOG_LEVEL = env.str('LOG_LEVEL', 'INFO')
+LOG_LEVEL_DB = env.str('LOG_LEVEL_DB', 'INFO')
+
 # MQTT variables for connection
 MQTT_BROKER_ADDRESS = env.str('MQTT_BROKER_ADDRESS')
 MQTT_USERNAME = env.str('MQTT_USERNAME')
@@ -152,3 +160,94 @@ STARTS_WITH_GUNICORN = env.bool('STARTS_WITH_GUNICORN', False)
 # SHELLY-HTTP
 HTTP_SHELLY_USERNAME = env.str('HTTP_SHELLY_USERNAME')
 HTTP_SHELLY_PASSWORD = env.str('HTTP_SHELLY_PASSWORD')
+
+# SHELLY-UPDATE THRESHOLD
+MAX_INFO_DAYS = env.str('MAX_INFO_DAYS', 1)
+
+
+### LOG SETTINGS
+
+# LOGGING
+LOGGING_CONFIG = None
+if not os.path.exists(os.path.join(MEDIA_ROOT, "logs")):
+    os.makedirs(os.path.join(MEDIA_ROOT, "logs"))
+logging.config.dictConfig(
+{
+    "version": 1,
+    "disable_existing_loggers": False,
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse'
+        },
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue'
+        }
+    },
+    'formatters': {
+        'main_formatter': {
+            'format': '%(asctime)s - %(levelname)s: %(message)s (%(name)s - %(pathname)s:%(lineno)d)',
+            'datefmt': "%Y-%m-%d %H:%M:%S",
+        },
+    },
+    'handlers': {
+        'mail_admins': {
+            'level': 'ERROR',
+            'filters': ['require_debug_false'],
+            'class': 'django.utils.log.AdminEmailHandler'
+        },
+        'console': {
+            'level': 'DEBUG',
+            'filters': ['require_debug_true'],
+            'class': 'logging.StreamHandler',
+            'formatter': 'main_formatter',
+        },
+        'production_file': {
+            'level': LOG_LEVEL,
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(MEDIA_ROOT, "logs", "shellyupdater.log"),
+            'maxBytes': 1024 * 1024 * 10,  # 10 MB
+            'backupCount': 7,
+            'formatter': 'main_formatter',
+            'filters': ['require_debug_false'],
+        },
+        'debug_file': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(MEDIA_ROOT, "logs", "shellyupdater_debug.log"),
+            'maxBytes': 1024 * 1024 * 50,  # 50 MB
+            'backupCount': 7,
+            'formatter': 'main_formatter',
+            'filters': ['require_debug_true'],
+        },
+        'database_file': {
+            'level': LOG_LEVEL_DB,
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(MEDIA_ROOT, "logs", "shellyupdater_database.log"),
+            'maxBytes': 1024 * 1024 * 50,  # 50 MB
+            'backupCount': 7,
+            'formatter': 'main_formatter',
+            'filters': ['require_debug_false'],
+        },
+        'null': {
+            "class": 'logging.NullHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['mail_admins', 'console', 'production_file', 'debug_file'],
+            'level': 'WARNING',
+            'propagate': True,
+        },
+        'django.db.backends': {
+            'handlers': ['database_file'],
+            'level': LOG_LEVEL_DB,
+        },
+        'py.warnings': {
+            'handlers': ['null', ],
+        },
+        '': {
+            'handlers': ['console', 'production_file', 'debug_file'],
+            'level': LOG_LEVEL,
+        },
+    }
+})

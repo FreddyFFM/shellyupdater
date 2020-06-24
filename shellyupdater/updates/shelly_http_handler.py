@@ -4,10 +4,14 @@ This module handles the http communication to the Shellies
 
 import requests
 import json
+import logging
 
 from datetime import datetime
 from django.conf import settings
 from .models import Shellies, ShellySettings, ShellySettingUpdates
+
+
+logger = logging.getLogger(__name__)
 
 
 def get_shelly_info(shelly_id=None):
@@ -55,13 +59,13 @@ def get_shelly_settings(shelly=None, shellySettings=None):
         if response.status_code == 200:
             shellySettings.shelly_settings_json = json.dumps(json.loads(response.text.strip()), indent=4, sort_keys=True)
             status = current_dt + ": HTTP OK " + str(response.status_code)
-            print("HTTP LOG - " + str(datetime.now()) + ": HTTP OK - " + response.url + " - " + str(response.status_code))
+            logger.info("HTTP LOG - " + str(datetime.now()) + ": HTTP OK - " + response.url + " - " + str(response.status_code))
         else:
             status = current_dt + ": HTTP Error " + str(response.status_code)
-            print("HTTP LOG - " + str(datetime.now()) + ": HTTP Error - " + response.url + " - " + str(response.status_code))
+            logger.error("HTTP LOG - " + str(datetime.now()) + ": HTTP Error - " + response.url + " - " + str(response.status_code))
     except requests.exceptions.RequestException as e:
         status = current_dt + ": Exception " + str(e)
-        print("HTTP LOG - " + str(datetime.now()) + ": HTTP Exception - " + str(e))
+        logger.error("HTTP LOG - " + str(datetime.now()) + ": HTTP Exception - " + str(e))
 
     shellySettings.last_status_settings = status
 
@@ -94,15 +98,15 @@ def get_shelly_status(shelly=None, shellySettings=None):
             if "update" in status_json:
                 shelly.shelly_fw_version_new = status_json["update"]["new_version"]
             status = current_dt + ": HTTP OK " + str(response.status_code)
-            print(
+            logger.info(
                 "HTTP LOG - " + str(datetime.now()) + ": HTTP OK - " + response.url + " - " + str(response.status_code))
         else:
             status = current_dt + ": HTTP Error " + str(response.status_code)
-            print("HTTP LOG - " + str(datetime.now()) + ": HTTP Error - " + response.url + " - " + str(
+            logger.error("HTTP LOG - " + str(datetime.now()) + ": HTTP Error - " + response.url + " - " + str(
                 response.status_code))
     except requests.exceptions.RequestException as e:
         status = current_dt + ": Exception " + str(e)
-        print("HTTP LOG - " + str(datetime.now()) + ": HTTP Exception - " + str(e))
+        logger.error("HTTP LOG - " + str(datetime.now()) + ": HTTP Exception - " + str(e))
 
     shellySettings.last_status_status = status
 
@@ -129,16 +133,16 @@ def perform_update_http(shelly=None):
                 shelly.last_status = current_dt + ": Update via HTTP running"
             else:
                 shelly.last_status = current_dt + ": Update via HTTP Initialized"
-            print(
+            logger.info(
                 "HTTP LOG - " + str(datetime.now()) + ": HTTP OK - " + response.url + " - " + str(response.status_code))
             return True
         else:
             shelly.last_status = current_dt + ": Update via HTTP failed (Response " + str(response.status_code) + ")"
-            print("HTTP LOG - " + str(datetime.now()) + ": HTTP Error - " + response.url + " - " + str(
+            logger.error("HTTP LOG - " + str(datetime.now()) + ": HTTP Error - " + response.url + " - " + str(
                 response.status_code))
     except requests.exceptions.RequestException as e:
         shelly.last_status = current_dt + ": Exception " + str(e)
-        print("HTTP LOG - " + str(datetime.now()) + ": HTTP Exception - " + str(e))
+        logger.error("HTTP LOG - " + str(datetime.now()) + ": HTTP Exception - " + str(e))
 
     return False
 
@@ -168,20 +172,20 @@ def apply_shelly_settings(shelly=None):
                 update.last_status = json.loads(response.text.strip())
                 update.last_status_code = response.status_code
                 update.shelly_settings_applied = True
-                print(
+                logger.info(
                     "HTTP LOG - " + str(datetime.now()) + ": HTTP OK - " + response.url + " - " + str(
                         response.status_code))
             else:
                 update.last_status_ts = datetime.now()
                 update.last_status = json.loads(response.text.strip())
                 update.last_status_code = response.status_code
-                print("HTTP LOG - " + str(datetime.now()) + ": HTTP Error - " + response.url + " - " + str(
+                logger.error("HTTP LOG - " + str(datetime.now()) + ": HTTP Error - " + response.url + " - " + str(
                     response.status_code))
         except requests.exceptions.RequestException as e:
             update.last_status_ts = datetime.now()
             update.last_status = "HTTP Exception " + str(e)
             update.last_status_code = "FAILED"
-            print("HTTP LOG - " + str(datetime.now()) + ": HTTP Exception - " + str(e))
+            logger.error("HTTP LOG - " + str(datetime.now()) + ": HTTP Exception - " + str(e))
             cancel = True
 
         update.save()
