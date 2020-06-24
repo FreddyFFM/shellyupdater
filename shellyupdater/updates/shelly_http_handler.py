@@ -60,6 +60,8 @@ def get_shelly_settings(shelly=None, shellySettings=None):
             shellySettings.shelly_settings_json = json.dumps(json.loads(response.text.strip()), indent=4, sort_keys=True)
             status = current_dt + ": HTTP OK " + str(response.status_code)
             logger.info("HTTP LOG - " + str(datetime.now()) + ": HTTP OK - " + response.url + " - " + str(response.status_code))
+            logger.debug(
+                "HTTP LOG - " + str(datetime.now()) + ": HTTP OK - " + response.url + " - " + str(response.text.strip()))
         else:
             status = current_dt + ": HTTP Error " + str(response.status_code)
             logger.error("HTTP LOG - " + str(datetime.now()) + ": HTTP Error - " + response.url + " - " + str(response.status_code))
@@ -100,6 +102,9 @@ def get_shelly_status(shelly=None, shellySettings=None):
             status = current_dt + ": HTTP OK " + str(response.status_code)
             logger.info(
                 "HTTP LOG - " + str(datetime.now()) + ": HTTP OK - " + response.url + " - " + str(response.status_code))
+            logger.debug(
+                "HTTP LOG - " + str(datetime.now()) + ": HTTP OK - " + response.url + " - " + str(
+                    response.text.strip()))
         else:
             status = current_dt + ": HTTP Error " + str(response.status_code)
             logger.error("HTTP LOG - " + str(datetime.now()) + ": HTTP Error - " + response.url + " - " + str(
@@ -135,11 +140,17 @@ def perform_update_http(shelly=None):
                 shelly.last_status = current_dt + ": Update via HTTP Initialized"
             logger.info(
                 "HTTP LOG - " + str(datetime.now()) + ": HTTP OK - " + response.url + " - " + str(response.status_code))
+            logger.debug(
+                "HTTP LOG - " + str(datetime.now()) + ": HTTP OK - " + response.url + " - " + str(
+                    response.text.strip()))
             return True
         else:
             shelly.last_status = current_dt + ": Update via HTTP failed (Response " + str(response.status_code) + ")"
             logger.error("HTTP LOG - " + str(datetime.now()) + ": HTTP Error - " + response.url + " - " + str(
                 response.status_code))
+            logger.error(
+                "HTTP LOG - " + str(datetime.now()) + ": HTTP OK - " + response.url + " - " + str(
+                    response.text.strip()))
     except requests.exceptions.RequestException as e:
         shelly.last_status = current_dt + ": Exception " + str(e)
         logger.error("HTTP LOG - " + str(datetime.now()) + ": HTTP Exception - " + str(e))
