@@ -186,12 +186,18 @@ def apply_shelly_settings(shelly=None):
                 logger.info(
                     "HTTP LOG - " + str(datetime.now()) + ": HTTP OK - " + response.url + " - " + str(
                         response.status_code))
+                logger.debug(
+                    "HTTP LOG - " + str(datetime.now()) + ": HTTP OK - " + response.url + " - " + str(
+                        response.text.strip()))
             else:
                 update.last_status_ts = datetime.now()
                 update.last_status = json.loads(response.text.strip())
                 update.last_status_code = response.status_code
                 logger.error("HTTP LOG - " + str(datetime.now()) + ": HTTP Error - " + response.url + " - " + str(
                     response.status_code))
+                logger.error(
+                    "HTTP LOG - " + str(datetime.now()) + ": HTTP Error - " + response.url + " - " + str(
+                        response.text.strip()))
         except requests.exceptions.RequestException as e:
             update.last_status_ts = datetime.now()
             update.last_status = "HTTP Exception " + str(e)
