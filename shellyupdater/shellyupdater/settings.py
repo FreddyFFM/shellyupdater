@@ -209,7 +209,7 @@ logging.config.dictConfig(
         'console': {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
-            'formatter': 'simple_formatter',
+            'formatter': 'main_formatter',
             'filters': ['require_debug_true','skip_logentry_startswith'],
         },
         'production_file': {
@@ -227,7 +227,7 @@ logging.config.dictConfig(
             'filename': os.path.join(MEDIA_ROOT, "logs", "shellyupdater_debug.log"),
             'maxBytes': 1024 * 1024 * 50,  # 50 MB
             'backupCount': 7,
-            'formatter': 'main_formatter',
+            'formatter': 'simple_formatter',
             'filters': ['require_debug_true','skip_logentry_startswith'],
         },
         'database_file': {
