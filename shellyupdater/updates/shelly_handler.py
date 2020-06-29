@@ -3,14 +3,16 @@ This module handles all Shelly update/info functions and the communication via M
 """
 
 import json
-import time
+import logging
 
-from .models import Shellies
+from .models import Shellies, ShellySettingUpdates
 from django.utils import timezone
 from datetime import datetime
-from shellyupdater.mqtt import get_mqttclient
 from .shelly_http_handler import get_shelly_info, perform_update_http, apply_shelly_settings
 from django.conf import settings
+
+
+logger = logging.getLogger(__name__)
 
 
 def put_shelly(id=None, name="", mac="", ip="", fw_update=False, fw_ver=""):
@@ -30,20 +32,28 @@ def put_shelly(id=None, name="", mac="", ip="", fw_update=False, fw_ver=""):
     if id:
         if Shellies.objects.filter(shelly_id=id).exists():
             shelly = Shellies.objects.get(shelly_id=id)
+            logger.debug(
+                "SHELLY LOG - " + str(datetime.now()) + ": SHELLY EXISTENT - ID: " + str(id))
         else:
             shelly = Shellies()
             shelly.shelly_id = id
             shelly.shelly_last_online = timezone.now()
+            logger.debug(
+                "SHELLY LOG - " + str(datetime.now()) + ": SHELLY NEW - ID: " + str(id))
 
         shelly.shelly_type = (id.split('-')[0]).upper()
         shelly.shelly_new_fw = fw_update
 
         # Apply firmware update when available an initiated
         if fw_update and shelly.shelly_do_update:
+            logger.debug(
+                "SHELLY LOG - " + str(datetime.now()) + ": SHELLY PERFORM UPDATE - ID: " + str(id))
             perform_update_http(shelly=shelly)
 
         # update firmware information and update status
         elif not fw_update and shelly.shelly_do_update and fw_ver.split("@")[0] != shelly.shelly_fw_version_old:
+            logger.debug(
+                "SHELLY LOG - " + str(datetime.now()) + ": SHELLY UPDATE DONE - ID: " + str(id))
             shelly.shelly_do_update = False
             current_dt = datetime.now().strftime("%d.%m.%Y %H:%M")
             shelly.last_status = current_dt + ": Update OK"
@@ -86,6 +96,8 @@ def update_shelly_online(topic=None, status=None):
             shelly_online = False
 
         if Shellies.objects.filter(shelly_id=shelly_id).exists():
+            logger.info(
+                "SHELLY LOG - " + str(datetime.now()) + ": SHELLY ONLINE - ID: " + str(shelly_id) + ", " + str(shelly_online))
             shelly = Shellies.objects.get(shelly_id=shelly_id)
 
             current_ts = timezone.now()
@@ -93,16 +105,24 @@ def update_shelly_online(topic=None, status=None):
             shelly.shelly_last_online = current_ts
 
             diff = current_ts - shelly.shelly2infos.last_change_ts
-            # if shelly is online update settings and status information in DB (after time interval)
-            if shelly_online and ((diff.days >= settings.MAX_INFO_DAYS) or shelly.shelly_do_update):
+            shellyupdates = ShellySettingUpdates.objects.filter(shelly_id=shelly, shelly_settings_applied=False,
+                                                                shelly_settings_delete=False).exists()
+            # if shelly_online and has updates or settings-changes or needs current settings catch
+            if shelly_online and ((0 < settings.MAX_INFO_DAYS <= diff.days) or shelly.shelly_do_update or shellyupdates):
                 # start available and initiated updates
                 if shelly.shelly_do_update:
+                    logger.info(
+                        "SHELLY LOG - " + str(datetime.now()) + ": SHELLY PERFORM UPDATE - ID: " + str(shelly))
                     perform_update_http(shelly=shelly)
-                # if no updates apply new settings (if applicable)
-                else:
+
+                # shelly hs setting updates
+                elif shellyupdates:
                     apply_shelly_settings(shelly=shelly)
 
-                # catch settings and status
-                get_shelly_info(shelly_id=shelly_id)
+                # need to catch settings and status
+                else:
+                    logger.info(
+                        "SHELLY LOG - " + str(datetime.now()) + ": SHELLY CATCH INFOS - ID: " + str(shelly_id))
+                    get_shelly_info(shelly_id=shelly_id)
 
             shelly.save()

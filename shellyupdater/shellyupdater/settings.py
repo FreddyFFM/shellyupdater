@@ -14,6 +14,8 @@ import os
 import environ
 import logging.config
 
+from .logfilter import skip_logentry_startswith
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -22,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 env = environ.Env()
 # reading .env file
 env.read_env()
-DEBUG = env.bool('DEBUG', True)
+DEBUG = env.bool('DEBUG', False)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -139,9 +141,10 @@ STATICFILES_DIRS = (  # where to find static files
 # GENERAL
 MEDIA_ROOT = env.str('MEDIA_ROOT', BASE_DIR)
 
-# LOGLEVEL
+# LOGGING
 LOG_LEVEL = env.str('LOG_LEVEL', 'INFO')
 LOG_LEVEL_DB = env.str('LOG_LEVEL_DB', 'INFO')
+LOG_SKIP_STARTSWITH = env.str('LOG_SKIP_STARTSWITH', '')
 
 # MQTT variables for connection
 MQTT_BROKER_ADDRESS = env.str('MQTT_BROKER_ADDRESS')
@@ -161,8 +164,8 @@ STARTS_WITH_GUNICORN = env.bool('STARTS_WITH_GUNICORN', False)
 HTTP_SHELLY_USERNAME = env.str('HTTP_SHELLY_USERNAME')
 HTTP_SHELLY_PASSWORD = env.str('HTTP_SHELLY_PASSWORD')
 
-# SHELLY-UPDATE THRESHOLD
-MAX_INFO_DAYS = env.str('MAX_INFO_DAYS', 1)
+# SHELLY-UPDATE SETTINGS AND STATUS THRESHOLD
+MAX_INFO_DAYS = env.str('MAX_INFO_DAYS', 0)
 
 
 ### LOG SETTINGS
@@ -181,11 +184,19 @@ logging.config.dictConfig(
         },
         'require_debug_true': {
             '()': 'django.utils.log.RequireDebugTrue'
+        },
+        'skip_logentry_startswith': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': skip_logentry_startswith
         }
     },
     'formatters': {
         'main_formatter': {
             'format': '%(asctime)s - %(levelname)s: %(message)s (%(name)s - %(pathname)s:%(lineno)d)',
+            'datefmt': "%Y-%m-%d %H:%M:%S",
+        },
+        'simple_formatter': {
+            'format': '%(asctime)s - %(levelname)s: %(message)s',
             'datefmt': "%Y-%m-%d %H:%M:%S",
         },
     },
@@ -197,9 +208,9 @@ logging.config.dictConfig(
         },
         'console': {
             'level': 'DEBUG',
-            'filters': ['require_debug_true'],
             'class': 'logging.StreamHandler',
-            'formatter': 'main_formatter',
+            'formatter': 'simple_formatter',
+            'filters': ['require_debug_true','skip_logentry_startswith'],
         },
         'production_file': {
             'level': LOG_LEVEL,
@@ -207,8 +218,8 @@ logging.config.dictConfig(
             'filename': os.path.join(MEDIA_ROOT, "logs", "shellyupdater.log"),
             'maxBytes': 1024 * 1024 * 10,  # 10 MB
             'backupCount': 7,
-            'formatter': 'main_formatter',
-            'filters': ['require_debug_false'],
+            'formatter': 'simple_formatter',
+            'filters': ['require_debug_false','skip_logentry_startswith'],
         },
         'debug_file': {
             'level': 'DEBUG',
@@ -217,7 +228,7 @@ logging.config.dictConfig(
             'maxBytes': 1024 * 1024 * 50,  # 50 MB
             'backupCount': 7,
             'formatter': 'main_formatter',
-            'filters': ['require_debug_true'],
+            'filters': ['require_debug_true','skip_logentry_startswith'],
         },
         'database_file': {
             'level': LOG_LEVEL_DB,

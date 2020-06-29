@@ -10,7 +10,8 @@ import logging, os
 
 from django.apps import AppConfig
 from django.conf import settings
-from shellyupdater.mqtt import MQTTClient, set_mqttclient, get_mqttclient
+from shellyupdater.mqtt import MQTTClient, set_mqttclient
+from datetime import datetime
 
 logger = logging.getLogger()
 
@@ -30,7 +31,7 @@ def start_MQTT():
         :return:
         """
         from updates.shelly_handler import put_shelly_json
-        logger.debug(msg.payload.decode('utf-8'))
+        logger.debug("MQTT LOG - " + str(datetime.now()) + ": DEVICE ANNOUNCE: "+ msg.payload.decode('utf-8'))
         put_shelly_json(msg.payload.decode('utf-8'))
 
     def on_device_online(self, userdata, msg):
@@ -42,7 +43,7 @@ def start_MQTT():
         :return:
         """
         from updates.shelly_handler import update_shelly_online
-        logger.debug(msg.payload.decode('utf-8'))
+        logger.debug("MQTT LOG - " + str(datetime.now()) + ": DEVICE ONLINE: " + msg.payload.decode('utf-8'))
         update_shelly_online(topic=msg.topic, status=msg.payload.decode('utf-8'))
 
     mqttclient = MQTTClient().getMQTTClient()
@@ -50,7 +51,9 @@ def start_MQTT():
     mqttclient.loop_start()
     # Subscribe to global announcement topic and Shelly specific online topics
     mqttclient.message_callback_add(settings.MQTT_SHELLY_ANNOUNCE_TOPIC, on_msg_announce)
+    logger.debug("MQTT LOG - " + str(datetime.now()) + ": Added callback to " + settings.MQTT_SHELLY_ANNOUNCE_TOPIC)
     mqttclient.message_callback_add(settings.MQTT_SHELLY_BASE_TOPIC + "+/online", on_device_online)
+    logger.debug("MQTT LOG - " + str(datetime.now()) + ": Added callback to " + settings.MQTT_SHELLY_BASE_TOPIC + "+/online")
 
 
 class UpdatesConfig(AppConfig):

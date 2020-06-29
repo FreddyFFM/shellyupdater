@@ -169,6 +169,10 @@ def apply_shelly_settings(shelly=None):
         shellyupdates = ShellySettingUpdates.objects.filter(shelly_id=shelly, shelly_settings_applied=False,
                                                             shelly_settings_delete=False).select_related('shelly_id').order_by('insert_ts')
 
+    if shellyupdates:
+        logger.info(
+            "SHELLY LOG - " + str(datetime.now()) + ": SHELLY APPLY NEW SETTINGS - ID: " + str(shelly))
+
     for update in shellyupdates:
         cancel = False
         try:
