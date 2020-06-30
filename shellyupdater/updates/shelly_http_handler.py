@@ -204,7 +204,7 @@ def apply_shelly_settings(shelly=None):
             response = req_session.post("http://" + update.shelly_id.shelly_ip + update.shelly_settings_path,
                                      auth=(settings.HTTP_SHELLY_USERNAME, settings.HTTP_SHELLY_PASSWORD),
                                      timeout=3,
-                                     data=json.loads(update.shelly_settings_json),
+                                     data=update.shelly_settings_encoded,
                                      headers=headers)
             logger.debug(
                 "HTTP LOG - " + str(datetime.now()) + ": HTTP OK Request Headers - " + response.url + " - " + str(
@@ -215,7 +215,7 @@ def apply_shelly_settings(shelly=None):
 
             if response.status_code == 200:
                 update.last_status_ts = datetime.now()
-                update.last_status = json.loads(response.text.strip())
+                update.last_status = response.text.strip()
                 update.last_status_code = response.status_code
                 update.shelly_settings_applied = True
                 logger.info(
@@ -229,7 +229,7 @@ def apply_shelly_settings(shelly=None):
                         response.headers))
             else:
                 update.last_status_ts = datetime.now()
-                update.last_status = json.loads(response.text.strip())
+                update.last_status = response.text.strip()
                 update.last_status_code = response.status_code
                 logger.error("HTTP LOG - " + str(datetime.now()) + ": HTTP Error - " + response.url + " - " + str(
                     response.status_code))
