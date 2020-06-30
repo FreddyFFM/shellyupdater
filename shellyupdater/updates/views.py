@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 import time
+import logging
 
 from django.views.generic import TemplateView
 from django.conf import settings
@@ -10,6 +11,9 @@ from datetime import datetime
 from shellyupdater.mqtt import get_mqttclient
 from .forms import ShellySelectForm
 from .shelly_http_handler import get_shelly_info, perform_update_http
+
+
+logger = logging.getLogger(__name__)
 
 
 class ShowShelliesView(TemplateView):
@@ -28,6 +32,9 @@ class ShowShelliesView(TemplateView):
 
         # If refresh initiate a refresh via MQTT
         if refresh == 'Y':
+            logger.info(
+                "SHELLY LOG - " + str(datetime.now()) + ": SHELLY MASS ANNOUNCE")
+
             mqttclient = get_mqttclient()
             if mqttclient.is_connected():
 
@@ -66,6 +73,8 @@ class ShowShelliesView(TemplateView):
                 shelly.shelly_fw_version_old = shelly.shelly_fw_version
                 shelly.shelly_do_update = True
                 if shelly.shelly_online:
+                    logger.info(
+                        "SHELLY LOG - " + str(datetime.now()) + ": SHELLY PERFORM UPDATE - ID: " + str(id))
                     perform_update_http(shelly=shelly)
                 else:
                     shelly.last_status = current_dt + ": Marked for update"
@@ -105,9 +114,13 @@ class ShellyDetailView(TemplateView):
             details = None
             if ShellySettings.objects.filter(shelly_id__shelly_id=shelly_id).exists():
                 if refresh == "Y":
+                    logger.info(
+                        "SHELLY LOG - " + str(datetime.now()) + ": SHELLY CATCH INFOS - ID: " + str(shelly_id))
                     get_shelly_info(shelly_id=shelly_id)
                 details = ShellySettings.objects.get(shelly_id__shelly_id=shelly_id)
             else:
+                logger.info(
+                    "SHELLY LOG - " + str(datetime.now()) + ": SHELLY CATCH INFOS - ID: " + str(shelly_id))
                 if get_shelly_info(shelly_id=shelly_id):
                     details = ShellySettings.objects.get(shelly_id__shelly_id=shelly_id)
 

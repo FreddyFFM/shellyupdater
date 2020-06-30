@@ -38,7 +38,7 @@ def put_shelly(id=None, name="", mac="", ip="", fw_update=False, fw_ver=""):
             shelly = Shellies()
             shelly.shelly_id = id
             shelly.shelly_last_online = timezone.now()
-            logger.debug(
+            logger.info(
                 "SHELLY LOG - " + str(datetime.now()) + ": SHELLY NEW - ID: " + str(id))
 
         shelly.shelly_type = (id.split('-')[0]).upper()
@@ -46,13 +46,13 @@ def put_shelly(id=None, name="", mac="", ip="", fw_update=False, fw_ver=""):
 
         # Apply firmware update when available an initiated
         if fw_update and shelly.shelly_do_update:
-            logger.debug(
+            logger.info(
                 "SHELLY LOG - " + str(datetime.now()) + ": SHELLY PERFORM UPDATE - ID: " + str(id))
             perform_update_http(shelly=shelly)
 
         # update firmware information and update status
         elif not fw_update and shelly.shelly_do_update and fw_ver.split("@")[0] != shelly.shelly_fw_version_old:
-            logger.debug(
+            logger.info(
                 "SHELLY LOG - " + str(datetime.now()) + ": SHELLY UPDATE DONE - ID: " + str(id))
             shelly.shelly_do_update = False
             current_dt = datetime.now().strftime("%d.%m.%Y %H:%M")
@@ -78,6 +78,9 @@ def put_shelly_json(payload=None):
     """
     shelly = json.loads(payload)
     put_shelly(id=shelly["id"], name=shelly["id"], mac=shelly["mac"], ip=shelly["ip"], fw_update=shelly["new_fw"], fw_ver=shelly["fw_ver"])
+    logger.info(
+        "SHELLY LOG - " + str(datetime.now()) + ": SHELLY ANNOUNCED - ID: " + str(shelly["id"]) + ", " + str(
+            payload))
 
 
 def update_shelly_online(topic=None, status=None):
