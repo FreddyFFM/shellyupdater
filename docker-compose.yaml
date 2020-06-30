@@ -1,6 +1,7 @@
 version: '2'
 
-shellyupdater:
+services:
+  shellyupdater:
     image: shellyupdater
     ports:
       - "8000:8000"
