@@ -18,6 +18,9 @@ def http_get(url, timeout=3):
         req_session = requests.Session()
         response = req_session.get(url,
                                    auth=(settings.HTTP_SHELLY_USERNAME, settings.HTTP_SHELLY_PASSWORD), timeout=timeout)
+        logger.debug(
+            "HTTP LOG - " + str(datetime.now()) + ": HTTP OK Request Headers - " + response.url + " - " + str(
+                response.request.headers))
         if response.status_code == 200:
             logger.info(
                 "HTTP LOG - " + str(datetime.now()) + ": HTTP OK - " + response.url + " - " + str(response.status_code))
@@ -203,6 +206,13 @@ def apply_shelly_settings(shelly=None):
                                      timeout=3,
                                      data=json.loads(update.shelly_settings_json),
                                      headers=headers)
+            logger.debug(
+                "HTTP LOG - " + str(datetime.now()) + ": HTTP OK Request Headers - " + response.url + " - " + str(
+                    response.request.headers))
+            logger.debug(
+                "HTTP LOG - " + str(datetime.now()) + ": HTTP OK Request Body - " + response.url + " - " + str(
+                    response.request.body))
+
             if response.status_code == 200:
                 update.last_status_ts = datetime.now()
                 update.last_status = json.loads(response.text.strip())
