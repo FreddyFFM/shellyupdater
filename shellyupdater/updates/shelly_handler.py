@@ -108,7 +108,7 @@ def update_shelly_online(topic=None, status=None):
             shellyupdates = ShellySettingUpdates.objects.filter(shelly_id=shelly, shelly_settings_applied=False,
                                                                 shelly_settings_delete=False).exists()
             # if shelly_online and has updates or settings-changes or needs current settings catch
-            if shelly_online and ((0 < settings.MAX_INFO_DAYS <= diff.days) or shelly.shelly_do_update or shellyupdates or 1==1):
+            if shelly_online and ((0 < settings.MAX_INFO_DAYS <= diff.days) or shelly.shelly_do_update or shellyupdates):
                 # start available and initiated updates
                 if shelly.shelly_do_update:
                     logger.info(
