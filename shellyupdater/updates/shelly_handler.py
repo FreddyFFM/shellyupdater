@@ -45,13 +45,14 @@ def put_shelly(id=None, name="", mac="", ip="", fw_update=False, fw_ver=""):
         shelly.shelly_new_fw = fw_update
 
         # Apply firmware update when available an initiated
-        if fw_update and shelly.shelly_do_update:
-            logger.info(
-                "SHELLY LOG - " + str(datetime.now()) + ": SHELLY PERFORM UPDATE - ID: " + str(id))
-            perform_update_http(shelly=shelly)
+        # This is already done when device announces online state
+        # if fw_update and shelly.shelly_do_update:
+        #     logger.info(
+        #         "SHELLY LOG - " + str(datetime.now()) + ": SHELLY PERFORM UPDATE - ID: " + str(id))
+        #     perform_update_http(shelly=shelly)
 
         # update firmware information and update status
-        elif not fw_update and shelly.shelly_do_update and fw_ver.split("@")[0] != shelly.shelly_fw_version_old:
+        if not fw_update and shelly.shelly_do_update and fw_ver.split("@")[0] != shelly.shelly_fw_version_old:
             logger.info(
                 "SHELLY LOG - " + str(datetime.now()) + ": SHELLY UPDATE DONE - ID: " + str(id))
             shelly.shelly_do_update = False

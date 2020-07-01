@@ -51,6 +51,10 @@ def http_get(url, timeout=3):
         return_resp = {"exception": e}
         logger.error("HTTP LOG - " + str(datetime.now()) + ": HTTP Exception - " + str(e))
         pass
+    except Exception as e:
+        return_resp = {"exception": e}
+        logger.error("HTTP LOG - " + str(datetime.now()) + ": Other Exception - " + str(e))
+        pass
 
     return return_resp
 
@@ -187,6 +191,7 @@ def apply_shelly_settings(shelly=None):
     :return:
     """
 
+    shellyupdates = None
     if shelly:
         shellyupdates = ShellySettingUpdates.objects.filter(shelly_id=shelly, shelly_settings_applied=False,
                                                             shelly_settings_delete=False).select_related(
@@ -239,14 +244,14 @@ def apply_shelly_settings(shelly=None):
         except requests.Timeout as e:
             update.last_status_ts = datetime.now()
             update.last_status = "HTTP Timeout " + str(e)
-            update.last_status_code = "FAILED"
+            update.last_status_code = "TIMEOUT"
             cancel = True
             logger.error("HTTP LOG - " + str(datetime.now()) + ": HTTP Timeout - " + str(e))
             pass
         except requests.ConnectionError as e:
             update.last_status_ts = datetime.now()
             update.last_status = "HTTP ConnectionError " + str(e)
-            update.last_status_code = "FAILED"
+            update.last_status_code = "CONNECTIONERROR"
             cancel = True
             logger.error("HTTP LOG - " + str(datetime.now()) + ": HTTP ConnectionError - " + str(e))
             pass
@@ -256,6 +261,14 @@ def apply_shelly_settings(shelly=None):
             update.last_status_code = "FAILED"
             cancel = True
             logger.error("HTTP LOG - " + str(datetime.now()) + ": HTTP Exception - " + str(e))
+            pass
+        except Exception as e:
+            update.last_status_ts = datetime.now()
+            update.last_status = "Other Exception " + str(e)
+            update.last_status_code = "OTHER"
+            cancel = True
+            return_resp = {"exception": e}
+            logger.error("HTTP LOG - " + str(datetime.now()) + ": Other Exception - " + str(e))
             pass
 
         update.save()

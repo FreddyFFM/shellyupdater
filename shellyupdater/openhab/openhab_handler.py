@@ -68,6 +68,9 @@ def get_openhab_things():
                 "HTTP LOG - " + str(datetime.now()) + ": HTTP Error - " + response.url + " - " + str(response.status_code))
     except requests.exceptions.RequestException as e:
         logger.error("HTTP LOG - " + str(datetime.now()) + ": HTTP Exception - " + str(e))
+    except Exception as e:
+        logger.error("HTTP LOG - " + str(datetime.now()) + ": Other Exception - " + str(e))
+
 
 
 def join_shelly_things():
