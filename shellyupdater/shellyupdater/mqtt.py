@@ -71,8 +71,6 @@ class MQTTClient():
         logger.info("MQTT LOG - " + str(datetime.now()) + ": Connecting to broker" + settings.MQTT_BROKER_ADDRESS)
 
         self.mqttclient.on_connect = on_connect
-        #self.mqttclient.on_log = on_log
-        #self.mqttclient.enable_logger(logger)
         self.mqttclient.username_pw_set(username=settings.MQTT_USERNAME, password=settings.MQTT_PASSWORD)
         rc = self.mqttclient.connect(host=settings.MQTT_BROKER_ADDRESS)  # connect to broker
         if rc == 0:
@@ -81,6 +79,9 @@ class MQTTClient():
             logger.info("MQTT LOG - " + str(datetime.now()) + ": Subscribed to " + settings.MQTT_SHELLY_ANNOUNCE_TOPIC)
             self.mqttclient.subscribe(settings.MQTT_SHELLY_BASE_TOPIC + "+/online")
             logger.info("MQTT LOG - " + str(datetime.now()) + ": Subscribed to " + settings.MQTT_SHELLY_BASE_TOPIC + "+/online")
+            self.mqttclient.subscribe(settings.MQTT_SHELLY_BASE_TOPIC + "+/+/battery")
+            logger.info(
+                "MQTT LOG - " + str(datetime.now()) + ": Subscribed to " + settings.MQTT_SHELLY_BASE_TOPIC + "+/sensor/battery")
         else:
             logger.error("MQTT LOG - " + str(datetime.now()) + ": Connection error " + rc)
 

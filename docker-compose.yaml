@@ -7,7 +7,7 @@ services:
       - "8000:8000"
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - /home/pi/docker/shellyupdater/data:/home/updater/data
+      - ./data:/home/updater/data
     environment:
       - DJANGO_SETTINGS_MODULE=shellyupdater.settings
       - RUN_ENV=DOCKER

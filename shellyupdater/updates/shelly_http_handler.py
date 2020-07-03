@@ -103,9 +103,14 @@ def get_shelly_settings(shelly=None, shellySettings=None):
     if "response" in resp:
         response = resp["response"]
         if response.status_code == 200:
-            shellySettings.shelly_settings_json = json.dumps(json.loads(response.text.strip()), indent=4,
-                                                             sort_keys=True)
-            status = current_dt + ": HTTP OK " + str(response.status_code)
+            try:
+                shellySettings.shelly_settings_json = json.dumps(json.loads(response.text.strip()), indent=4,
+                                                                 sort_keys=True)
+                status = current_dt + ": HTTP OK " + str(response.status_code)
+            except Exception as e:
+                logger.error(
+                    "SHELLY LOG - " + str(datetime.now()) + ": GET SETTINGS Exception: " + str(e))
+                shelly.last_status = current_dt + ": Settings Exception: " + str(e)
         else:
             status = current_dt + ": HTTP Error " + str(response.status_code)
     else:
@@ -132,17 +137,22 @@ def get_shelly_status(shelly=None, shellySettings=None):
     if "response" in resp:
         response = resp["response"]
         if response.status_code == 200:
-            status_json = json.loads(response.text.strip())
-            shellySettings.shelly_status_json = json.dumps(status_json, indent=4, sort_keys=True)
-            if "bat" in status_json:
-                shellySettings.shelly_battery_percent = status_json["bat"]["value"]
-                shellySettings.shelly_battery_voltage = status_json["bat"]["voltage"]
-            if "wifi_sta" in status_json:
-                shellySettings.shelly_wifi_ssid = status_json["wifi_sta"]["ssid"]
-                shellySettings.shelly_wifi_strength = status_json["wifi_sta"]["rssi"]
-            if "update" in status_json:
-                shelly.shelly_fw_version_new = status_json["update"]["new_version"]
-            status = current_dt + ": HTTP OK " + str(response.status_code)
+            try:
+                status_json = json.loads(response.text.strip())
+                shellySettings.shelly_status_json = json.dumps(status_json, indent=4, sort_keys=True)
+                if "bat" in status_json:
+                    shellySettings.shelly_battery_percent = status_json["bat"]["value"]
+                    shellySettings.shelly_battery_voltage = status_json["bat"]["voltage"]
+                if "wifi_sta" in status_json:
+                    shellySettings.shelly_wifi_ssid = status_json["wifi_sta"]["ssid"]
+                    shellySettings.shelly_wifi_strength = status_json["wifi_sta"]["rssi"]
+                if "update" in status_json:
+                    shelly.shelly_fw_version_new = status_json["update"]["new_version"]
+                status = current_dt + ": HTTP OK " + str(response.status_code)
+            except Exception as e:
+                logger.error(
+                    "SHELLY LOG - " + str(datetime.now()) + ": GET STATUS Exception: " + str(e))
+                shelly.last_status = current_dt + ": Status Exception: " + str(e)
         else:
             status = current_dt + ": HTTP Error " + str(response.status_code)
     else:
@@ -169,12 +179,17 @@ def perform_update_http(shelly=None):
     if "response" in resp:
         response = resp["response"]
         if response.status_code == 200:
-            status_json = json.loads(response.text.strip())
-            if "status" in status_json and status_json["status"].upper() == "UPDATING":
-                shelly.last_status = current_dt + ": Update via HTTP running"
-            else:
-                shelly.last_status = current_dt + ": Update via HTTP Initialized"
-            return True
+            try:
+                status_json = json.loads(response.text.strip())
+                if "status" in status_json and status_json["status"].upper() == "UPDATING":
+                    shelly.last_status = current_dt + ": Update via HTTP running"
+                else:
+                    shelly.last_status = current_dt + ": Update via HTTP Initialized"
+                return True
+            except Exception as e:
+                logger.error(
+                    "SHELLY LOG - " + str(datetime.now()) + ": PERFORM UPDATE Exception: " + str(e))
+                shelly.last_status = current_dt + ": Update Exception: " + str(e)
         else:
             shelly.last_status = current_dt + ": Update via HTTP failed (Response " + str(response.status_code) + ")"
     else:
@@ -251,7 +266,7 @@ def apply_shelly_settings(shelly=None):
         except requests.ConnectionError as e:
             update.last_status_ts = datetime.now()
             update.last_status = "HTTP ConnectionError " + str(e)
-            update.last_status_code = "CONNECTIONERROR"
+            update.last_status_code = "CONNECTION ERROR"
             cancel = True
             logger.error("HTTP LOG - " + str(datetime.now()) + ": HTTP ConnectionError - " + str(e))
             pass
@@ -267,7 +282,6 @@ def apply_shelly_settings(shelly=None):
             update.last_status = "Other Exception " + str(e)
             update.last_status_code = "OTHER"
             cancel = True
-            return_resp = {"exception": e}
             logger.error("HTTP LOG - " + str(datetime.now()) + ": Other Exception - " + str(e))
             pass
 

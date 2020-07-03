@@ -5,7 +5,7 @@ This module handles all Shelly update/info functions and the communication via M
 import json
 import logging
 
-from .models import Shellies, ShellySettingUpdates
+from .models import Shellies, ShellySettingUpdates, ShellySettings
 from django.utils import timezone
 from datetime import datetime
 from .shelly_http_handler import get_shelly_info, perform_update_http, apply_shelly_settings
@@ -130,3 +130,22 @@ def update_shelly_online(topic=None, status=None):
                     get_shelly_info(shelly_id=shelly_id)
 
             shelly.save()
+
+def update_shelly_battery(topic=None, status=None):
+    """
+    Update Shelly Online Information
+    Apply or mark Updates if applicable
+    :param topic:
+    :param status:
+    :return:
+    """
+    if topic and status:
+        shelly_id = topic.split('/')[1]
+
+        if ShellySettings.objects.filter(shelly_id__shelly_id=shelly_id).exists():
+            logger.info(
+                "SHELLY LOG - " + str(datetime.now()) + ": SHELLY BATTERY UPDATE - ID: " + str(shelly_id) + ", " + str(status))
+            shellySettings = ShellySettings.objects.get(shelly_id__shelly_id=shelly_id)
+
+            shellySettings.shelly_battery_percent = status
+            shellySettings.save()
