@@ -46,6 +46,11 @@ I did not setup everything to run immediately after cloning the repo, but with s
     ```
    docker-compose build shellyupdate
    docker-compose up shellyupdater &
+   # If you do not see Masterdata in Settings Wizards you have to stop 
+   # the cointeiner with docker-compose down and  
+   # start it again (issue in parallel supervisor start-process)
+   ```
+    
 
 ## Notice
 

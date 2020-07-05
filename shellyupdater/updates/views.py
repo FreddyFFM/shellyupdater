@@ -36,7 +36,7 @@ class ShowShelliesView(TemplateView):
                 "SHELLY LOG - " + str(datetime.now()) + ": SHELLY MASS ANNOUNCE")
 
             mqttclient = get_mqttclient()
-            if mqttclient.is_connected():
+            if mqttclient and mqttclient.is_connected():
 
                 i = 1
                 while True:

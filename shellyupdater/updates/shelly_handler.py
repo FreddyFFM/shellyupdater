@@ -131,6 +131,7 @@ def update_shelly_online(topic=None, status=None):
 
             shelly.save()
 
+
 def update_shelly_battery(topic=None, status=None):
     """
     Update Shelly Online Information
@@ -142,10 +143,21 @@ def update_shelly_battery(topic=None, status=None):
     if topic and status:
         shelly_id = topic.split('/')[1]
 
+        logger.info(
+            "SHELLY LOG - " + str(datetime.now()) + ": SHELLY BATTERY UPDATE - ID: " + str(shelly_id) + ", " + str(
+                status))
+
         if ShellySettings.objects.filter(shelly_id__shelly_id=shelly_id).exists():
-            logger.info(
-                "SHELLY LOG - " + str(datetime.now()) + ": SHELLY BATTERY UPDATE - ID: " + str(shelly_id) + ", " + str(status))
             shellySettings = ShellySettings.objects.get(shelly_id__shelly_id=shelly_id)
 
             shellySettings.shelly_battery_percent = status
             shellySettings.save()
+        else:
+            if Shellies.objects.filter(shelly_id=shelly_id).exists():
+                shelly = Shellies.objects.get(shelly_id=shelly_id)
+
+                shellySettings = ShellySettings()
+                shellySettings.shelly_id = shelly
+
+                shellySettings.shelly_battery_percent = status
+                shellySettings.save()

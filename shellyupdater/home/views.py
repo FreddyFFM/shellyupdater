@@ -26,12 +26,16 @@ class HomeView(TemplateView):
         context["shelly_info"] = shelly_info
 
         # Get Shelly with lowest battery
-        shelly_min_battery = Shellies.objects.filter(shelly2infos__shelly_battery_percent__isnull=False).order_by('shelly2infos__shelly_battery_percent')[0]
-        context["shelly_min_battery"] = shelly_min_battery
+        if Shellies.objects.filter(shelly2infos__shelly_battery_percent__isnull=False).order_by('shelly2infos__shelly_battery_percent').exists():
+            shelly_min_battery = Shellies.objects.filter(shelly2infos__shelly_battery_percent__isnull=False).order_by('shelly2infos__shelly_battery_percent')[0]
+            context["shelly_min_battery"] = shelly_min_battery
 
         # Get Shelly longest NOT online
-        shelly_oldest = Shellies.objects.earliest('last_change_ts')
-        context["shelly_oldest"] = shelly_oldest
+        try:
+            shelly_oldest = Shellies.objects.earliest('last_change_ts')
+            context["shelly_oldest"] = shelly_oldest
+        except Exception as e:
+            pass
 
         # If Openhab Modul is activated get summary about Shelly-Openhab-link
         if 'openhab' in settings.INSTALLED_APPS:
