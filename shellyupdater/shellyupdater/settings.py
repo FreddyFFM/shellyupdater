@@ -89,6 +89,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(env.str('DATABASE_DIR', BASE_DIR), 'db.sqlite3'),
+        'OPTIONS': {
+            'timeout': 20,
+        }
     }
 }
 
@@ -192,7 +195,7 @@ logging.config.dictConfig(
     },
     'formatters': {
         'main_formatter': {
-            'format': '%(asctime)s - %(levelname)s: %(message)s (%(name)s - %(pathname)s:%(lineno)d)',
+            'format': '%(asctime)s - %(levelname)s: %(message)s (%(name)s - %(pathname)s:%(lineno)d - %(process)d)',
             'datefmt': "%Y-%m-%d %H:%M:%S",
         },
         'simple_formatter': {
@@ -210,7 +213,7 @@ logging.config.dictConfig(
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
             'formatter': 'main_formatter',
-            'filters': ['require_debug_true','skip_logentry_startswith'],
+            'filters': ['require_debug_true', 'skip_logentry_startswith'],
         },
         'production_file': {
             'level': LOG_LEVEL,
@@ -219,7 +222,7 @@ logging.config.dictConfig(
             'maxBytes': 1024 * 1024 * 10,  # 10 MB
             'backupCount': 7,
             'formatter': 'simple_formatter',
-            'filters': ['require_debug_false','skip_logentry_startswith'],
+            'filters': ['require_debug_false', 'skip_logentry_startswith'],
         },
         'debug_file': {
             'level': 'DEBUG',
@@ -259,6 +262,7 @@ logging.config.dictConfig(
         '': {
             'handlers': ['console', 'production_file', 'debug_file'],
             'level': LOG_LEVEL,
+            'propagate': False,
         },
     }
 })

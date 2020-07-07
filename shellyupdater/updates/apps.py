@@ -61,7 +61,19 @@ def start_MQTT():
     mqttclient = MQTTClient().getMQTTClient()
     set_mqttclient(mqttclient)
     mqttclient.loop_start()
+
     # Subscribe to global announcement topic and Shelly specific online topics
+    mqttclient.subscribe(settings.MQTT_SHELLY_ANNOUNCE_TOPIC)
+    logger.info("MQTT LOG - " + str(datetime.now()) + ": Subscribed to " + settings.MQTT_SHELLY_ANNOUNCE_TOPIC)
+    mqttclient.subscribe(settings.MQTT_SHELLY_BASE_TOPIC + "+/online")
+    logger.info(
+        "MQTT LOG - " + str(datetime.now()) + ": Subscribed to " + settings.MQTT_SHELLY_BASE_TOPIC + "+/online")
+    mqttclient.subscribe(settings.MQTT_SHELLY_BASE_TOPIC + "+/+/battery")
+    logger.info(
+        "MQTT LOG - " + str(
+            datetime.now()) + ": Subscribed to " + settings.MQTT_SHELLY_BASE_TOPIC + "+/sensor/battery")
+
+    # Add callbacks for topics
     mqttclient.message_callback_add(settings.MQTT_SHELLY_ANNOUNCE_TOPIC, on_msg_announce)
     logger.debug("MQTT LOG - " + str(datetime.now()) + ": Added callback to " + settings.MQTT_SHELLY_ANNOUNCE_TOPIC)
     mqttclient.message_callback_add(settings.MQTT_SHELLY_BASE_TOPIC + "+/online", on_device_online)

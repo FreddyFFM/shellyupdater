@@ -10,6 +10,17 @@
 
     {# Main Section #}
 
+    {% if mqtt_error %}
+
+        <div class="container-fluid">
+
+            <div class="row alert alert-danger" role="alert">
+                <strong>No MQTT Connection available!</strong>
+            </div>
+        </div>
+
+    {% endif %}
+
     <div class="container-fluid">
 
         <div class="row" style="margin-bottom:20px;">

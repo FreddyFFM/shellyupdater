@@ -10,6 +10,7 @@ from updates.models import Shellies, ShellySettings, ShellySettingUpdates
 from datetime import datetime
 from shellyupdater.mqtt import get_mqttclient
 from .forms import ShellySelectForm
+from .shelly_handler import do_mqtt_announce
 from .shelly_http_handler import get_shelly_info, perform_update_http
 
 
@@ -32,24 +33,7 @@ class ShowShelliesView(TemplateView):
 
         # If refresh initiate a refresh via MQTT
         if refresh == 'Y':
-            logger.info(
-                "SHELLY LOG - " + str(datetime.now()) + ": SHELLY MASS ANNOUNCE")
-
-            mqttclient = get_mqttclient()
-            if mqttclient and mqttclient.is_connected():
-
-                i = 1
-                while True:
-                    result = mqttclient.publish(settings.MQTT_SHELLY_COMMAND_TOPIC, "announce")
-                    if result.rc == 0 or i > 3:
-                        break
-                    i = i + 1
-                    time.sleep(1)
-
-                if result.rc == 0:
-                    time.sleep(2)
-                else:
-                    context["error"] = True
+            do_mqtt_announce()
 
         shellies = Shellies.objects.all()
         context["shellies"] = shellies

@@ -4,7 +4,9 @@ This module handles all Shelly update/info functions and the communication via M
 
 import json
 import logging
+import time
 
+from shellyupdater.mqtt import MQTTClient
 from .models import Shellies, ShellySettingUpdates, ShellySettings
 from django.utils import timezone
 from datetime import datetime
@@ -28,8 +30,11 @@ def put_shelly(id=None, name="", mac="", ip="", fw_update=False, fw_ver=""):
     :return:
     """
 
-    # if Shelly not exists create a new in DB
     if id:
+        logger.info(
+            "SHELLY LOG - " + str(datetime.now()) + ": SHELLY ONLINE - ID: " + str(id))
+
+        # if Shelly not exists create a new in DB
         if Shellies.objects.filter(shelly_id=id).exists():
             shelly = Shellies.objects.get(shelly_id=id)
             logger.debug(
@@ -37,19 +42,19 @@ def put_shelly(id=None, name="", mac="", ip="", fw_update=False, fw_ver=""):
         else:
             shelly = Shellies()
             shelly.shelly_id = id
-            shelly.shelly_last_online = timezone.now()
+            shelly.shelly_type = (id.split('-')[0]).upper()
             logger.info(
                 "SHELLY LOG - " + str(datetime.now()) + ": SHELLY NEW - ID: " + str(id))
 
-        shelly.shelly_type = (id.split('-')[0]).upper()
+        current_ts = timezone.now()
+
+        shelly.shelly_last_online = current_ts
         shelly.shelly_new_fw = fw_update
 
-        # Apply firmware update when available an initiated
-        # This is already done when device announces online state
-        # if fw_update and shelly.shelly_do_update:
-        #     logger.info(
-        #         "SHELLY LOG - " + str(datetime.now()) + ": SHELLY PERFORM UPDATE - ID: " + str(id))
-        #     perform_update_http(shelly=shelly)
+        if shelly.shelly_do_update:
+            logger.info(
+                "SHELLY LOG - " + str(datetime.now()) + ": SHELLY PERFORM UPDATE - ID: " + str(shelly))
+            perform_update_http(shelly=shelly)
 
         # update firmware information and update status
         if not fw_update and shelly.shelly_do_update and fw_ver.split("@")[0] != shelly.shelly_fw_version_old:
@@ -70,6 +75,30 @@ def put_shelly(id=None, name="", mac="", ip="", fw_update=False, fw_ver=""):
 
         shelly.save()
 
+        logger.debug(
+            "SHELLY LOG - " + str(datetime.now()) + ": SHELLY SAVED: " + str(id))
+
+        try:
+            diff = current_ts - shelly.shelly2infos.last_change_ts
+            shellyupdates = ShellySettingUpdates.objects.filter(shelly_id=shelly, shelly_settings_applied=False,
+                                                                shelly_settings_delete=False).exists()
+        except:
+            logger.debug(
+                "SHELLY LOG - " + str(datetime.now()) + ": Shelly Settings not existing yet: " + str(id))
+            shellyupdates = None
+            diff = current_ts - current_ts
+            pass
+
+        # shelly hs setting updates
+        if not shelly.shelly_do_update and shellyupdates:
+            apply_shelly_settings(shelly=shelly)
+
+        # need to catch settings and status
+        if not (shelly.shelly_do_update or shellyupdates) and 0 < settings.MAX_INFO_DAYS <= diff.days:
+            logger.info(
+                "SHELLY LOG - " + str(datetime.now()) + ": SHELLY CATCH INFOS - ID: " + str(id))
+            get_shelly_info(shelly_id=id)
+
 
 def put_shelly_json(payload=None):
     """
@@ -77,11 +106,15 @@ def put_shelly_json(payload=None):
     :param payload:
     :return:
     """
-    shelly = json.loads(payload)
-    put_shelly(id=shelly["id"], name=shelly["id"], mac=shelly["mac"], ip=shelly["ip"], fw_update=shelly["new_fw"], fw_ver=shelly["fw_ver"])
-    logger.info(
-        "SHELLY LOG - " + str(datetime.now()) + ": SHELLY ANNOUNCED - ID: " + str(shelly["id"]) + ", " + str(
-            payload))
+    try:
+        shelly = json.loads(payload)
+        put_shelly(id=shelly["id"], name=shelly["id"], mac=shelly["mac"], ip=shelly["ip"], fw_update=shelly["new_fw"], fw_ver=shelly["fw_ver"])
+        logger.info(
+            "SHELLY LOG - " + str(datetime.now()) + ": SHELLY ANNOUNCED - ID: " + str(shelly["id"]) + ", " + str(
+                payload))
+    except Exception as e:
+        logger.error(
+            "SHELLY LOG - " + str(datetime.now()) + ": SHELLY PUT Exception: " + str(e))
 
 
 def update_shelly_online(topic=None, status=None):
@@ -99,35 +132,14 @@ def update_shelly_online(topic=None, status=None):
         else:
             shelly_online = False
 
-        if Shellies.objects.filter(shelly_id=shelly_id).exists():
+        if Shellies.objects.filter(shelly_id=shelly_id).exists() and not shelly_online:
             logger.info(
-                "SHELLY LOG - " + str(datetime.now()) + ": SHELLY ONLINE - ID: " + str(shelly_id) + ", " + str(shelly_online))
+                "SHELLY LOG - " + str(datetime.now()) + ": SHELLY OFFLINE - ID: " + str(shelly_id))
             shelly = Shellies.objects.get(shelly_id=shelly_id)
 
             current_ts = timezone.now()
             shelly.shelly_online = shelly_online
             shelly.shelly_last_online = current_ts
-
-            diff = current_ts - shelly.shelly2infos.last_change_ts
-            shellyupdates = ShellySettingUpdates.objects.filter(shelly_id=shelly, shelly_settings_applied=False,
-                                                                shelly_settings_delete=False).exists()
-            # if shelly_online and has updates or settings-changes or needs current settings catch
-            if shelly_online and ((0 < settings.MAX_INFO_DAYS <= diff.days) or shelly.shelly_do_update or shellyupdates):
-                # start available and initiated updates
-                if shelly.shelly_do_update:
-                    logger.info(
-                        "SHELLY LOG - " + str(datetime.now()) + ": SHELLY PERFORM UPDATE - ID: " + str(shelly))
-                    perform_update_http(shelly=shelly)
-
-                # shelly hs setting updates
-                elif shellyupdates:
-                    apply_shelly_settings(shelly=shelly)
-
-                # need to catch settings and status
-                else:
-                    logger.info(
-                        "SHELLY LOG - " + str(datetime.now()) + ": SHELLY CATCH INFOS - ID: " + str(shelly_id))
-                    get_shelly_info(shelly_id=shelly_id)
 
             shelly.save()
 
@@ -161,3 +173,34 @@ def update_shelly_battery(topic=None, status=None):
 
                 shellySettings.shelly_battery_percent = status
                 shellySettings.save()
+
+
+def do_mqtt_announce():
+    mqttclient = MQTTClient().getMQTTClient()
+
+    logger.info(
+        "SHELLY LOG - " + str(datetime.now()) + ": SHELLY MASS ANNOUNCE")
+
+    i = 1
+    while True:
+        logger.debug("MQTT LOG - " + str(
+            datetime.now()) + ": Publish announce to " + settings.MQTT_SHELLY_COMMAND_TOPIC + " - retry " +
+                     str(i))
+
+        result = mqttclient.publish(settings.MQTT_SHELLY_COMMAND_TOPIC, "announce")
+
+        logger.debug("MQTT LOG - " + str(
+            datetime.now()) + ": Published announce with result " + str(result.rc))
+
+        if result.rc == 0:
+            logger.info(
+                "SHELLY LOG - " + str(datetime.now()) + ": SHELLY MASS ANNOUNCE SUCCESSFUL")
+            return True
+        if i > 10:
+            logger.error(
+                "SHELLY LOG - " + str(datetime.now()) + ": MQTT NOT AVAILABLE")
+
+            return False
+
+        i = i + 1
+        time.sleep(1)

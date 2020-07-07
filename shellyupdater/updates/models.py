@@ -4,10 +4,6 @@ from __future__ import unicode_literals
 from django.db import models
 
 
-# Create your models here.
-from django.db.models import Count
-
-
 class Shellies (models.Model):
     """
     Base model for the Shellies
@@ -26,11 +22,11 @@ class Shellies (models.Model):
 
     def get_updates_applied(self):
         return Shellies.objects.filter(shelly2updates__shelly_id=self, shelly2updates__shelly_settings_applied=True,
-                                       shelly2updates__shelly_settings_delete=False).aggregate(Count('shelly_id'))
+                                       shelly2updates__shelly_settings_delete=False).aggregate(models.Count('shelly_id'))
 
     def get_updates_all(self):
         return Shellies.objects.filter(shelly2updates__shelly_id=self,
-                                       shelly2updates__shelly_settings_delete=False).aggregate(Count('shelly_id'))
+                                       shelly2updates__shelly_settings_delete=False).aggregate(models.Count('shelly_id'))
 
     id = models.AutoField(primary_key=True)
     shelly_id = models.CharField(max_length=100, blank=False, null=False, unique=True)
