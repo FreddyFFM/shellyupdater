@@ -5,6 +5,7 @@ This module handles all Shelly update/info functions and the communication via M
 import json
 import logging
 import time
+import pytz
 
 from shellyupdater.mqtt import MQTTClient
 from .models import Shellies, ShellySettingUpdates, ShellySettings
@@ -86,7 +87,7 @@ def put_shelly(id=None, name="", mac="", ip="", fw_update=False, fw_ver=""):
             logger.debug(
                 "SHELLY LOG - " + str(datetime.now()) + ": Shelly Settings not existing yet: " + str(id))
             shellyupdates = None
-            diff = current_ts - current_ts
+            diff = current_ts - datetime(1970, 1, 1, tzinfo=pytz.timezone(settings.TIME_ZONE))
             pass
 
         # shelly hs setting updates
