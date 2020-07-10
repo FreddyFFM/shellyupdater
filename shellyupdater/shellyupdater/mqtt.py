@@ -43,6 +43,7 @@ class MQTTClient():
         """
         Initialize the MQTT client
         """
+
         def on_connect(client, userdata, flags, rc):
             """
             Log the connect
@@ -52,7 +53,11 @@ class MQTTClient():
             :param rc:
             :return:
             """
-            logger.debug("MQTT LOG - " + str(datetime.now()) + ": CONNECTED with flags [%s] rtn code [%d]" % (flags, rc))
+            if rc == 0:
+                logger.info("MQTT LOG - " + str(datetime.now()) + ": Connected to MQTT")
+                logger.debug("MQTT LOG - " + str(datetime.now()) + ": CONNECTED with flags [%s] rtn code [%d]" % (flags, rc))
+            else:
+                logger.error("MQTT LOG - " + str(datetime.now()) + ": Connection error " + str(rc))
 
         clientid = str(hash(datetime.now()))
         self.mqttclient = mqtt.Client("ShellyUpdater_" + clientid)  # create new instance
@@ -60,21 +65,12 @@ class MQTTClient():
 
         try:
             self.mqttclient.on_connect = on_connect
-            self.mqttclient.username_pw_set(username=settings.MQTT_USERNAME, password=settings.MQTT_PASSWORD)
-            rc = self.mqttclient.connect(host=settings.MQTT_BROKER_ADDRESS)  # connect to broker
-            if rc == 0:
-                logger.info("MQTT LOG - " + str(datetime.now()) + ": Connected to MQTT")
-            else:
-                logger.error("MQTT LOG - " + str(datetime.now()) + ": Connection error " + rc)
+            if settings.MQTT_USERNAME and settings.MQTT_PASSWORD:
+                self.mqttclient.username_pw_set(username=settings.MQTT_USERNAME, password=settings.MQTT_PASSWORD)
+            self.mqttclient.connect(host=settings.MQTT_BROKER_ADDRESS)  # connect to broker
+
         except Exception as e:
             logger.error("MQTT LOG - " + str(datetime.now()) + ": Exception " + str(e))
-
-    def startMQTTloop(self):
-        """
-        Start the MQTT logging
-        :return:
-        """
-        self.mqttclient.loop_start()
 
     def getMQTTClient(self):
         """
