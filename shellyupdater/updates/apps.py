@@ -63,28 +63,28 @@ def start_MQTT():
     mqttclient.loop_start()
 
     # Subscribe to global announcement topic and Shelly specific online topics
-    if not mqttclient.is_connected():
-        mqttclient.loop_stop()
-        logger.info("MQTT LOG - " + str(datetime.now()) + ": Disconnected from MQTT")
-    else:
-        mqttclient.subscribe(settings.MQTT_SHELLY_ANNOUNCE_TOPIC)
-        logger.info("MQTT LOG - " + str(datetime.now()) + ": Subscribed to " + settings.MQTT_SHELLY_ANNOUNCE_TOPIC)
-        mqttclient.subscribe(settings.MQTT_SHELLY_BASE_TOPIC + "+/online")
-        logger.info(
-            "MQTT LOG - " + str(datetime.now()) + ": Subscribed to " + settings.MQTT_SHELLY_BASE_TOPIC + "+/online")
-        mqttclient.subscribe(settings.MQTT_SHELLY_BASE_TOPIC + "+/+/battery")
-        logger.info(
-            "MQTT LOG - " + str(
-                datetime.now()) + ": Subscribed to " + settings.MQTT_SHELLY_BASE_TOPIC + "+/sensor/battery")
+    # if not mqttclient.is_connected():
+    #     mqttclient.loop_stop()
+    #     logger.info("MQTT LOG - " + str(datetime.now()) + ": Disconnected from MQTT")
+    # else:
+    mqttclient.subscribe(settings.MQTT_SHELLY_ANNOUNCE_TOPIC)
+    logger.info("MQTT LOG - " + str(datetime.now()) + ": Subscribed to " + settings.MQTT_SHELLY_ANNOUNCE_TOPIC)
+    mqttclient.subscribe(settings.MQTT_SHELLY_BASE_TOPIC + "+/online")
+    logger.info(
+        "MQTT LOG - " + str(datetime.now()) + ": Subscribed to " + settings.MQTT_SHELLY_BASE_TOPIC + "+/online")
+    mqttclient.subscribe(settings.MQTT_SHELLY_BASE_TOPIC + "+/+/battery")
+    logger.info(
+        "MQTT LOG - " + str(
+            datetime.now()) + ": Subscribed to " + settings.MQTT_SHELLY_BASE_TOPIC + "+/sensor/battery")
 
-        # Add callbacks for topics
-        mqttclient.message_callback_add(settings.MQTT_SHELLY_ANNOUNCE_TOPIC, on_msg_announce)
-        logger.debug("MQTT LOG - " + str(datetime.now()) + ": Added callback to " + settings.MQTT_SHELLY_ANNOUNCE_TOPIC)
-        mqttclient.message_callback_add(settings.MQTT_SHELLY_BASE_TOPIC + "+/online", on_device_online)
-        logger.debug("MQTT LOG - " + str(datetime.now()) + ": Added callback to " + settings.MQTT_SHELLY_BASE_TOPIC + "+/online")
-        mqttclient.message_callback_add(settings.MQTT_SHELLY_BASE_TOPIC + "+/sensor/battery", on_battery_change)
-        logger.debug(
-            "MQTT LOG - " + str(datetime.now()) + ": Added callback to " + settings.MQTT_SHELLY_BASE_TOPIC + "+/sensor/battery")
+    # Add callbacks for topics
+    mqttclient.message_callback_add(settings.MQTT_SHELLY_ANNOUNCE_TOPIC, on_msg_announce)
+    logger.debug("MQTT LOG - " + str(datetime.now()) + ": Added callback to " + settings.MQTT_SHELLY_ANNOUNCE_TOPIC)
+    mqttclient.message_callback_add(settings.MQTT_SHELLY_BASE_TOPIC + "+/online", on_device_online)
+    logger.debug("MQTT LOG - " + str(datetime.now()) + ": Added callback to " + settings.MQTT_SHELLY_BASE_TOPIC + "+/online")
+    mqttclient.message_callback_add(settings.MQTT_SHELLY_BASE_TOPIC + "+/sensor/battery", on_battery_change)
+    logger.debug(
+        "MQTT LOG - " + str(datetime.now()) + ": Added callback to " + settings.MQTT_SHELLY_BASE_TOPIC + "+/sensor/battery")
 
 
 class UpdatesConfig(AppConfig):
