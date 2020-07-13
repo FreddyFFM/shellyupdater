@@ -213,7 +213,7 @@ class ShellyWizardPreviewView(TemplateView):
                         settings_json[param] = value
                     else:
                         settings_json[param] = str(value)
-                    settings_encode = param + ":" + str(value) + "\n" + settings_encode
+                    settings_encode = param + "=" + str(value) + "\n" + settings_encode
 
         preview_form = SettingsPreviewForm(settings_path=path, settings_json=settings_json, settings_encode=settings_encode)
 

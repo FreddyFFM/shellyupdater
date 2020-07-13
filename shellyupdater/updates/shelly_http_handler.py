@@ -224,7 +224,7 @@ def apply_shelly_settings(shelly=None):
             response = req_session.post("http://" + update.shelly_id.shelly_ip + update.shelly_settings_path,
                                      auth=(settings.HTTP_SHELLY_USERNAME, settings.HTTP_SHELLY_PASSWORD),
                                      timeout=3,
-                                     data=update.shelly_settings_encoded,
+                                     data=json.loads(update.shelly_settings_json),
                                      headers=headers)
             logger.debug(
                 "HTTP LOG - " + str(datetime.now()) + ": HTTP OK Request Headers - " + response.url + " - " + str(
