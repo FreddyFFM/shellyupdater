@@ -49,7 +49,10 @@ class SettingsValuesForm(forms.Form):
             reference_settings = None
             if ShellySettings.objects.filter(shelly_id__id=self.shellies[0]).exists():
                 reference_shelly = ShellySettings.objects.get(shelly_id__id=self.shellies[0])
-                reference_settings = json.loads(reference_shelly.shelly_settings_json)
+                try:
+                    reference_settings = json.loads(reference_shelly.shelly_settings_json)
+                except:
+                    pass
 
             # For each setting create a new Field
             for set in settings:
