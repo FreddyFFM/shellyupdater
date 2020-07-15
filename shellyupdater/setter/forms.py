@@ -46,8 +46,10 @@ class SettingsValuesForm(forms.Form):
                                                                md_settings_type=self.settings_type)
 
             # Load (reference) Shelly settings
-            reference_shelly = ShellySettings.objects.get(shelly_id__id=self.shellies[0])
-            reference_settings = json.loads(reference_shelly.shelly_settings_json)
+            reference_settings = None
+            if ShellySettings.objects.filter(shelly_id__id=self.shellies[0]).exists():
+                reference_shelly = ShellySettings.objects.get(shelly_id__id=self.shellies[0])
+                reference_settings = json.loads(reference_shelly.shelly_settings_json)
 
             # For each setting create a new Field
             for set in settings:
@@ -69,7 +71,7 @@ class SettingsValuesForm(forms.Form):
 
                 reference_settings_path = set.md_settings_reference_path
                 # If value is POSTed fill this value, else prefill with current value from Shelly (if exists)
-                if reference_settings_path:
+                if reference_settings_path and reference_settings:
                     json_path = parse('$.' + reference_settings_path)
                     matches = json_path.find(reference_settings)
                     placeholder = ""

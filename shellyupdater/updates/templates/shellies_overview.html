@@ -59,14 +59,20 @@
                     {% for shelly in shellies %}
                         <tr>
                             <td class="text-center" style="column-width:10px;">
-                                {% if shelly.shelly_do_update %}
-                                    <i class="fas fa-times"></i>
-                                {% elif shelly.shelly_new_fw %}
-                                    <label>
-                                        <input type="checkbox" id="{{ shelly.shelly_id }}" name="{{ shelly.shelly_id }}" style="margin:0px;padding:0px;" />
-                                    </label>
-                                {% endif %}
-
+                                <div class="checkbox">
+                                    <span class="hidden">{{ shelly.shelly_do_update }}</span>
+                                    {% if shelly.shelly_do_update %}
+                                        <i class="fas fa-times" title="Marked for update"></i>
+                                    {% else %}
+                                        <label for="{{ shelly.shelly_id }}">
+                                            <input type="checkbox" id="{{ shelly.shelly_id }}" name="{{ shelly.shelly_id }}" style="margin:0px;padding:0px;" />
+                                            {% if not shelly.shelly_new_fw %}
+                                                <i class="fa fa-exclamation-circle" aria-hidden="true"
+                                                   title="Force update - be sure update is available!"></i>
+                                            {% endif %}
+                                        </label>
+                                    {% endif %}
+                                </div>
                             </td>
                             <td class="">
                                 <strong>{{ shelly.shelly_id }}</strong>&nbsp;&nbsp;

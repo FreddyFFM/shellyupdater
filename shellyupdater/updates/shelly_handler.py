@@ -52,18 +52,19 @@ def put_shelly(id=None, name="", mac="", ip="", fw_update=False, fw_ver=""):
         shelly.shelly_last_online = current_ts
         shelly.shelly_new_fw = fw_update
 
-        if shelly.shelly_do_update:
-            logger.info(
-                "SHELLY LOG - " + str(datetime.now()) + ": SHELLY PERFORM UPDATE - ID: " + str(shelly))
-            perform_update_http(shelly=shelly)
-
         # update firmware information and update status
-        if not fw_update and shelly.shelly_do_update and fw_ver.split("@")[0] != shelly.shelly_fw_version_old:
+        if not fw_update and shelly.shelly_do_update and fw_ver.split("@")[0] != shelly.shelly_fw_version_old.split("@")[0]:
             logger.info(
                 "SHELLY LOG - " + str(datetime.now()) + ": SHELLY UPDATE DONE - ID: " + str(id))
             shelly.shelly_do_update = False
             current_dt = datetime.now().strftime("%d.%m.%Y %H:%M")
             shelly.last_status = current_dt + ": Update OK"
+
+        elif shelly.shelly_do_update:
+            shelly.shelly_fw_version_old = shelly.shelly_fw_version
+            logger.info(
+                "SHELLY LOG - " + str(datetime.now()) + ": SHELLY PERFORM UPDATE - ID: " + str(shelly))
+            perform_update_http(shelly=shelly)
 
         if name:
             shelly.shelly_name = name

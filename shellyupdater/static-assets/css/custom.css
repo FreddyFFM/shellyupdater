@@ -5,3 +5,8 @@
 .hidden {
     display:    none;
 }
+
+input[type="checkbox"]
+{
+    vertical-align:middle;
+}
