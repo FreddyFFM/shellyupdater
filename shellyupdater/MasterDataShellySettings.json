@@ -687,5 +687,18 @@
     "md_settings_single": false,
     "md_settings_reference_path": "twilight_threshold"
   }
+},
+{
+  "model": "updates.masterdatashellysettings",
+  "pk": 54,
+  "fields": {
+    "md_settings_type": "Device",
+    "md_settings_path": "/settings",
+    "md_settings_parameter": "lux_wakeup_enable",
+    "md_settings_parameter_type": "bool",
+    "md_settings_description": "Enable wakeup on lux change",
+    "md_settings_single": false,
+    "md_settings_reference_path": "lux_wakeup_enable"
+  }
 }
 ]
