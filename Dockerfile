@@ -1,4 +1,4 @@
-FROM python:3.8.14
+FROM python:3.9-slim
 ENV PYTHONUNBUFFERED 1
 ENV TERM xterm
 
